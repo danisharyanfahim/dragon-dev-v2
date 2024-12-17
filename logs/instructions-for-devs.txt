@@ -66,7 +66,6 @@ CLI Commands:
 -npm i (dependency name and version) --save-dev(if it's a dev dependency)
 -sass 
 -next-themes (Theme selector for nextJS)
--sanity@latest (CMS client) (Ignore this for now)
 -react-icons (icons)
 -react-syntax-highlighter (code highlighter based on prismJS for react)
 --save-dev -uid-generator (uuid generator for keys)
