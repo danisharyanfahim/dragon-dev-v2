@@ -25,7 +25,9 @@ export const formatTimeDifference = (dateString: string): string => {
     return `${minutes} minute${minutes > 1 ? "s" : ""} ago`; // Less than an hour ago
   } else if (hours < 24) {
     return `${hours} hour${hours > 1 ? "s" : ""} ago`; // Less than a day ago
-  } else if (days < 30) {
+  } else if (days < 7) {
+    return `${days} day${days > 1 ? "s" : ""} ago`; // Less than a month ago
+  } else if (weeks < 5) {
     return `${weeks} week${weeks > 1 ? "s" : ""} ago`; // Less than a month ago
   } else if (months < 12) {
     return `${months} month${months > 1 ? "s" : ""} ago`; // Less than a year ago

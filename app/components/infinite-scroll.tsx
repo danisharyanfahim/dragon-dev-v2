@@ -8,6 +8,7 @@ import {
 import useOnScreen from "../hooks/useOnScreen";
 import ArticleCard from "./article-card";
 import { ArticleCardProps } from "../interfaces/blog";
+import SkeletonArticleCard from "./skeleton-article-card";
 
 const InfiniteScroll = ({
   searchParams,
@@ -101,11 +102,15 @@ const InfiniteScroll = ({
         </div>
 
         {totalArticles > 0 && (
-          <div ref={loaderRef} className="loading-container">
+          <div
+            ref={loaderRef}
+            className="loading-container"
+            style={{ marginTop: articles.length >= 3 ? "2rem" : "0rem" }}
+          >
             {Array(setSkeletons())
               .fill(null)
               .map((_, index) => (
-                <div key={index} className="skeleton-card"></div>
+                <SkeletonArticleCard key={index} />
               ))}
           </div>
         )}
