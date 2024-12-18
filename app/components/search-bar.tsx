@@ -1,16 +1,9 @@
 "use client";
 import React, { useState } from "react";
 import { IoMdSearch } from "react-icons/io";
-import {
-  useSearchParams,
-  useRouter,
-  usePathname,
-  redirect,
-} from "next/navigation";
+import { useRouter, redirect } from "next/navigation";
 
 const SearchBar = () => {
-  const searchParams = useSearchParams();
-  const pathname = usePathname();
   const router = useRouter();
   const [search, setSearch] = useState("");
 
