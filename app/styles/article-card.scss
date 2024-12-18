@@ -62,6 +62,7 @@
       max-width: 345px;
       box-shadow: 0px 0px 10px 0px rgba(0 0 0 / 0.2);
       padding: 0.5rem;
+      animation: appear 0.33s;
 
       .image-container {
         display: flex;
@@ -256,5 +257,14 @@
   100% {
     opacity: 0%;
     transform: translateX(140%);
+  }
+}
+
+@keyframes appear {
+  from {
+    opacity: 0%;
+  }
+  to {
+    opacity: 100%;
   }
 }
