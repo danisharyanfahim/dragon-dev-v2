@@ -16,7 +16,7 @@ export default function RootLayout({
         <meta name="description" content="DragonDev.ca" />
         <meta name="author" content="Danish Fahim" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>DragonDev.ca</title>
+        <title>Dragon Dev</title>
       </head>
       <body>{children}</body>
     </html>

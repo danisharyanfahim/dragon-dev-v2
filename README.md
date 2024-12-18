@@ -1,9 +1,9 @@
 This is my portfolio page. It uses SanityIO (CMS), NextJs (Front-End Framework), React (Front-End Library), TypeScript + JS + ES6, SCSS + CSS, and HTML. It consists of 4 main page types:
 
-1) Landing page
-2) Blog page
-3) Blog Search page
-4) Blog Article Page
+1. Landing page
+2. Blog page
+3. Blog Search page
+4. Blog Article Page
 
 The main page structure is as follows (from top to bottom):
 1)Navbar
@@ -18,7 +18,23 @@ Here is a breakdown for each of the page sections along with the functions they 
 
 3)Page content (Main) depending on page type:
 
-1) Landing page
-2) Blog page
-3) Blog Search page
-4) Blog Article Page
+1. Landing page
+2. Blog page
+3. Blog Search page
+4. Blog Article Page
+
+Components:
+
+Infinite Scroll:
+
+Process:
+
+Component is mounted:
+
+1. Search Params are passed in as props
+2. Total number of articles are fetched based on the search params
+3. If more than 25% of the loader is visible then it loads in the
+
+Search Params change:
+
+{/_ Very important so that the useOnScreenHook doesn't trigger immediately _/}
