@@ -1,12 +1,13 @@
 "use client";
-import React from "react";
+import React, { MouseEventHandler } from "react";
 import { useRouter } from "next/navigation";
 
 const Tag = ({ relevance, text }: { relevance: number; text: string }) => {
   const router = useRouter();
-  const handleClick = (e) => {
+
+  const handleClick: MouseEventHandler<HTMLButtonElement> = (e) => {
     e.preventDefault();
-    router.push(`/blog/search?category=${text.toLowerCase()}`); // Update the URL with the new params
+    router.push(`/blog/search?category=${text.toLowerCase()}`);
   };
 
   return (

@@ -1,0 +1,269 @@
+$toggleWidth: 100px;
+$toggleBorder: 2px;
+$toggleHeight: 40px;
+$navbarHeight: 5rem;
+$navbarPadding: clamp(0rem, -51.429rem + 57.143vw, 40rem);
+
+.navbar {
+  padding: 0rem $navbarPadding;
+  z-index: 1000;
+  position: fixed;
+  width: 100%;
+  height: $navbarHeight;
+  background: linear-gradient(
+    90deg,
+    var(--ui-background-color-1),
+    var(--ui-background-color-2)
+  );
+  display: flex;
+  justify-content: space-between;
+  box-shadow: 0px 0px 5px 0px var(--shadow-color-1);
+  border-bottom: 2px solid var(--border-color-3);
+
+  .center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .logo-button {
+  }
+
+  .logo-button,
+  .menu-button,
+  .theme-toggle-container {
+    height: 100%;
+  }
+
+  .logo-button,
+  .menu-button {
+    aspect-ratio: 1 / 1;
+  }
+
+  .menu-button {
+    font-size: 3.4rem;
+  }
+
+  .right-side {
+    display: flex;
+    gap: clamp(0rem, -2.143rem + 4.464vw, 5rem);
+    text-shadow: 0px 0px 5px rgba(11, 18, 80, 0.103);
+
+    .menu-icon {
+      filter: drop-shadow(0px 0px 5px var(--text-shadow-color-1));
+      transition: all 0.2s;
+      > * {
+        fill: var(--nav-menu-icon-color);
+      }
+      &:hover {
+        filter: drop-shadow(0px 0px 25px rgb(17, 0, 255));
+        > * {
+          fill: rgb(17, 0, 255);
+        }
+      }
+
+      &.active {
+        filter: drop-shadow(0px 0px 25px rgb(255, 0, 0));
+        > * {
+          fill: rgb(255, 0, 0);
+        }
+      }
+    }
+  }
+
+  .theme-toggle-container {
+    padding: 1rem 0rem;
+    .theme-toggle {
+      border-radius: 100px;
+      width: $toggleWidth;
+      height: $toggleHeight;
+      background: linear-gradient(
+        90deg,
+        var(--theme-toggle-color-1),
+        var(--theme-toggle-color-2),
+        var(--theme-toggle-color-3),
+        var(--theme-toggle-color-4),
+        var(--theme-toggle-color-5),
+        var(--theme-toggle-color-6),
+        var(--theme-toggle-color-7)
+      );
+      background-size: 200%;
+      display: flex;
+      align-items: center;
+      padding: 0.25rem;
+      box-shadow: inset 0px 2px 7px 2px var(--text-shadow-color-2),
+        0px 0px 10px 0px rgba(4, 17, 138, 0.144);
+      background-clip: padding-box;
+      border: solid transparent $toggleBorder;
+      cursor: pointer;
+
+      &.dark {
+        animation: shiftBackgroundLeft 0.2s ease forwards;
+      }
+
+      &.light {
+        animation: shiftBackgroundRight 0.2s ease forwards;
+      }
+
+      .toggle-button {
+        border-radius: 50%;
+        background: linear-gradient(
+          0deg,
+          var(--border-color-3),
+          var(--border-color-2)
+        );
+        height: $toggleHeight - 8px;
+        width: $toggleHeight - 8px;
+        font-size: 1.5rem;
+        padding: 0.5rem;
+        position: absolute;
+
+        &.dark {
+          color: var(--moon-color);
+          left: 2px;
+          animation: slideLeft 0.2s ease;
+        }
+
+        &.light {
+          color: var(--sun-color);
+          left: $toggleWidth - $toggleHeight + 2px;
+          animation: slideRight 0.2s ease;
+        }
+
+        .toggle-icon {
+          z-index: 2;
+        }
+
+        &::before {
+          content: "";
+          position: absolute;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          z-index: 1;
+          margin: $toggleBorder;
+          border-radius: inherit;
+          background: linear-gradient(
+            90deg,
+            var(--ui-background-color-1),
+            var(--ui-background-color-2)
+          );
+        }
+      }
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: -1;
+        margin: -$toggleBorder;
+        border-radius: inherit;
+        background: linear-gradient(
+          0deg,
+          var(--border-color-2),
+          var(--border-color-3)
+        );
+      }
+    }
+  }
+
+  .side-nav {
+    position: absolute;
+    min-height: 100dvh;
+    backdrop-filter: blur(20px);
+    background-color: var(--dark-transparent-shade-2);
+    width: 100vw;
+    top: $navbarHeight;
+    right: calc(-1 * $navbarPadding);
+    animation: slideIn 1s ease;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    padding: clamp(2rem, 1.286rem + 3.571vw, 3rem)
+      clamp(2rem, 0.571rem + 7.143vw, 4rem);
+    box-shadow: 0px 0px 5px 0px var(--shadow-color-1);
+
+    .nav-menu {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      .nav-button {
+        color: var(--light-text-color);
+        height: 5rem;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        right: 0px;
+        transition: right 0.3s ease;
+
+        h4 {
+          text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5),
+            0px 0px 15px rgba(0, 38, 255, 0.404);
+          transition: all 0.1s;
+        }
+
+        &:hover {
+          right: 10px;
+          color: white;
+
+          h4 {
+            text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.253),
+              0px 0px 25px rgb(0, 38, 255);
+          }
+        }
+
+        &:active {
+          color: rgb(0, 38, 255);
+        }
+      }
+    }
+  }
+}
+
+@keyframes slideIn {
+  from {
+    right: -100vw;
+  }
+  to {
+    right: calc(-1 * $navbarPadding);
+  }
+}
+
+@keyframes slideLeft {
+  from {
+    left: $toggleWidth - $toggleHeight + 2px;
+  }
+  to {
+    left: 2px;
+  }
+}
+
+@keyframes slideRight {
+  from {
+    left: 2px;
+  }
+  to {
+    left: $toggleWidth - $toggleHeight + 2px;
+  }
+}
+
+@keyframes shiftBackgroundLeft {
+  from {
+    background-position-x: 10%;
+  }
+  to {
+    background-position-x: 80%;
+  }
+}
+
+@keyframes shiftBackgroundRight {
+  from {
+    background-position-x: 80%;
+  }
+  to {
+    background-position-x: 10%;
+  }
+}

@@ -1,0 +1,57 @@
+:root {
+  --sun-color: rgb(31, 50, 224);
+  --moon-color: rgb(207, 211, 248);
+  --light-text-color: #e4e4f7;
+  --dark-text-color: #171722;
+  --dark-transparent-shade-1: rgba(14, 11, 22, 0.548);
+  --dark-transparent-shade-2: rgba(0, 0, 0, 0.274);
+  --shadow-color-1: rgba(0 0 0 / 0.2);
+  --ui-background-color-1: #f0f0ff;
+  --ui-background-color-2: #e4e4f7;
+  --ui-background-color-3: #232335;
+  --ui-background-color-4: #0c0c16;
+  --nav-menu-icon-color: rgb(14, 32, 194);
+  --ui-primary-accent-color-1: rgb(6, 24, 184);
+  --ui-primary-accent-color-2: rgb(16, 37, 224);
+  --ui-secondary-accent-color-1: rgb(40, 68, 228);
+  --ui-secondary-accent-color-2: #0962e7;
+  --ui-tertiary-accent-color-1: rgb(255, 0, 0);
+  --ui-tertiary-accent-color-2: rgb(143, 0, 0);
+  --theme-toggle-color-1: rgb(216, 244, 255);
+  --theme-toggle-color-2: rgb(67, 180, 255);
+  --theme-toggle-color-3: rgb(0, 60, 255);
+  --theme-toggle-color-4: rgb(16, 26, 170);
+  --theme-toggle-color-5: rgb(27, 15, 92);
+  --theme-toggle-color-6: rgb(107, 14, 92);
+  --theme-toggle-color-7: rgb(204, 0, 27);
+  --text-color-title: #202849;
+  --text-color-p: rgb(62, 68, 92);
+  --background-color-1: rgb(13, 8, 100);
+  --background-color-2: rgb(117, 0, 0);
+  --border-color-1: rgb(156, 162, 199);
+  --border-color-2: rgb(244, 246, 255);
+  --border-color-3: rgb(156, 162, 199);
+  --text-shadow-color-1: rgba(8, 20, 129, 0.26);
+  --text-shadow-color-2: rgba(4, 17, 138, 0.144);
+  --text-shadow-color-3: rgba(19, 19, 185, 0.24);
+
+  /* dimensions */
+  --border-radius-outer: 1rem;
+  --border-radius-inner: calc(1rem - 8px);
+  --border-radius-inner-2: calc(1rem - 4px);
+  --font-size-paragraph: clamp(1rem, 1vw + 0.75rem, 1.55rem);
+  --font-size-small: clamp(0.813rem, 1vw + 0.25rem, 1.125rem);
+}
+
+.dark {
+  --text-color-p: #7b7f96;
+  --text-color-title: rgb(171, 176, 204);
+  --ui-background-color-1: #0a0e22;
+  --ui-background-color-2: #08081a;
+  --ui-background-color-3: #f0f0ff;
+  --ui-background-color-4: rgb(219, 223, 255);
+  --border-color-1: rgb(21, 23, 46);
+  --border-color-2: rgb(29, 30, 65);
+  --border-color-3: rgb(3, 4, 22);
+  --nav-menu-icon-color: rgb(219, 223, 255);
+}

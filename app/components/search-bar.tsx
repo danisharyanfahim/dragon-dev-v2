@@ -38,7 +38,9 @@ const SearchBar = () => {
         className="search-button"
         onClick={(e) => handleSubmit(e)}
       >
-        <IoMdSearch />
+        <p>
+          <IoMdSearch />
+        </p>
       </button>
     </form>
   );

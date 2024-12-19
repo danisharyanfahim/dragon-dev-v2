@@ -1,0 +1,173 @@
+@property --gradient-angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
+@keyframes rotateGradient {
+  0% {
+    --gradient-angle: 0deg;
+  }
+  100% {
+    --gradient-angle: 360deg;
+  }
+}
+
+.blog-article-container {
+  height: 10%;
+  margin: 10rem clamp(1rem, 27.5vw - 11rem, 35rem);
+  .blog-article {
+    width: 100%;
+    background: linear-gradient(
+      135deg,
+      var(--ui-background-color-2),
+      var(--ui-background-color-1)
+    );
+    box-shadow: 0px 0px 3px 0px rgba(0 0 0 / 0.5);
+    border: 4px solid var(--border-color-1);
+    z-index: 3;
+    border-radius: var(--border-radius-outer);
+    padding: clamp(0.813rem, 6vw - 0.75rem, 8rem);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+    .image-container {
+      width: 100%;
+      height: 50dvh;
+      margin-bottom: 1rem;
+      .hero-image {
+        object-fit: cover;
+        height: 100%;
+        width: 100%;
+        border-radius: var(--border-radius-inner);
+        box-shadow: 0px 0px 6px 0px var(--border-color-1);
+      }
+    }
+    article {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      .article-head {
+        display: inherit;
+        justify-content: inherit;
+        align-items: inherit;
+        flex-direction: inherit;
+        padding-top: clamp(1rem, 5vw - 0.75rem, 3rem);
+
+        > * {
+          padding-bottom: 0.5rem;
+        }
+
+        > *:not(:first-child) {
+          text-shadow: 0px 0px 6px var(--border-color-1);
+        }
+
+        .title {
+          color: var(--text-color-title);
+          display: table-cell;
+          vertical-align: middle;
+          text-align: center;
+          padding-bottom: 0.5rem;
+        }
+        .author-info {
+          background: linear-gradient(
+            170deg,
+            var(--ui-primary-accent-color-1),
+            var(--ui-primary-accent-color-2)
+          );
+          background-clip: text;
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          display: table-cell;
+          vertical-align: middle;
+          text-align: center;
+        }
+        .dates-container {
+          display: flex;
+          justify-content: center;
+          flex-direction: column-reverse;
+          align-items: center;
+        }
+        .category-container {
+          width: 100%;
+          display: flex;
+          justify-content: center;
+          flex-wrap: wrap;
+          gap: 0.5rem;
+          margin: 1.5rem 0rem 2rem;
+
+          .tag {
+            &.relevance-1 {
+              background: rgb(0, 68, 255);
+            }
+            &.relevance-2 {
+              background: rgb(98, 0, 255);
+            }
+            &.relevance-3 {
+              background: rgb(175, 4, 175);
+            }
+            &.relevance-4 {
+              background: rgb(255, 0, 140);
+            }
+            &.relevance-5 {
+              background: rgb(255, 0, 0);
+            }
+            padding: 0.125rem 0.75rem;
+            border-radius: 50px;
+            box-shadow: 0px 0px 6px 0px var(--border-color-1);
+            cursor: pointer;
+
+            small {
+              display: table-cell;
+              vertical-align: middle;
+              color: white;
+            }
+          }
+        }
+      }
+      .article-body {
+        width: 100%;
+        border-top: 1px solid var(--text-color-p);
+        padding-top: 2rem;
+        p {
+          padding: 1rem 0rem;
+          text-align: justify;
+          line-height: 133%;
+        }
+
+        .code-container {
+          width: 100%;
+          border-radius: 0.75rem;
+          background: linear-gradient(
+            135deg,
+            rgba(44, 44, 71),
+            rgba(34, 34, 61)
+          );
+          overflow: hidden;
+          margin: 1rem 0rem;
+          font-size: clamp(0.813rem, 1vw + 0.15rem, 1.125rem);
+          border: 1px solid rgba(71, 67, 80, 0.445);
+          box-shadow: 0px 0px 6px 0px var(--border-color-1);
+
+          .top-bar {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            padding: 0.5rem 1rem;
+            p,
+            button {
+              color: var(--moon-color);
+              font-size: var(--font-size-paragraph);
+              display: flex;
+              align-items: center;
+              gap: 0.25rem;
+              padding: 0rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}

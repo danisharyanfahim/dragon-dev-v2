@@ -1,34 +1,10 @@
 @use "./article-card.scss";
-
-@font-face {
-  font-family: paragraph;
-  src: url("../../public/static/fonts/IBMPlexSans-Light.ttf") format("truetype");
-}
-
-@font-face {
-  font-family: subtitle;
-  src: url("../../public/static/fonts/IBMPlexSans-SemiBold.ttf")
-    format("truetype");
-}
-
-:root {
-  --background: #ffffff;
-  --text-color: #161e3d;
-  --text-color-p: rgb(62, 68, 92);
-}
-
-// @media (prefers-color-scheme: dark) {
-//   :root {
-//     --background: #0a0a0a;
-//     --text-color: #ededed;
-//   }
-// }
-
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-}
+@use "./article.scss";
+@use "./navbar.scss";
+@use "./search-bar.scss";
+@use "./footer.scss";
+@import url("./_fonts.css");
+@import url("./_variables.css");
 
 * {
   position: relative;
@@ -40,7 +16,11 @@
 html,
 body {
   color: var(--text-color);
-  background: linear-gradient(90deg, rgb(13, 8, 100), rgb(97, 18, 104));
+  background: linear-gradient(
+    90deg,
+    var(--background-color-1),
+    var(--background-color-2)
+  );
   background-attachment: fixed;
   width: 100%;
   min-height: 100dvh;
@@ -85,14 +65,44 @@ input {
 
 small {
   font-family: paragraph, sans-serif;
+  font-size: var(--font-size-small);
 }
 
 p {
   font-family: paragraph, sans-serif;
   color: var(--text-color-p);
+  font-size: var(--font-size-paragraph);
+}
+
+h1 {
+  font-family: title, sans-serif;
+  font-size: clamp(2.25rem, 3vw + 1rem, 4.5rem);
+}
+
+h2 {
+  font-family: subtitle, sans-serif;
+  font-size: clamp(1.875rem, 1vw + 1.5rem, 3rem);
+}
+
+h3 {
+  font-family: subtitle, sans-serif;
 }
 
 h4 {
   font-family: subtitle, sans-serif;
   font-size: clamp(1.25rem, 1vw + 1rem, 2.25rem);
+}
+
+button {
+  cursor: pointer;
+  small,
+  p {
+    color: var(--light-text-color);
+  }
+}
+
+main {
+  margin-top: 5rem;
+  width: 100%;
+  min-height: 100dvh;
 }

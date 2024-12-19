@@ -1,3 +1,6 @@
+import Footer from "./components/footer";
+import Navbar from "./components/navbar/navbar";
+import { ThemeProvider } from "./context/theme-provider";
 import "./styles/globals.scss";
 
 export default function RootLayout({
@@ -18,7 +21,18 @@ export default function RootLayout({
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Dragon Dev</title>
       </head>
-      <body>{children}</body>
+      <body>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <Navbar />
+          <main>{children}</main>
+          <Footer />
+        </ThemeProvider>
+      </body>
     </html>
   );
 }

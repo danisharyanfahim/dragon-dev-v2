@@ -67,9 +67,7 @@ CLI Commands:
 -sass 
 -next-themes (Theme selector for nextJS)
 -react-icons (icons)
--react-syntax-highlighter (code highlighter based on prismJS for react)
---save-dev -uid-generator (uuid generator for keys)
-
+-react-syntax-highlighter --save-dev (code highlighter based on prismJS for react)
 
 
 6) Replace layout.tsx file in the app directory with the following code:
