@@ -121,8 +121,7 @@ const InfiniteScroll = ({
             return <ArticleCard {...article} key={index} />;
           })}
         </div>
-
-        {totalArticles > 0 ? (
+        {totalArticles > 0 && hasMore.current && (
           <div
             ref={loaderRef}
             className="loading-container"
@@ -134,8 +133,9 @@ const InfiniteScroll = ({
                 <SkeletonArticleCard key={index} />
               ))}
           </div>
-        ) : (
-          !isPending && <h4 className="no-results-text">No Results</h4>
+        )}
+        {!isPending && totalArticles === 0 && (
+          <h4 className="no-results-text">No Results</h4>
         )}
       </div>
     </>

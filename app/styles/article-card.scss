@@ -11,6 +11,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-bottom: 5rem;
+  min-height: 50dvh;
 
   .no-results-text {
     color: var(--light-text-color);
@@ -162,10 +164,6 @@
   min-height: 480px;
   border-radius: 1rem;
   border: 2px solid var(--border-color-1);
-}
-
-.loading-container {
-  margin-bottom: 5rem;
 }
 
 .skeleton-card {

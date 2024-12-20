@@ -1,4 +1,4 @@
-import { useState, useEffect, useMemo, RefObject } from "react";
+import { useState, useEffect, RefObject } from "react";
 
 const useOnScreen = (
   ref: RefObject<HTMLElement | null>,
