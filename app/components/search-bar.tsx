@@ -1,7 +1,8 @@
 "use client";
-import React, { useState } from "react";
+import React, { Suspense, useState } from "react";
 import { IoMdSearch } from "react-icons/io";
 import { useRouter, redirect, usePathname } from "next/navigation";
+import Loader from "./loader";
 
 const SearchBar = () => {
   const router = useRouter();
@@ -33,32 +34,34 @@ const SearchBar = () => {
   };
 
   return (
-    <form className="search-bar-container">
-      <input
-        className="search-bar"
-        type="search"
-        value={search}
-        name="search"
-        placeholder="Search..."
-        onChange={(e) => setSearch(e.target.value)}
-        size={17}
-        autoComplete="off"
-        onKeyDown={(e) => {
-          if (e.key === "Enter") {
-            handleSubmit(e);
-          }
-        }}
-      />
-      <button
-        type="submit"
-        className="search-button"
-        onClick={(e) => handleSubmit(e)}
-      >
-        <p>
-          <IoMdSearch />
-        </p>
-      </button>
-    </form>
+    <Suspense fallback={<Loader />}>
+      <form className="search-bar-container">
+        <input
+          className="search-bar"
+          type="search"
+          value={search}
+          name="search"
+          placeholder="Search..."
+          onChange={(e) => setSearch(e.target.value)}
+          size={17}
+          autoComplete="off"
+          onKeyDown={(e) => {
+            if (e.key === "Enter") {
+              handleSubmit(e);
+            }
+          }}
+        />
+        <button
+          type="submit"
+          className="search-button"
+          onClick={(e) => handleSubmit(e)}
+        >
+          <p>
+            <IoMdSearch />
+          </p>
+        </button>
+      </form>
+    </Suspense>
   );
 };
 
