@@ -34,7 +34,7 @@ const NavMenu = () => {
                 } else {
                   return (
                     <Link
-                      href={`/#${section}`}
+                      href={`/#${section.toLocaleLowerCase()}`}
                       key={index}
                       className="nav-button"
                       onClick={() => setShowing(false)}

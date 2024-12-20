@@ -40,6 +40,18 @@ export default {
               validation: (rule) => rule.min(1).max(5),
               components: {input: RatingInput},
             },
+            {
+              name: 'format',
+              title: 'Format Text',
+              type: 'string',
+              initialValue: 'camelCase',
+              options: {
+                list: [
+                  {title: 'Capitalize', value: 'capitalize'},
+                  {title: 'Camel Case', value: 'camelCase'},
+                ],
+              },
+            },
           ],
         },
       ],

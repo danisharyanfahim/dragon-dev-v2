@@ -1,23 +1,57 @@
 "use server";
 
+import { SearchParamProps } from "../interfaces/blog";
 import { sanityFetch } from "../lib/client";
 
-export const getNumberOfArticles = async (searchParams: { title?: string }) => {
-  const { title } = searchParams || {};
-  const query = `*[_type == 'article' && title match $title]`;
+export const getNumberOfArticles = async (searchParams?: SearchParamProps) => {
+  const { title, category, writtenAt } = searchParams || {};
+  let query;
+  let articleData;
+
+  if (searchParams) {
+    let params;
+    if (category) {
+      query = `*[_type == 'article' && $category in categories[].categoryName]{}`;
+      params = { category: `${category.toLowerCase()}` };
+    } else if (writtenAt) {
+      query = `*[_type == 'article' &&  _createdAt match $writtenAt]{}`;
+      params = { writtenAt: `*${writtenAt}*` };
+    } else {
+      query = `*[_type == 'article' && title match $title]{}`;
+      params = { title: `*${title}*` };
+    }
+    articleData = await sanityFetch({
+      query: query,
+      params: params, // Will match any title which contains the search term
+      revalidate: 30,
+    });
+  } else {
+    query = `*[_type == 'article']{}`;
+    articleData = await sanityFetch({
+      query: query,
+      revalidate: 30,
+    });
+  }
+  return articleData.length;
+};
+
+export const getAllArticles = async (page: number, articlesPerPage: number) => {
+  const firstArticle = (page - 1) * articlesPerPage;
+  const lastArticle = page * articlesPerPage;
+  const query = `*[_type == 'article'][${firstArticle}...${lastArticle}] | order(_createdAt desc)
+  {title, 'dateCreated' : _createdAt, titleImage, 'currentSlug': slug.current, categories[]{'text': categoryName, relevance, format}, overview}`;
   const articleData = await sanityFetch({
     query: query,
-    params: { title: `*${title}*` }, // Will match any title which contains the search term
     revalidate: 30,
   });
-  return articleData.length;
+  return articleData; //Get rid of last updated in the final version
 };
 
 export const getArticle = async (slug: string) => {
   const query = `
 *[_type == "article" && slug.current == "${slug}"]{
   "currentSlug": slug.current,
-  title, titleImage,'dateCreated' : _createdAt, 'lastUpdated': _updatedAt, categories[] | order(relevance asc) {'text': categoryName, relevance},
+  title, titleImage,'dateCreated' : _createdAt, 'lastUpdated': _updatedAt, categories[] | order(relevance asc) {'text': categoryName, relevance, format},
   content[]{
       _type == 'block' => {
         'type': 'text',
@@ -37,19 +71,31 @@ export const getArticle = async (slug: string) => {
 };
 
 export const getArticlesByPage = async (
-  searchParams: { title?: string },
+  searchParams: SearchParamProps,
   page: number,
   articlesPerPage: number
 ) => {
-  const { title } = searchParams || {};
+  const { title, category, writtenAt } = searchParams || {};
   const firstArticle = (page - 1) * articlesPerPage;
   const lastArticle = page * articlesPerPage;
-  const query = `*[_type == 'article' && title match $title][${firstArticle}...${lastArticle}]
-  {title, 'dateCreated' : _createdAt, titleImage, 'currentSlug': slug.current, categories[]{'text': categoryName, relevance}, overview}`;
+  const queryFields = `{title, 'dateCreated' : _createdAt, titleImage, 'currentSlug': slug.current, categories[]{'text': categoryName, relevance, format}, overview}`;
+  let params, queryFilter;
+
+  if (category) {
+    queryFilter = `*[_type == 'article' && $category in categories[].categoryName][${firstArticle}...${lastArticle}] | order(_createdAt desc)`;
+    params = { category: `${category.toLowerCase()}` };
+  } else if (writtenAt) {
+    queryFilter = `*[_type == 'article' &&  _createdAt match $writtenAt][${firstArticle}...${lastArticle}] | order(_createdAt desc)`;
+    params = { writtenAt: `*${writtenAt}*` };
+  } else {
+    queryFilter = `*[_type == 'article' && title match $title][${firstArticle}...${lastArticle}] | order(_createdAt desc)`;
+    params = { title: `*${title}*` };
+  }
+
   const articleData = await sanityFetch({
-    query: query,
-    params: { title: `*${title}*` }, // Will match any title which contains the search term
+    query: queryFilter + queryFields,
+    params: params, // Will match any title which contains the search term
     revalidate: 30,
   });
-  return articleData; //Get rid of last updated in the final version
+  return articleData;
 };

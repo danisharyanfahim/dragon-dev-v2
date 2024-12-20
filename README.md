@@ -42,15 +42,32 @@ Search Params change:
 Todolist:
 
 <!-- -Navbar with day and night toggle switch -->
+<!-- -Blog Article page -->
+<!-- -Loading page with nextJS -->
+<!-- -Searching for nothing on the articles page will just send you to the blog page, which by default will load all of the newest articles -->
+<!-- -Adding category searching option
+-Adding Date searching option -->
+<!-- -Get rid of scrollbar -->
+<!-- -Create section shapes -->
+<!-- -Get text fragment scroll to to work, and make the scrolling smooth -->
 
 -Main logo
--Footer
+-Change favicon
+-Proper Loading icon
+-Footer proper formatting
+-Background design
 
-<!-- -Blog Article page -->
+-Landing page:
+-Header (Slideshow)
+-About (A&B Cards in a flex container)
+-Blog (Carousel)
+-Work/Websites (A&B Cards in a slider)
+-Projects (Tab Menu)
+-Technologies (Ticker + Grid)
+-Contact (EmailLink or Form)
+-Footer (Different from the blog footer, same design but the container has a different style)
 
--Landing page
--Loading page
--Searching for nothing on the articles page will just send you to the blog page, which by default will load all of the newest articles
--Adding category searching options
+-Write some articles
+-Design my resume
+-Send my resume
 -Adding sorting button for page, which changes the orders of the articles
--Background page

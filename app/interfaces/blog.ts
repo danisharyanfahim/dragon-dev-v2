@@ -20,10 +20,17 @@ export interface ArticlePageProps {
 export interface Category {
   text: string;
   relevance: number;
+  format: "capitalize" | "camelCase";
 }
 
 export interface CodeContainerProps {
   fileName: string;
   language: string;
   code: string;
+}
+
+export interface SearchParamProps {
+  title?: string;
+  category?: string;
+  writtenAt?: string;
 }

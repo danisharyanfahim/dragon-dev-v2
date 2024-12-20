@@ -8,19 +8,20 @@ import React, {
   useTransition,
 } from "react";
 import {
+  getAllArticles,
   getArticlesByPage,
   getNumberOfArticles,
 } from "../utils/server-actions";
 import useOnScreen from "../hooks/useOnScreen";
 import ArticleCard from "./article-card";
-import { ArticleCardProps } from "../interfaces/blog";
+import { ArticleCardProps, SearchParamProps } from "../interfaces/blog";
 import SkeletonArticleCard from "./skeleton-article-card";
 
 const InfiniteScroll = ({
   searchParams,
   articlesPerPage = 6,
 }: {
-  searchParams: Promise<{ title?: string }>;
+  searchParams?: Promise<SearchParamProps>;
   articlesPerPage?: number;
 }) => {
   const [totalArticles, setTotalArticles] = useState<number>(0); //Start at -1, so that it doesn't show no results immediately after the component mounts
@@ -35,8 +36,12 @@ const InfiniteScroll = ({
   // Fetch the total number of articles, along with the first page of articles
   const fetchFirstArticles = async () => {
     const params = await searchParams;
-    const numberOfArticles = await getNumberOfArticles(params);
-
+    let numberOfArticles = 0;
+    if (params) {
+      numberOfArticles = await getNumberOfArticles(params);
+    } else {
+      numberOfArticles = await getNumberOfArticles();
+    }
     setTotalArticles(numberOfArticles);
     hasMore.current = true;
   };
@@ -44,11 +49,17 @@ const InfiniteScroll = ({
   // Load articles based on page number
   const loadArticles = async () => {
     const params = await searchParams;
-    const articleData = await getArticlesByPage(
-      params,
-      page.current,
-      articlesPerPage
-    );
+    let articleData;
+
+    if (params) {
+      articleData = await getArticlesByPage(
+        params,
+        page.current,
+        articlesPerPage
+      );
+    } else {
+      articleData = await getAllArticles(page.current, articlesPerPage);
+    }
 
     if (articles.length + articleData.length === totalArticles) {
       hasMore.current = false; // No more articles to load

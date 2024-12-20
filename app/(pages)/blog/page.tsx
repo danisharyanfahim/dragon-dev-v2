@@ -10,7 +10,7 @@ const BlogIndex = ({
   return (
     <div className="blog-page">
       <SearchBar />
-      <InfiniteScroll searchParams={searchParams} />
+      <InfiniteScroll />
     </div>
   );
 };

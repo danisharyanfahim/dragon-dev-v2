@@ -1,8 +1,10 @@
 "use client";
 import React, { MouseEventHandler } from "react";
 import { useRouter } from "next/navigation";
+import { Category } from "../interfaces/blog";
+import { formatCamelCase } from "../utils/utility-functions";
 
-const Tag = ({ relevance, text }: { relevance: number; text: string }) => {
+const Tag = ({ relevance, text, format }: Category) => {
   const router = useRouter();
 
   const handleClick: MouseEventHandler<HTMLButtonElement> = (e) => {
@@ -12,7 +14,9 @@ const Tag = ({ relevance, text }: { relevance: number; text: string }) => {
 
   return (
     <button className={`tag relevance-${relevance}`} onClick={handleClick}>
-      <small>{text}</small>
+      <small>
+        {format === "capitalize" ? text.toUpperCase() : formatCamelCase(text)}
+      </small>
     </button>
   );
 };

@@ -14,6 +14,7 @@
 
   .no-results-text {
     color: var(--light-text-color);
+    // animation: fadeIn 0.1s ease 250ms forwards;
   }
 
   .article-card-container,
@@ -51,7 +52,7 @@
           width: 100%;
           position: absolute;
           object-fit: cover;
-          border-radius: calc(1rem - 4px) calc(1rem - 4px) 4rem 0rem;
+          border-radius: calc(1rem - 6px) calc(1rem - 6px) 4rem 0rem;
           box-shadow: 0px 0px 10px 0px var(--shadow-color-1);
         }
       }

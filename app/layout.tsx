@@ -1,7 +1,9 @@
+import { Suspense } from "react";
 import Footer from "./components/footer";
 import Navbar from "./components/navbar/navbar";
 import { ThemeProvider } from "./context/theme-provider";
 import "./styles/globals.scss";
+import Loader from "./components/loader";
 
 export default function RootLayout({
   children,
@@ -29,8 +31,9 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <Navbar />
-          <main>{children}</main>
-          <Footer />
+          <Suspense fallback={<Loader />}>
+            <main>{children}</main>
+          </Suspense>
         </ThemeProvider>
       </body>
     </html>

@@ -35,3 +35,9 @@ export const formatTimeDifference = (dateString: string): string => {
     return `${years} year${years > 1 ? "s" : ""} ago`; // More than a year ago
   }
 };
+
+export const formatCamelCase = (text: string) => {
+  return text?.replace(/(^\w{1})|(\s+\w{1})/g, (letter) =>
+    letter.toUpperCase()
+  );
+}; //Makes first letter of each word upper-case using regex
