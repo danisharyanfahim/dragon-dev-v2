@@ -1,5 +1,6 @@
 import InfiniteScroll from "@/app/components/infinite-scroll";
 import SearchBar from "@/app/components/search-bar";
+import { SearchParamProps } from "@/app/interfaces/blog";
 import React from "react";
 
 const BlogIndex = ({
@@ -10,7 +11,7 @@ const BlogIndex = ({
   return (
     <div className="blog-page">
       <SearchBar />
-      <InfiniteScroll searchParams={searchParams} />
+      <InfiniteScroll searchParams={searchParams} articlesPerPage={6} />
     </div>
   );
 };
