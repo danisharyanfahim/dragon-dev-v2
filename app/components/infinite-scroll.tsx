@@ -21,7 +21,7 @@ const InfiniteScroll = ({
   searchParams,
   articlesPerPage = 6,
 }: {
-  searchParams?: Promise<SearchParamProps>;
+  searchParams?: Promise<SearchParamProps | undefined>;
   articlesPerPage?: number;
 }) => {
   const [totalArticles, setTotalArticles] = useState<number>(0); //Start at -1, so that it doesn't show no results immediately after the component mounts
@@ -37,7 +37,7 @@ const InfiniteScroll = ({
   const fetchFirstArticles = async () => {
     const params = await searchParams;
     let numberOfArticles = 0;
-    if (params) {
+    if (Object.keys(params).length !== 0) {
       numberOfArticles = await getNumberOfArticles(params);
     } else {
       numberOfArticles = await getNumberOfArticles();
@@ -51,7 +51,7 @@ const InfiniteScroll = ({
     const params = await searchParams;
     let articleData;
 
-    if (params) {
+    if (Object.keys(params).length !== 0) {
       articleData = await getArticlesByPage(
         params,
         page.current,
@@ -101,7 +101,7 @@ const InfiniteScroll = ({
   renderCount.current++;
   return (
     <>
-      {/* <div
+      <div
         style={{
           position: "fixed",
           margin: "1rem",
@@ -114,7 +114,7 @@ const InfiniteScroll = ({
         <div>page: {page.current}</div>
         <div>Render Count: {renderCount.current}</div>
         <div>Total Articles: {totalArticles}</div>
-      </div> */}
+      </div>
       <div className="infinite-scroll-container">
         <div className="article-card-container">
           {articles.map((article: ArticleCardProps, index) => {

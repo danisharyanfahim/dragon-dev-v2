@@ -6,7 +6,7 @@ import React from "react";
 const BlogIndex = ({
   searchParams,
 }: {
-  searchParams: Promise<SearchParamProps>;
+  searchParams: Promise<SearchParamProps | undefined>;
 }) => {
   return (
     <div className="blog-page">
