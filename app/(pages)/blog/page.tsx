@@ -5,12 +5,12 @@ import React from "react";
 const BlogIndex = ({
   searchParams,
 }: {
-  searchParams: Promise<{ title?: string }>;
+  searchParams: Promise<SearchParamProps>;
 }) => {
   return (
     <div className="blog-page">
       <SearchBar />
-      <InfiniteScroll />
+      <InfiniteScroll searchParams={searchParams} />
     </div>
   );
 };
