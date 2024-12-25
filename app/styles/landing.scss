@@ -107,15 +107,21 @@
     container-type: inline-size;
 
     &#tech-solid .badge-container {
-      color: var(--text-color-p);
+      display: flex;
+      align-items: flex-end;
+      justify-content: flex-start;
+      color: var(--text-color-p-3);
       font-size: 11cqw;
     }
 
     &#tech-familiar .badge-container {
-      color: var(--text-color-p);
+      display: flex;
+      align-items: flex-end;
+      justify-content: flex-start;
+      color: var(--text-color-p-3);
       font-size: 14cqw;
     }
-    .badge-container {
+    .front .badge-container {
       position: absolute;
       top: 0rem;
       left: 0rem;
@@ -123,12 +129,12 @@
       filter: drop-shadow(0px 0px 10px var(--text-shadow-color-1));
 
       &.solid {
-        color: var(--text-color-p);
+        color: var(--text-color-p-3);
         font-size: 11cqw;
       }
 
       &.familiar {
-        color: var(--text-color-p);
+        color: var(--text-color-p-3);
         font-size: 14cqw;
       }
 
@@ -238,7 +244,7 @@
       align-items: center;
       filter: drop-shadow(0px 0px 10px var(--text-shadow-color-1));
 
-      .link-button-url .link-button {
+      .link-button-url .link-button-button {
         padding: min(0.5rem, 1.5vw) min(1rem, 3vw);
         background: linear-gradient(
           135deg,

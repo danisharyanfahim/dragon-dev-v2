@@ -29,6 +29,7 @@
   --text-color-title: #202849;
   --text-color-p: rgb(62, 68, 92);
   --text-color-p-2: rgb(101, 108, 139);
+  --text-color-p-3: rgb(171, 178, 204);
   --background-color-1: rgb(13, 8, 100);
   --background-color-2: rgb(117, 0, 0);
   --border-color-1: rgb(156, 162, 199);
@@ -50,9 +51,10 @@
 }
 
 .dark {
+  --text-color-title: rgb(171, 176, 204);
   --text-color-p: #7b7f96;
   --text-color-p-2: rgb(95, 100, 126);
-  --text-color-title: rgb(171, 176, 204);
+  --text-color-p-3: rgb(49, 56, 85);
   --ui-background-color-1: #0a0e22;
   --ui-background-color-2: #08081a;
   --ui-background-color-3: #f0f0ff;

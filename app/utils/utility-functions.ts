@@ -62,3 +62,20 @@ export const transformTechData = <T extends TechProps>(
     };
   }) as unknown as T[];
 };
+
+export const findClass = (
+  target: HTMLElement | null,
+  className: string
+): HTMLElement | null => {
+  let object;
+  if (target !== null) {
+    if (target.className.includes(className)) {
+      object = target;
+    } else {
+      object = findClass(target.parentElement, className);
+    }
+  } else {
+    return null;
+  }
+  return object;
+};
