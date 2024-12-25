@@ -57,11 +57,6 @@ a {
   text-decoration: none;
 }
 
-button {
-  background-color: transparent;
-  border: 0px solid transparent;
-}
-
 figure {
   margin-block-start: 0em;
   margin-block-end: 0em;
@@ -93,25 +88,68 @@ h1 {
   font-size: clamp(2.25rem, 3vw + 1rem, 4.5rem);
 }
 
-h2 {
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: subtitle, sans-serif;
+
+  &.no-bold {
+    font-family: paragraph, sans-serif;
+  }
+}
+
+h2 {
   font-size: clamp(1.875rem, 1vw + 1.5rem, 3rem);
 }
 
-h3 {
-  font-family: subtitle, sans-serif;
-}
-
 h4 {
-  font-family: subtitle, sans-serif;
   font-size: clamp(1.25rem, 1vw + 1rem, 2.25rem);
 }
 
+h5 {
+  font-size: clamp(1.1rem, 0.786rem + 0.759cqw, 2rem);
+}
+
+code {
+  color: var(--text-color-p);
+  background-color: var(--border-color-1);
+  border-radius: 0.25rem;
+  padding: 0.1rem 0.2rem;
+}
+
+a.external-link p {
+  color: var(--ui-primary-accent-color-1);
+  text-decoration: underline;
+}
+
+mark {
+  background-color: var(--highlight-color);
+  color: var(--text-color-p);
+}
+
+blockquote {
+  font-family: paragraph, sans-serif;
+  border-left: 0.25rem solid var(--highlight-color);
+  padding-left: 2rem;
+  font-size: clamp(1.25rem, 1vw + 1rem, 2.25rem);
+  text-align: justify;
+  color: var(--text-color-title);
+}
+
 button {
+  background-color: transparent;
+  border: 0px solid transparent;
   cursor: pointer;
   small,
   p {
     color: var(--light-text-color);
+  }
+
+  &:hover {
+    transform: scale(108%);
+    transition: all 0.15s;
   }
 }
 
@@ -134,5 +172,30 @@ main {
     color: var(--light-text-color);
     animation: spinClockwise 1s linear infinite;
     filter: drop-shadow(0px 0px 10px rgba(47, 0, 255, 0.678));
+  }
+}
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  li {
+    display: flex; // Flexbox to align items horizontally
+    align-items: flex-start; // Align bullet point with the top of multiline text
+  }
+
+  li::before {
+    content: "•"; // Bullet point
+    font-size: 10pt; // Adjust size as needed
+    margin-right: 0.5rem; // Space between bullet and list item content
+    flex-shrink: 0;
+    align-self: flex-start;
+    display: inline-block; // Keep the bullet inline with the text
+    vertical-align: middle;
+  }
+
+  li > * {
+    display: inline-block; // Make sure children also align properly inline
+    vertical-align: middle; // Keeps children aligned with the text and bullet
   }
 }

@@ -1,3 +1,5 @@
+import { TechProps } from "../interfaces/landing";
+
 export const formatDate = (dateString: string): string => {
   const date = new Date(dateString);
   const month = (date.getMonth() + 1).toString().padStart(2, "0");
@@ -41,3 +43,22 @@ export const formatCamelCase = (text: string) => {
     letter.toUpperCase()
   );
 }; //Makes first letter of each word upper-case using regex
+
+export const transformTechData = <T extends TechProps>(
+  techData: TechProps[]
+): T[] => {
+  return techData.map((tech, index) => {
+    const { title, description, category, url, features, understanding } = tech;
+    return {
+      category: category,
+      title: title,
+      description: description,
+      features: features,
+      understanding: understanding,
+      url: {
+        current: url,
+        _type: "slug",
+      },
+    };
+  }) as unknown as T[];
+};

@@ -1,3 +1,4 @@
+import {HighlightDecorator, HighlightIcon} from '../components/highlight-decorator'
 import RatingInput from '../components/rating-input'
 
 // Split this into multiple schema files
@@ -71,7 +72,24 @@ export default {
       type: 'array',
       title: 'Content',
       of: [
-        {type: 'block'},
+        {
+          type: 'block',
+          marks: {
+            decorators: [
+              {title: 'Strong', value: 'strong'},
+              {title: 'Emphasis', value: 'em'},
+              {title: 'Code', value: 'code'},
+              {title: 'Underline', value: 'underline'},
+              {title: 'Strike', value: 'strike-through'},
+              {
+                title: 'Highlight',
+                value: 'highlight',
+                icon: HighlightIcon,
+                component: HighlightDecorator,
+              },
+            ],
+          },
+        },
         {
           type: 'image',
         },

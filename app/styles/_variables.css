@@ -10,6 +10,8 @@
   --ui-background-color-2: #e4e4f7;
   --ui-background-color-3: #232335;
   --ui-background-color-4: #0c0c16;
+  --ui-background-color-transparent-1: #f0f0ff6e;
+  --ui-background-color-transparent-2: #e4e4f7c2;
   --nav-menu-icon-color: rgb(14, 32, 194);
   --ui-primary-accent-color-1: rgb(6, 24, 184);
   --ui-primary-accent-color-2: rgb(16, 37, 224);
@@ -26,6 +28,7 @@
   --theme-toggle-color-7: rgb(204, 0, 27);
   --text-color-title: #202849;
   --text-color-p: rgb(62, 68, 92);
+  --text-color-p-2: rgb(101, 108, 139);
   --background-color-1: rgb(13, 8, 100);
   --background-color-2: rgb(117, 0, 0);
   --border-color-1: rgb(156, 162, 199);
@@ -34,6 +37,9 @@
   --text-shadow-color-1: rgba(8, 20, 129, 0.26);
   --text-shadow-color-2: rgba(4, 17, 138, 0.144);
   --text-shadow-color-3: rgba(19, 19, 185, 0.24);
+  --highlight-color: rgba(0, 132, 255, 0.767);
+  --red: rgba(200, 0, 0);
+  --blue: rgba(0, 50, 200);
 
   /* dimensions */
   --border-radius-outer: 1rem;
@@ -45,13 +51,19 @@
 
 .dark {
   --text-color-p: #7b7f96;
+  --text-color-p-2: rgb(95, 100, 126);
   --text-color-title: rgb(171, 176, 204);
   --ui-background-color-1: #0a0e22;
   --ui-background-color-2: #08081a;
   --ui-background-color-3: #f0f0ff;
   --ui-background-color-4: rgb(219, 223, 255);
+  --ui-background-color-transparent-1: #0a0e2260;
+  --ui-background-color-transparent-2: #08081ac7;
   --border-color-1: rgb(21, 23, 46);
-  --border-color-2: rgb(29, 30, 65);
+  --border-color-2: rgb(35, 35, 66);
   --border-color-3: rgb(3, 4, 22);
   --nav-menu-icon-color: rgb(219, 223, 255);
+  --highlight-color: rgba(133, 9, 9, 0.767);
+  --red: rgb(211, 68, 68);
+  --blue: rgb(87, 113, 192);
 }

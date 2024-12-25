@@ -1,10 +1,75 @@
 import CodeContainer from "@/app/components/code-container";
 import Tag from "@/app/components/tag";
-import { ArticlePageProps } from "@/app/interfaces/blog";
+import {
+  ArticlePageProps,
+  CodeContainerProps,
+  Marks,
+  TextBlock,
+} from "@/app/interfaces/blog";
 import { urlFor } from "@/app/lib/client";
 import { getArticle } from "@/app/utils/server-actions";
 import { formatDate } from "@/app/utils/utility-functions";
 import React from "react";
+
+const applyMarks = (text: string, marks: Marks[]) => {
+  let formattedText: string | React.ReactNode = text;
+
+  // Apply all the marks the text has to it
+  if (marks) {
+    marks.forEach((mark) => {
+      if (mark === "strong") {
+        formattedText = <strong>{formattedText}</strong>;
+      } else if (mark === "em") {
+        formattedText = <em>{formattedText}</em>;
+      } else if (mark === "underline") {
+        formattedText = <u>{formattedText}</u>;
+      } else if (mark === "strike-through") {
+        formattedText = <del>{formattedText}</del>;
+      } else if (mark === "code") {
+        formattedText = <code>{formattedText}</code>;
+      } else if (mark === "highlight") {
+        formattedText = <mark>{formattedText}</mark>;
+      }
+    });
+  }
+  return formattedText;
+};
+
+const formatText = (textInfo: TextBlock, index: number) => {
+  const { text, style, marks, listItem, link } = textInfo;
+  let formattedText: React.ReactNode;
+
+  if (style === "normal") {
+    formattedText = <p key={index}>{applyMarks(text, marks)}</p>;
+  } else {
+    const Tag = style as keyof JSX.IntrinsicElements; // Dynamically sets the style of the text based on the tag name
+    if (style === "blockquote") {
+      formattedText = <Tag key={index}>"{applyMarks(text, marks)}"</Tag>; //Applies quotes to block qoute tag
+    } else {
+      formattedText = <Tag key={index}>{applyMarks(text, marks)}</Tag>;
+    }
+  }
+
+  if (link) {
+    return (
+      <a href={link} className="external-link" target="_blank">
+        {formattedText}
+      </a>
+    );
+  } else {
+    return formattedText;
+  }
+};
+
+const generateContent = (content: (TextBlock | CodeContainerProps)[]) => {
+  return content.map((item: TextBlock | CodeContainerProps, index: number) => {
+    if (item.type === "text") {
+      return formatText(item, index);
+    } else if (item.type === "code") {
+      return <CodeContainer key={index} {...item}></CodeContainer>;
+    }
+  });
+};
 
 const BlogArticle = async ({ params }: { params: { slug: string } }) => {
   const data: ArticlePageProps = await getArticle(params.slug);
@@ -31,20 +96,12 @@ const BlogArticle = async ({ params }: { params: { slug: string } }) => {
               </p>
             </div>
             <div className="category-container">
-              {data?.categories.map((category, index) => {
+              {categories.map((category, index) => {
                 return <Tag {...category} key={index} />;
               })}
             </div>
           </section>
-          <section className="article-body">
-            {content.map((item, index: number) => {
-              if (item.type === "text") {
-                return <p key={index}>{item.text}</p>;
-              } else if (item.type === "code") {
-                return <CodeContainer key={index} {...item}></CodeContainer>;
-              }
-            })}
-          </section>
+          <section className="article-body">{generateContent(content)}</section>
         </article>
       </main>
     </div>

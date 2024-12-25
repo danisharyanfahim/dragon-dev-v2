@@ -1,26 +1,24 @@
 import React from "react";
+import Header from "./_components/header";
+import About from "./_components/about";
+import Technologies from "./_components/technologies";
+import Contact from "./_components/contact";
+import Projects from "./_components/projects";
+import Work from "./_components/work";
+import Blog from "./_components/blog";
+import Footer from "./_components/footer";
 
 const Landing = () => {
   return (
     <div className="landing-page">
-      <header id="home"></header>
-      <section className="about" id="about">
-        About
-      </section>
-      <section className="technologies" id="technologies">
-        Technologies
-      </section>
-      <section className="blog">Blog</section>
-      <section className="work" id="work">
-        Work
-      </section>
-      <section className="projects" id="projects">
-        Projects
-      </section>
-      <section className="contact" id="contact">
-        Contact
-      </section>
-      <footer></footer>
+      <Header />
+      <About />
+      <Technologies />
+      <Blog />
+      <Work />
+      <Projects />
+      <Contact />
+      <Footer />
     </div>
   );
 };

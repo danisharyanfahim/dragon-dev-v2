@@ -1,0 +1,362 @@
+[
+  {
+    "title": "Next.js",
+    "description": "Next.js is a powerful React framework that enables server-side rendering (SSR), static site generation (SSG), and optimized performance for React applications. It supports both the Page and App Routers, as well as other advanced features like dynamic and static rendering, caching, and revalidation.",
+    "features": [
+      "Server-side Rendering (SSR) and Client-Side Rendering (CSR) for SEO optimization and fast load times.",
+      "Page and App Routers for flexible routing in your applications.",
+      "Dynamic and Static Rendering, Caching, Revalidation, RSC, RCC, and Suspense for loading states."
+    ],
+    "category": "JS Front End Framework",
+    "url": "https://nextjs.org",
+    "understanding": "solid"
+  },
+  {
+    "title": "React",
+    "description": "React is a JavaScript library for building user interfaces, allowing developers to create dynamic, high-performance applications using reusable UI components.",
+    "features": [
+      "Components to create modular UI elements.",
+      "Props to pass data to components.",
+      "Hooks for managing state and side effects in functional components."
+    ],
+    "category": "JS Front End Library",
+    "url": "https://reactjs.org",
+    "understanding": "solid"
+  },
+  {
+    "title": "Redux + Redux Toolkit",
+    "description": "Redux is a state management library that helps manage the state of an application, often paired with React. Redux Toolkit simplifies Redux development with built-in tools for better developer experience.",
+    "features": [
+      "Centralized state management across the app.",
+      "Reducers and actions to update state.",
+      "DevTools integration for debugging."
+    ],
+    "category": "JS State Management Library",
+    "url": "https://redux.js.org",
+    "understanding": "solid"
+  },
+  {
+    "title": "SASS/SCSS",
+    "description": "Sass is a CSS preprocessor that extends CSS with features such as variables, nesting, and mixins to make stylesheets more efficient and organized.",
+    "features": [
+      "Variables for storing reusable values.",
+      "Nesting of styles for a more structured and hierarchical CSS.",
+      "Mixins to reuse chunks of styles across the project."
+    ],
+    "category": "CSS Preprocessor",
+    "url": "https://sass-lang.com",
+    "understanding": "solid"
+  },
+  {
+    "title": "Sanity.io and Sanity Studio",
+    "description": "Sanity.io is a headless CMS that provides a structured content store for developers to build custom websites and apps. Sanity Studio is a customizable editing environment for managing content.",
+    "features": [
+      "Real-time content updates.",
+      "Flexible schema definitions for content structure.",
+      "Customizable UI for managing content in Sanity Studio."
+    ],
+    "category": "Headless CMS",
+    "url": "https://www.sanity.io",
+    "understanding": "solid"
+  },
+  {
+    "title": "Plesk",
+    "description": "Plesk is a hosting control panel that simplifies server management, including website, database, and email management, with a user-friendly interface.",
+    "features": [
+      "Web hosting management on both Linux and Windows servers.",
+      "Built-in security tools like SSL certificates and firewalls.",
+      "Automated backup and restore functionality."
+    ],
+    "category": "Web Hosting Control Panel",
+    "url": "https://www.plesk.com",
+    "understanding": "solid"
+  },
+  {
+    "title": "REST API",
+    "description": "REST APIs use HTTP requests to fetch, create, update, or delete data. RESTful services are commonly used in web applications to enable communication between a client and a server.",
+    "features": [
+      "Stateless communication for scalability.",
+      "Use of HTTP methods like GET, POST, PUT, DELETE.",
+      "Resources (URLs) represent data for easy access."
+    ],
+    "category": "Web Service Architecture",
+    "url": "https://www.restapitutorial.com",
+    "understanding": "solid"
+  },
+  {
+    "title": "Tailwind CSS",
+    "description": "Tailwind CSS is a utility-first CSS framework that allows developers to quickly build custom designs using pre-defined utility classes for every aspect of the design.",
+    "features": [
+      "Utility-first classes for fast, custom design.",
+      "Mobile-first and responsive utilities.",
+      "Customizable with configuration files for better flexibility."
+    ],
+    "category": "CSS Framework",
+    "url": "https://tailwindcss.com",
+    "understanding": "solid"
+  },
+  {
+    "title": "Vercel",
+    "description": "Vercel is a cloud platform optimized for front-end frameworks like Next.js. It automates the deployment process for static sites and serverless functions, providing a seamless integration with GitHub.",
+    "features": [
+      "Optimized for Next.js deployment and serverless functions.",
+      "Continuous deployment via GitHub integration.",
+      "Edge caching for faster content delivery."
+    ],
+    "category": "Cloud Deployment Platform",
+    "url": "https://vercel.com",
+    "understanding": "solid"
+  },
+  {
+    "title": "Heroku",
+    "description": "Heroku is a cloud platform as a service (PaaS) that provides developers with a simple and scalable way to deploy and manage applications without managing the underlying infrastructure.",
+    "features": [
+      "Multi-language support including Node.js, Python, Ruby, etc.",
+      "Git-based deployment and integration.",
+      "Add-ons like databases, email, caching, and more."
+    ],
+    "category": "Cloud PaaS (Platform as a Service)",
+    "url": "https://www.heroku.com",
+    "understanding": "solid"
+  },
+  {
+    "title": "Ionos",
+    "description": "Ionos offers cloud hosting, domain registration, and email hosting services with a focus on security, scalability, and reliability.",
+    "features": [
+      "Scalable cloud hosting solutions.",
+      "Managed WordPress and CMS hosting.",
+      "Comprehensive security tools such as SSL and DDoS protection."
+    ],
+    "category": "Web Hosting Provider",
+    "url": "https://www.ionos.com",
+    "understanding": "solid"
+  },
+  {
+    "title": "Porkbun",
+    "description": "Porkbun is a domain registrar that offers affordable domain name registration, SSL certificates, and web hosting services with a user-friendly interface.",
+    "features": [
+      "Competitive pricing on domain registration.",
+      "Free WHOIS privacy protection.",
+      "Easy-to-use domain management interface."
+    ],
+    "category": "Domain Registrar",
+    "url": "https://porkbun.com",
+    "understanding": "solid"
+  },
+  {
+    "title": "Git and GitHub",
+    "description": "Git is a version control system, and GitHub is a platform for hosting Git repositories, collaborating on code, and managing versioned projects.",
+    "features": [
+      "Version tracking for software projects.",
+      "Git branches for parallel development.",
+      "Pull requests for code review and collaboration."
+    ],
+    "category": "Version Control / Collaboration Platform",
+    "url": "https://git-scm.com | https://github.com",
+    "understanding": "solid"
+  },
+  {
+    "title": "Express.js",
+    "description": "Express.js is a web framework for Node.js, offering minimal and flexible tools for building backend web applications and RESTful APIs.",
+    "features": [
+      "Middleware for request handling.",
+      "Simplified routing for building APIs.",
+      "Template engine support for dynamic content."
+    ],
+    "category": "JS Backend Framework",
+    "url": "https://expressjs.com",
+    "understanding": "solid"
+  },
+  {
+    "title": "Node.js",
+    "description": "Node.js is a JavaScript runtime that enables developers to build scalable and performant web applications on the server-side using JavaScript.",
+    "features": [
+      "Non-blocking, event-driven architecture.",
+      "Large ecosystem with npm for managing dependencies.",
+      "Full-stack JavaScript support."
+    ],
+    "category": "JavaScript Runtime (Backend)",
+    "url": "https://nodejs.org",
+    "understanding": "solid"
+  },
+  {
+    "title": "VS Code",
+    "description": "Visual Studio Code is an open-source code editor with support for debugging, Git version control, and an extensible plugin ecosystem, making it a popular choice among developers.",
+    "features": [
+      "Built-in Git integration.",
+      "Support for extensions to add features.",
+      "Code completion and IntelliSense."
+    ],
+    "category": "Code Editor",
+    "url": "https://code.visualstudio.com",
+    "understanding": "solid"
+  },
+  {
+    "title": "PrismJS",
+    "description": "PrismJS is a lightweight syntax highlighter used for enhancing code snippets in websites by providing attractive and readable syntax highlighting.",
+    "features": [
+      "Support for many programming languages.",
+      "Themes for customizing syntax highlighting.",
+      "Plugins for additional functionality like line numbers."
+    ],
+    "category": "Syntax Highlighter",
+    "url": "https://prismjs.com",
+    "understanding": "solid"
+  },
+  {
+    "title": "Prisma",
+    "description": "Prisma is an ORM for Node.js and TypeScript that simplifies database queries and migrations, providing a type-safe and intuitive API.",
+    "features": [
+      "Type-safe queries with autocomplete support.",
+      "Auto-generated migrations for database schema changes.",
+      "Integration with popular databases like PostgreSQL and MySQL."
+    ],
+    "category": "ORM (Database Management)",
+    "url": "https://www.prisma.io",
+    "understanding": "solid"
+  },
+  {
+    "title": "GraphQL",
+    "description": "GraphQL is a query language and runtime for APIs, allowing clients to request specific data from a server, minimizing data over-fetching and making APIs more flexible.",
+    "features": [
+      "Strongly typed schema for validation.",
+      "Allows for real-time data updates with subscriptions.",
+      "Clients can request only the data they need."
+    ],
+    "category": "API Query Language",
+    "url": "https://graphql.org",
+    "understanding": "solid"
+  },
+  {
+    "title": "MongoDB",
+    "description": "MongoDB is a NoSQL database that uses JSON-like documents to store data, making it flexible for unstructured or semi-structured data.",
+    "features": [
+      "Document-based storage model.",
+      "High scalability and performance.",
+      "Aggregation framework for data analysis."
+    ],
+    "category": "NoSQL Database",
+    "url": "https://www.mongodb.com",
+    "understanding": "solid"
+  },
+  {
+    "title": "Mongoose",
+    "description": "Mongoose is an ODM (Object Data Modeling) library for MongoDB and Node.js, providing a schema-based solution to model and interact with MongoDB data.",
+    "features": [
+      "Schema-based modeling for MongoDB data.",
+      "Built-in validation and middleware.",
+      "Simplifies data manipulation and querying."
+    ],
+    "category": "ODM (MongoDB)",
+    "url": "https://mongoosejs.com",
+    "understanding": "solid"
+  },
+  {
+    "title": "EmailJS",
+    "description": "EmailJS is a service that allows developers to send emails directly from the client-side, without needing a backend, using predefined email templates.",
+    "features": [
+      "Client-side email sending.",
+      "Templates for customizable email formats.",
+      "Integration with Gmail, Outlook, and other services."
+    ],
+    "category": "Email Service",
+    "url": "https://www.emailjs.com",
+    "understanding": "solid"
+  },
+  {
+    "title": "LeafletJS",
+    "description": "LeafletJS is a lightweight JavaScript library used for building interactive maps for web applications with a variety of mapping features.",
+    "features": [
+      "Mobile-first maps with support for touch gestures.",
+      "Integration with external tile providers (OpenStreetMap, Google Maps).",
+      "Extensible with plugins for custom map features."
+    ],
+    "category": "JS Mapping Library",
+    "url": "https://leafletjs.com",
+    "understanding": "solid"
+  },
+  {
+    "title": "Docker",
+    "description": "Docker is a platform for developing, shipping, and running applications in containers, providing a consistent environment across different stages of development.",
+    "features": [
+      "Containerization of applications",
+      "Portability across environments",
+      "Isolation of dependencies"
+    ],
+    "category": "Containerization Platform",
+    "url": "https://www.docker.com/",
+    "understanding": "familiar"
+  },
+  {
+    "title": "PostgreSQL",
+    "description": "PostgreSQL is an open-source, object-relational database management system that emphasizes extensibility and SQL compliance.",
+    "features": [
+      "ACID compliance",
+      "Support for JSON data types",
+      "Advanced indexing techniques"
+    ],
+    "category": "Database Management System",
+    "url": "https://www.postgresql.org/",
+    "understanding": "familiar"
+  },
+  {
+    "title": "Vitest",
+    "description": "Vitest is a fast, modern unit testing framework built for JavaScript and TypeScript, designed for high performance and a smooth developer experience.",
+    "features": [
+      "Native TypeScript support",
+      "Instant feedback during tests",
+      "Fast and optimized for modern JavaScript frameworks"
+    ],
+    "category": "Testing Framework",
+    "url": "https://vitest.dev/",
+    "understanding": "familiar"
+  },
+  {
+    "title": "React Native",
+    "description": "React Native is a framework for building native mobile applications using React, allowing developers to use JavaScript to create iOS and Android apps.",
+    "features": [
+      "Cross-platform development (iOS & Android)",
+      "Reusable components",
+      "Fast refresh for rapid development"
+    ],
+    "category": "Mobile Development Framework",
+    "url": "https://reactnative.dev/",
+    "understanding": "familiar"
+  },
+  {
+    "title": "Figma",
+    "description": "Figma is a cloud-based design tool that enables collaborative design for web and mobile applications, supporting real-time collaboration among teams.",
+    "features": [
+      "Real-time collaboration",
+      "Vector-based design tools",
+      "Prototyping and interactive components"
+    ],
+    "category": "Design Tool",
+    "url": "https://www.figma.com/",
+    "understanding": "familiar"
+  },
+  {
+    "title": "DaisyUI",
+    "description": "DaisyUI is a component library built on top of Tailwind CSS, offering pre-designed UI components that can be easily customized and integrated into web projects.",
+    "features": [
+      "Pre-styled components",
+      "Tailwind CSS integration",
+      "Customizable themes"
+    ],
+    "category": "UI Component Library",
+    "url": "https://daisyui.com/",
+    "understanding": "familiar"
+  },
+  {
+    "title": "NPM",
+    "description": "npm (Node Package Manager) is the default package manager for the JavaScript runtime environment Node.js. It allows developers to manage and share reusable code modules, making it easier to install, update, and manage dependencies in JavaScript projects.",
+    "features": [
+      "Package management for JavaScript and Node.js",
+      "Dependency management and version control",
+      "Access to a vast registry of open-source packages"
+    ],
+    "category": "Package Manager",
+    "url": "https://www.npmjs.com/",
+    "understanding": "solid"
+  }
+]

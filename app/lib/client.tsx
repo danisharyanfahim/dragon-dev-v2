@@ -5,6 +5,8 @@ export const client = createClient({
   apiVersion: "2023-05-03",
   dataset: "production",
   projectId: "ho2oc6x8",
+  token:
+    "skcmq8ry6gUvxxu5CPp6LKWWllzwj9YitKkkboB090jeS9YdktihxK2r8o6Aoj5nH3CIE6behaGzozcuo1ydi9QVcohykjTC4xDAnlOVsGthq73VhDZbJ3rXnkn1ywJucM0kJPzekkZRHijv3b2zH4QdSRdH5KmX1OWcOKWolAiFIgPw7iUr",
   useCdn: false,
 });
 
@@ -32,3 +34,20 @@ export const sanityFetch = async <QueryString extends string>({
     },
   });
 };
+
+export const createDoc = <T extends {}, U extends T>(
+  docType: string,
+  data: T[],
+  transform: (data: T[]) => U[]
+) => {
+  transform(data).forEach((doc, index) => {
+    client.createIfNotExists({
+      _type: docType,
+      _id: index + docType,
+      ...doc,
+    });
+  });
+};
+
+// const data = await getStaticFile("/app/data/tech.json");
+// createDoc<TechProps, TransformedTechProps>("tech", data, transformTechData);

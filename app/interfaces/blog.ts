@@ -4,26 +4,31 @@ export interface ArticleCardProps {
   overview: string;
   currentSlug: string;
   dateCreated: string;
-  categories: [Category];
+  categories: Category[];
+  id: string;
 }
 
 export interface ArticlePageProps {
   title: string;
-  titleImage: any;
+  titleImage: any; // Consider defining a more specific type for titleImage (e.g., string | Image)
   currentSlug: string;
   dateCreated: string;
   lastUpdated: string;
-  categories: [Category];
-  content: any;
+  categories: Category[];
+  content: (TextBlock | CodeContainerProps)[]; // Array of either TextBlock or CodeContainer
 }
 
-export interface Category {
+export interface TextBlock {
+  type: "text";
   text: string;
-  relevance: number;
-  format: "capitalize" | "camelCase";
+  style: "h1" | "h2" | "h3" | "h4" | "h5" | "h6" | "blockquote" | "normal";
+  listItem: "bullet" | "number" | null;
+  marks: Marks[];
+  link: string | null;
 }
 
 export interface CodeContainerProps {
+  type: "code";
   fileName: string;
   language: string;
   code: string;
@@ -34,3 +39,18 @@ export interface SearchParamProps {
   category?: string;
   writtenAt?: string;
 }
+
+export interface Category {
+  text: string;
+  relevance: number;
+  format: "capitalize" | "camelCase";
+}
+
+export type Marks =
+  | "underline"
+  | "strike-through"
+  | "em"
+  | "strong"
+  | "code"
+  | "highlight"
+  | null;

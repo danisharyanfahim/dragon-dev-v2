@@ -13,7 +13,7 @@ import {
   getNumberOfArticles,
 } from "../utils/server-actions";
 import useOnScreen from "../hooks/useOnScreen";
-import ArticleCard from "./article-card";
+import ArticleCard from "./cards/article-card";
 import { ArticleCardProps, SearchParamProps } from "../interfaces/blog";
 import SkeletonArticleCard from "./skeleton-article-card";
 
@@ -118,7 +118,8 @@ const InfiniteScroll = ({
       <div className="infinite-scroll-container">
         <div className="article-card-container">
           {articles.map((article: ArticleCardProps, index) => {
-            return <ArticleCard {...article} key={index} />;
+            const { id } = article;
+            return <ArticleCard {...article} key={id} />;
           })}
         </div>
         {totalArticles > 0 && hasMore.current && (
