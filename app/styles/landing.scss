@@ -28,7 +28,7 @@
       content: "";
       position: absolute;
       background: inherit;
-      top: -300px;
+      top: -299px;
       height: 300px;
       width: 100%;
     }
@@ -37,7 +37,7 @@
         content: "";
         position: absolute;
         background: inherit;
-        bottom: -300px;
+        bottom: -299px;
         height: 300px;
         width: 100%;
       }
@@ -47,8 +47,8 @@
   > :nth-child(odd) {
     background-color: rgb(57, 60, 73);
     z-index: 2;
-    box-shadow: 0px 3px 0px 1px var(--border-color-2),
-      0px -3px 0px 1px var(--border-color-3);
+    box-shadow: 0px -10px 60px 1px var(--border-color-3),
+      0px 5px 50px 1px var(--border-color-2);
   }
 
   > :nth-child(1) {
@@ -138,8 +138,40 @@
   }
 
   footer {
-    min-height: 800px;
+    padding-top: 3rem;
+    min-height: 500px;
   }
+}
+
+.split-card {
+  display: flex;
+  padding: 5rem clamp(1rem, -56rem + 63.333vw, 20rem);
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  container-type: inline-size;
+  container-name: card-container;
+  width: 100%;
+
+  > * {
+    container-type: inline-size;
+    flex: 1 1 320px;
+    min-width: 320px;
+    max-width: 800px;
+  }
+}
+
+.text-section h1,
+.text-container h2 {
+  background: linear-gradient(
+    -45deg,
+    var(--ui-primary-accent-color-1),
+    var(--ui-primary-accent-color-2)
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0px 0px 15px var(--text-shadow-color-1);
 }
 
 header {
@@ -148,22 +180,10 @@ header {
   align-items: center;
 
   .section-spacer {
-    padding: 5rem clamp(1rem, -56rem + 63.333vw, 20rem);
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    container-type: inline-size;
-    container-name: card-container;
-    height: 100%;
-
     .text-container {
-      container-type: inline-size;
-      flex: 1 1 320px;
-      min-width: 320px;
       display: flex;
       flex-direction: column;
       justify-content: center;
-      max-width: 800px;
 
       .text {
         text-wrap: balance;
@@ -171,10 +191,6 @@ header {
     }
 
     .logo-container {
-      flex: 1 1 320px;
-      min-width: 320px;
-      min-height: 320px;
-      max-width: 800px;
     }
   }
 }
@@ -183,5 +199,13 @@ header {
 @container card-container (max-width: 640px) {
   .text-container .text {
     text-align: center;
+  }
+}
+
+.about .section-spacer {
+  .header {
+    > * {
+      text-wrap: balance;
+    }
   }
 }

@@ -1,9 +1,9 @@
 import React from "react";
 import FooterContent from "./footer-content";
 
-const Footer = () => {
+const Footer = ({ id }: { id?: string }) => {
   return (
-    <div className="footer-container">
+    <div className="footer-container" id={id}>
       <footer>
         <FooterContent />
       </footer>

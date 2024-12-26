@@ -1,32 +1,29 @@
+import SplitCard from "@/app/components/cards/split-card";
 import React from "react";
 
 const About = () => {
   return (
     <section className="about" id="about">
       <div className="section-spacer">
-        <div className="section-description">
-          <h2 className="title">Why Choose Me?</h2>
-          <h3>
-            My philosophy is to build websites and web applications that not
-            only captivate users with their design but also deliver fast,
-            efficient, and optimized performance for the best user experience.
-          </h3>
-          <h5>
-            I'll work closely with you to ensure every detail is tailored to
-            your vision, helping you build the website or web app of your
-            dreams—exactly how you envision it.
-          </h5>
-        </div>
-        <div className="design-section">
-          <section>
-            <h3>Design</h3>
-            <h4>
-              Design is the cornerstone of every project I undertake. I ensure
-              that both the functionality and aesthetic aspects of the design
-              come together seamlessly to enhance the user experience.
+        <SplitCard id="about-header">
+          <section className="text-section">
+            <h1 className="title">Why Choose Me?</h1>
+            <h2 className="no-bold">
+              My philosophy is to build websites and web applications that not
+              only captivate users with their design but also deliver fast,
+              efficient, and optimized performance for the best user experience.
+            </h2>
+            <h4 className="no-bold">
+              I'll work closely with you to ensure every detail is tailored to
+              your vision, helping you build the website or web app of your
+              dreams—exactly how you envision it.
             </h4>
-
-            <ul>
+          </section>
+          <figure className="image-container"></figure>
+        </SplitCard>
+        <SplitCard id="design-section">
+          <div className="slideshow">
+            {/* <ul>
               <li className="section-card" id="functional-design">
                 <h5>Functional Design</h5>
                 <p>
@@ -101,20 +98,29 @@ const About = () => {
                   </li>
                 </ul>
               </li>
-            </ul>
+            </ul> */}
+          </div>
+          <section className="text-container">
+            <h2>Design</h2>
+            <h3 className="no-bold">
+              Design is the cornerstone of every project I undertake. I ensure
+              that both the functionality and aesthetic aspects of the design
+              come together seamlessly to enhance the user experience.
+            </h3>
           </section>
-        </div>
-        <div className="development-section">
-          <section>
-            <h3>Development</h3>
-            <h4>
+        </SplitCard>
+        <SplitCard id="development-section">
+          <section className="text-container">
+            <h2>Development</h2>
+            <h3 className="no-bold">
               Efficient development is key to building high-performance websites
               and applications. I focus on delivering cutting-edge
               functionality, performance, and maintainable code to ensure the
               success of your project.
-            </h4>
-
-            <ul>
+            </h3>
+          </section>
+          <div className="slideshow">
+            {/* <ul>
               <li className="section-card" id="functionality">
                 <h5>Functionality</h5>
                 <p>
@@ -259,17 +265,12 @@ const About = () => {
                   </li>
                 </ul>
               </li>
-            </ul>
-          </section>
-        </div>
-        <div className="soft-skills-section">
-          <h3>Soft Skills</h3>
-          <h4>
-            In addition to my technical expertise, I focus on cultivating
-            essential soft skills that ensure smooth collaboration and effective
-            project execution
-          </h4>
-          <ul>
+            </ul> */}
+          </div>
+        </SplitCard>
+        <SplitCard id="soft-skills-section">
+          <div className="slideshow">
+            {/* <ul>
             <li>
               <h5>Efficiency & Organization</h5>
               <p>
@@ -318,8 +319,17 @@ const About = () => {
                 with others to achieve shared goals.
               </p>
             </li>
-          </ul>
-        </div>
+          </ul> */}
+          </div>
+          <section className="text-container">
+            <h2>Soft Skills</h2>
+            <h3 className="no-bold">
+              In addition to my technical expertise, I focus on cultivating
+              essential soft skills that ensure smooth collaboration and
+              effective project execution
+            </h3>
+          </section>
+        </SplitCard>
       </div>
     </section>
   );

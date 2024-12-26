@@ -8,7 +8,7 @@ export default function BlogLayout({
   return (
     <>
       {children}
-      <Footer />
+      <Footer id="blog" />
     </>
   );
 }

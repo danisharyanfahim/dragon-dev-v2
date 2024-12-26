@@ -3,11 +3,13 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <footer>
+    <div className="footer-container">
       <div className="section-spacer">
-        <FooterContent />
+        <footer>
+          <FooterContent />
+        </footer>
       </div>
-    </footer>
+    </div>
   );
 };
 
