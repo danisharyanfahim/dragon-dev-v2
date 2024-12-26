@@ -4,6 +4,7 @@ import Window from "@/app/components/window";
 import { LangProps, TechCardProps } from "@/app/interfaces/landing";
 import { getLang, getTech } from "@/app/utils/server-actions";
 import React from "react";
+import { GrPersonalComputer } from "react-icons/gr";
 import { IoStar } from "react-icons/io5";
 import { PiStudentFill } from "react-icons/pi";
 
@@ -16,14 +17,19 @@ const Technologies = async () => {
   return (
     <section className="technologies" id="technologies">
       <div className="section-spacer">
-        <div className="tech-description">
-          <h2>Technologies</h2>
-          <h3 className="no-bold">
-            These are the various technologies I've worked with and use in my
-            web development projects. Below, you'll find a breakdown of the
-            tools and tech I am proficient with, as well as those I am familiar
-            with.
-          </h3>
+        <div className="tech-header">
+          <div className="tech-icon-container">
+            <GrPersonalComputer className="tech-icon" />
+          </div>
+          <div className="tech-description">
+            <h2>Technologies</h2>
+            <h3 className="no-bold">
+              These are the various technologies I've worked with and use in my
+              web development projects. Below, you'll find a breakdown of the
+              tools and tech I am proficient with, as well as those I am
+              familiar with.
+            </h3>
+          </div>
         </div>
         {/* <div className="ticker" id="programming-languages">
           Ticker
