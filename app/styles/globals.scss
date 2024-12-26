@@ -4,6 +4,8 @@
 @use "./search-bar.scss";
 @use "./footer.scss";
 @use "./landing.scss";
+@use "./technologies.scss";
+@use "./window.scss";
 @import url("./_fonts.css");
 @import url("./_variables.css");
 @import url("./_animations.css");
@@ -83,11 +85,6 @@ p {
   font-size: var(--font-size-paragraph);
 }
 
-h1 {
-  font-family: title, sans-serif;
-  font-size: clamp(2.25rem, 3vw + 1rem, 4.5rem);
-}
-
 h2,
 h3,
 h4,
@@ -100,8 +97,13 @@ h6 {
   }
 }
 
+h1 {
+  font-family: title, sans-serif;
+  font-size: clamp(2.5rem, 2.041rem + 1.633vw, 4rem);
+}
+
 h2 {
-  font-size: clamp(1.875rem, 1vw + 1.5rem, 3rem);
+  font-size: clamp(1.875rem, 1cqw + 1.5rem, 3rem);
 }
 
 h3 {
@@ -109,7 +111,7 @@ h3 {
 }
 
 h4 {
-  font-size: clamp(1.25rem, 1vw + 1rem, 2.25rem);
+  font-size: clamp(1.25rem, 1cqw + 1rem, 2.25rem);
 }
 
 h5 {

@@ -43,7 +43,7 @@
   --highlight-color: rgba(0, 132, 255, 0.767);
   --red: rgba(200, 0, 0);
   --blue: rgba(0, 50, 200);
-  --ui-background-glass-color: rgba(245, 242, 255, 0.171);
+  --ui-background-glass-color: rgba(245, 242, 255, 0.35);
   --glass-border-color-1: rgba(255, 255, 255, 0.1);
   --glass-border-color-2: rgba(0, 0, 0, 0.1);
 
@@ -73,5 +73,5 @@
   --highlight-color: rgba(133, 9, 9, 0.767);
   --red: rgb(211, 68, 68);
   --blue: rgb(87, 113, 192);
-  --ui-background-glass-color: rgba(20, 15, 40, 0.2);
+  --ui-background-glass-color: rgba(20, 15, 40, 0.4);
 }

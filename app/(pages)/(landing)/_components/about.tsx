@@ -4,12 +4,18 @@ const About = () => {
   return (
     <section className="about" id="about">
       <div className="section-spacer">
-        <h2>Why Choose Me?</h2>
         <div className="section-description">
-          My philosophy is to build websites and web applications that not only
-          captivate users with their design but also deliver fast, efficient,
-          and optimized performance for the best user experience. Here's why we
-          should collaborate.
+          <h2 className="title">Why Choose Me?</h2>
+          <h3>
+            My philosophy is to build websites and web applications that not
+            only captivate users with their design but also deliver fast,
+            efficient, and optimized performance for the best user experience.
+          </h3>
+          <h5>
+            I'll work closely with you to ensure every detail is tailored to
+            your vision, helping you build the website or web app of your
+            dreams—exactly how you envision it.
+          </h5>
         </div>
         <div className="design-section">
           <section>

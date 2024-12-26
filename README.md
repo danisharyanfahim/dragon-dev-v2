@@ -58,12 +58,14 @@ Todolist:
 -Background design
 
 -Landing page: (use a modal image for zooming in on images by giving them a modal class and blurring out the background, with a smooth transition)
--Header (Slideshow)
--About (Cards in a flex container)
+-Header (A and B card with tickers on top and bottom)
+-About (A and B Cards which are in a slide-show)
 -Blog (Carousel)
--Work/Websites (A&B Cards in a slider)
--Projects (Tab Menu)
--Technologies (Ticker + Grids + Accordion Menu) (This will take the longest time to make, so save this for last or after I come back from eating)
+-Work/Websites (Tab Menu)
+-Projects (A&B Cards in a slider)
+
+<!-- -Technologies (Grids + Window Menu) (This will take the longest time to make, so save this for last or after I come back from eating) -->
+
 -Contact (EmailLink or Form)
 -Footer (Different from the blog footer, same design but the container has a different style)
 
