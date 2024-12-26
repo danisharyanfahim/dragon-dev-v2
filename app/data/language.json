@@ -1,0 +1,123 @@
+[
+  {
+    "title": "HTML",
+    "usedFor": [
+      "Creating the structure of web pages",
+      "Marking up text content",
+      "Embedding media"
+    ],
+    "description": "HTML (HyperText Markup Language) is the standard language used for creating and structuring content on the web. It defines the structure of web pages using a series of elements or tags.",
+    "yearCreated": 1991,
+    "understanding": "solid"
+  },
+  {
+    "title": "CSS",
+    "usedFor": [
+      "Styling web pages",
+      "Designing layouts",
+      "Defining visual elements like colors and fonts"
+    ],
+    "description": "CSS (Cascading Style Sheets) is used to describe the presentation of web pages, including the layout, colors, and fonts. It enhances the appearance and style of HTML elements.",
+    "yearCreated": 1996,
+    "understanding": "solid"
+  },
+  {
+    "title": "JavaScript",
+    "usedFor": [
+      "Adding interactivity to websites",
+      "Client-side scripting",
+      "Manipulating the DOM"
+    ],
+    "description": "JavaScript is a high-level programming language used to create dynamic and interactive effects on web pages. It is widely used for web development and enables client-side scripting.",
+    "yearCreated": 1995,
+    "understanding": "solid"
+  },
+  {
+    "title": "ES6",
+    "usedFor": [
+      "Modernizing JavaScript syntax",
+      "Enhancing features like classes, modules, and promises",
+      "Improving code readability and maintainability"
+    ],
+    "description": "ECMAScript 6 (ES6) is the sixth edition of the ECMAScript standard, introducing new features to JavaScript, such as arrow functions, template literals, and destructuring assignments.",
+    "yearCreated": 2015,
+    "understanding": "solid"
+  },
+  {
+    "title": "Typescript",
+    "usedFor": [
+      "Adding static typing to JavaScript",
+      "Building large-scale applications",
+      "Enhancing code quality with type-checking"
+    ],
+    "description": "TypeScript is a superset of JavaScript that adds optional static typing and other features to enhance development efficiency, such as better tooling support and refactoring capabilities.",
+    "yearCreated": 2012,
+    "understanding": "solid"
+  },
+  {
+    "title": "Java",
+    "usedFor": [
+      "Building cross-platform applications",
+      "Enterprise software development",
+      "Creating mobile applications (via Android)"
+    ],
+    "description": "Java is a general-purpose, object-oriented programming language used for creating applications that run on various platforms. It is known for its portability, stability, and scalability.",
+    "yearCreated": 1995,
+    "understanding": "solid"
+  },
+  {
+    "title": "Python",
+    "usedFor": [
+      "Web development",
+      "Data analysis and machine learning",
+      "Scripting and automation"
+    ],
+    "description": "Python is a versatile and high-level programming language known for its simplicity and readability. It is used in various fields such as web development, data science, automation, and artificial intelligence.",
+    "yearCreated": 1991,
+    "understanding": "solid"
+  },
+  {
+    "title": "C",
+    "usedFor": [
+      "System programming",
+      "Building operating systems",
+      "Low-level memory management"
+    ],
+    "description": "C is a general-purpose programming language that provides low-level access to memory and is commonly used in system software development, embedded systems, and operating systems.",
+    "yearCreated": 1972,
+    "understanding": "familiar"
+  },
+  {
+    "title": "C++",
+    "usedFor": [
+      "Object-oriented programming",
+      "Game development",
+      "Performance-critical applications"
+    ],
+    "description": "C++ is an extension of the C language, supporting object-oriented programming principles such as classes and inheritance. It is widely used in applications that require high performance, such as game development and systems programming.",
+    "yearCreated": 1983,
+    "understanding": "familiar"
+  },
+  {
+    "title": "Lua",
+    "usedFor": [
+      "Embedded scripting",
+      "Game development",
+      "Configuration scripting"
+    ],
+    "description": "Lua is a lightweight, high-level scripting language primarily used for embedded applications. It is often used in game development for scripting game behavior and logic.",
+    "yearCreated": 1993,
+    "understanding": "familiar"
+  },
+  {
+    "title": "SQL",
+    "usedFor": [
+      "Managing databases",
+      "Querying and modifying data",
+      "Database administration"
+    ],
+    "description": "SQL (Structured Query Language) is used for managing and manipulating relational databases. It enables users to query, insert, update, and delete data from databases.",
+    "yearCreated": 1974,
+    "understanding": "familiar"
+  }
+]

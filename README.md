@@ -72,6 +72,9 @@ Todolist:
 
 2. Start Making the UI components for displaying everything on the page, first with the mobile version in mind
 
+Bugs:
+-Intersection observer doesn't work properly on mobile versions
+
 -Write some articles
 -Design my resume
 -Send my resume

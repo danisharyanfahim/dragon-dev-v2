@@ -1,4 +1,4 @@
-import { TechProps } from "../interfaces/landing";
+import { LangProps, TechProps } from "../interfaces/landing";
 
 export const formatDate = (dateString: string): string => {
   const date = new Date(dateString);
@@ -59,6 +59,23 @@ export const transformTechData = <T extends TechProps>(
         current: url,
         _type: "slug",
       },
+    };
+  }) as unknown as T[];
+};
+
+export const transformLangData = <T extends LangProps>(
+  techData: LangProps[]
+): T[] => {
+  return techData.map((tech, index) => {
+    const { title, description, usedFor, understanding, yearCreated, id } =
+      tech;
+    return {
+      usedFor: usedFor,
+      title: title,
+      description: description,
+      yearCreated: yearCreated,
+      understanding: understanding,
+      id: id,
     };
   }) as unknown as T[];
 };

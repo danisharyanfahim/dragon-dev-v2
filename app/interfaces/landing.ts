@@ -27,4 +27,14 @@ export interface TransformedTechProps extends TechProps {
   };
 }
 
+export interface LangProps {
+  title: string;
+  icon: any;
+  description: string;
+  usedFor: string[];
+  yearCreated: number;
+  id: string;
+  understanding: Understanding;
+}
+
 export type Understanding = "solid" | "familiar";

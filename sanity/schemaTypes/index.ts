@@ -1,4 +1,5 @@
 import article from './article'
-import technologies from './technologies'
+import language from './language'
+import technology from './technology'
 
-export const schemaTypes = [article, technologies]
+export const schemaTypes = [article, technology, language]

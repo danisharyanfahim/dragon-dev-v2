@@ -143,10 +143,19 @@ export const getArticlesByPage = async (
 };
 
 export const getTech = async (understanding: Understanding) => {
-  const articleData = await sanityFetch({
+  const techData = await sanityFetch({
     query: `*[_type == "tech" && understanding match $understanding]{title, features, description, category, 'url': url.current, 'id': _id, icon, understanding}`,
     params: { understanding: understanding },
     revalidate: 30,
   });
-  return articleData;
+  return techData;
+};
+
+export const getLang = async (understanding: Understanding) => {
+  const langData = await sanityFetch({
+    query: `*[_type == "programmingLanguage" && understanding match $understanding]{title, usedFor, description, 'id': _id, icon, yearCreated, understanding}`,
+    params: { understanding: understanding },
+    revalidate: 30,
+  });
+  return langData;
 };

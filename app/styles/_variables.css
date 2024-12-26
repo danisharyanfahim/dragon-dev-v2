@@ -35,12 +35,17 @@
   --border-color-1: rgb(156, 162, 199);
   --border-color-2: rgb(244, 246, 255);
   --border-color-3: rgb(156, 162, 199);
+  --border-color-dark-1: rgb(35, 35, 66);
+  --border-color-dark-2: rgb(3, 4, 22);
   --text-shadow-color-1: rgba(8, 20, 129, 0.26);
   --text-shadow-color-2: rgba(4, 17, 138, 0.144);
   --text-shadow-color-3: rgba(19, 19, 185, 0.24);
   --highlight-color: rgba(0, 132, 255, 0.767);
   --red: rgba(200, 0, 0);
   --blue: rgba(0, 50, 200);
+  --ui-background-glass-color: rgba(245, 242, 255, 0.171);
+  --glass-border-color-1: rgba(255, 255, 255, 0.1);
+  --glass-border-color-2: rgba(0, 0, 0, 0.1);
 
   /* dimensions */
   --border-radius-outer: 1rem;
@@ -68,4 +73,5 @@
   --highlight-color: rgba(133, 9, 9, 0.767);
   --red: rgb(211, 68, 68);
   --blue: rgb(87, 113, 192);
+  --ui-background-glass-color: rgba(20, 15, 40, 0.2);
 }

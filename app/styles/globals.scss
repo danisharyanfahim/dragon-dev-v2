@@ -104,6 +104,10 @@ h2 {
   font-size: clamp(1.875rem, 1vw + 1.5rem, 3rem);
 }
 
+h3 {
+  font-size: clamp(1.35rem, 0.793rem + 1.161cqw, 2.65rem);
+}
+
 h4 {
   font-size: clamp(1.25rem, 1vw + 1rem, 2.25rem);
 }

@@ -1,5 +1,6 @@
 import imageUrlBuilder from "@sanity/image-url";
 import { createClient, type QueryParams } from "next-sanity";
+import { getStaticFile } from "../api/get-static-file";
 
 export const client = createClient({
   apiVersion: "2023-05-03",
@@ -49,5 +50,14 @@ export const createDoc = <T extends {}, U extends T>(
   });
 };
 
-// const data = await getStaticFile("/app/data/tech.json");
-// createDoc<TechProps, TransformedTechProps>("tech", data, transformTechData);
+// export const uploadDoc = async <T, U extends T>(
+//   docType: string,
+//   transform: (data: T[]) => U[]
+// ) => {
+//   try {
+//     const data = await getStaticFile("/app/data/language.json");
+//     createDoc<T, U>("programmingLanguage", data, transform);
+//   } catch (error) {
+//     console.log(error);
+//   }
+// };

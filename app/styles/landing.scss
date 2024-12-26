@@ -65,6 +65,22 @@
     border-bottom-left-radius: 400% 60%;
     display: flex;
     justify-content: center;
+    background: linear-gradient(90deg, #360000f8, #680000cb, #0000b69c),
+      url("/static/images/technology-background.jpg");
+    background-size: cover;
+
+    .section-spacer {
+      padding: 10rem clamp(1rem, -13.571rem + 30.357vw, 35rem);
+      display: flex;
+      flex-direction: column;
+      gap: 5rem;
+
+      .tech-description {
+        color: var(--light-text-color);
+        text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.253);
+        container-type: inline-size;
+      }
+    }
   }
   > :nth-child(4) {
   }
@@ -100,13 +116,15 @@
     minmax(min(clamp(8rem, 20vw, 16rem), 100%), 1fr)
   );
   grid-auto-rows: 1fr;
-  padding: 0rem clamp(1rem, -14.429rem + 32.143vw, 37rem);
+  // padding: 0rem clamp(1rem, -14.429rem + 32.143vw, 37rem);
 
   > * {
     border-radius: 1rem;
     container-type: inline-size;
+    animation: appear 1s;
 
-    &#tech-solid .badge-container {
+    &#tech-solid .badge-container,
+    &#lang-solid .badge-container {
       display: flex;
       align-items: flex-end;
       justify-content: flex-start;
@@ -114,13 +132,15 @@
       font-size: 11cqw;
     }
 
-    &#tech-familiar .badge-container {
+    &#tech-familiar .badge-container,
+    &#lang-familiar .badge-container {
       display: flex;
       align-items: flex-end;
       justify-content: flex-start;
       color: var(--text-color-p-3);
       font-size: 14cqw;
     }
+
     .front .badge-container {
       position: absolute;
       top: 0rem;
@@ -162,6 +182,7 @@
           var(--ui-background-color-transparent-2)
         ),
         url("/static/images/tech-solid.png");
+      background-size: cover;
     }
     &#tech-familiar {
       background: linear-gradient(
@@ -170,6 +191,26 @@
           var(--ui-background-color-transparent-2)
         ),
         url("/static/images/tech-familiar.png");
+      background-size: cover;
+    }
+    &#lang-solid {
+      background: linear-gradient(
+          105deg,
+          var(--ui-background-color-1) 20%,
+          var(--ui-background-color-transparent-2)
+        ),
+        url("/static/images/lang-solid.webp");
+      background-size: cover;
+    }
+
+    &#lang-familiar {
+      background: linear-gradient(
+          105deg,
+          var(--ui-background-color-1) 20%,
+          var(--ui-background-color-transparent-2)
+        ),
+        url("/static/images/lang-familiar.webp");
+      background-size: cover;
     }
 
     h2,
@@ -227,6 +268,7 @@
         flex-direction: column;
       }
       padding: 1rem;
+      border-radius: 2rem;
     }
 
     .back {
@@ -288,6 +330,86 @@
 
     li {
       margin-inline-start: 0.5rem;
+    }
+  }
+}
+
+.window-menu {
+  $borderSize: 0.02rem;
+  container-type: inline-size;
+  border-radius: 1rem;
+  overflow: hidden;
+  padding: 0.5rem;
+  background: var(--ui-background-glass-color);
+  backdrop-filter: blur(30px);
+  box-shadow: inset $borderSize $borderSize 0px $borderSize
+      var(--glass-border-color-1),
+    inset -1 * $borderSize -1 * $borderSize 0px $borderSize
+      var(--glass-border-color-2);
+
+  ol li {
+    list-style-type: none;
+  }
+
+  .tabs-container {
+    width: 100%;
+    margin-bottom: clamp(0.5rem, 0.143rem + 1.786vw, 1rem);
+    .tabs {
+      width: 100%;
+      display: flex;
+      align-items: flex-start;
+      .tab {
+        padding: clamp(0.5rem, 0.143rem + 1.786vw, 1rem)
+          clamp(1rem, 0.286rem + 3.571vw, 2rem);
+        border-bottom: 2px solid transparent;
+        transition: all 0.5s;
+
+        h4 {
+          color: rgba(111, 136, 170, 0.527);
+          transition: all 0.5s;
+          text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.253);
+        }
+
+        &.active {
+          border-bottom: 2px solid #e6ebfdf0;
+          transition: all 0.5s;
+
+          h4 {
+            color: #e6ebfdf0;
+            transition: all 0.5s;
+          }
+        }
+      }
+    }
+  }
+
+  .pages-container {
+    max-height: 800px;
+    overflow-y: scroll;
+    border-radius: 0rem 0rem 0rem 0.75rem;
+    scroll-behavior: smooth;
+
+    &::-webkit-scrollbar {
+      width: 0.5rem; // Adjust the scrollbar width if needed
+    }
+
+    &::-webkit-scrollbar-track {
+      background-color: #717fa762;
+      border-radius: 12px;
+      background-clip: content-box;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: #93a1cec5;
+      border-radius: 12px;
+      background-clip: content-box;
+      cursor: pointer;
+    }
+
+    .pages {
+      .page {
+        padding: 0.25rem;
+      }
     }
   }
 }

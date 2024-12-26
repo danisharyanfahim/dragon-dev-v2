@@ -1,5 +1,3 @@
-import {HighlightDecorator, HighlightIcon} from '../components/highlight-decorator'
-
 export default {
   name: 'tech',
   type: 'document',

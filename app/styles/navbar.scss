@@ -15,10 +15,16 @@ $navbarPadding: clamp(2rem, -46.857rem + 54.286vw, 40rem);
     var(--ui-background-color-1),
     var(--ui-background-color-2)
   );
-  display: flex;
-  justify-content: space-between;
+
   box-shadow: 0px 0px 5px 0px var(--shadow-color-1);
   border-bottom: 2px solid var(--border-color-3);
+
+  .navbar-spacer {
+    width: 100%;
+    height: inherit;
+    display: flex;
+    justify-content: space-between;
+  }
 
   .center {
     display: flex;
@@ -173,19 +179,22 @@ $navbarPadding: clamp(2rem, -46.857rem + 54.286vw, 40rem);
 
   .side-nav {
     position: absolute;
-    min-height: 100dvh;
+    min-height: 100lvh;
     backdrop-filter: blur(20px);
     background-color: var(--dark-transparent-shade-2);
-    width: 100vw;
+    width: 100%;
     top: $navbarHeight;
-    right: calc(-1 * $navbarPadding);
-    animation: slideIn 1s ease;
+    left: 100vw;
     display: flex;
     justify-content: flex-end;
     align-items: flex-start;
-    padding: clamp(2rem, 1.286rem + 3.571vw, 3rem)
+    padding: clamp(0rem, -2.478rem + 9.329vw, 2rem)
       clamp(2rem, 0.571rem + 7.143vw, 4rem);
     box-shadow: 0px 0px 5px 0px var(--shadow-color-1);
+    transition: left 0.5s ease;
+    &.showing {
+      left: 0rem;
+    }
 
     .nav-menu {
       display: flex;
@@ -196,7 +205,7 @@ $navbarPadding: clamp(2rem, -46.857rem + 54.286vw, 40rem);
         height: 5rem;
         display: flex;
         justify-content: center;
-        align-items: flex-start;
+        align-items: center;
         right: 0px;
         transition: right 0.3s ease;
 
@@ -204,6 +213,7 @@ $navbarPadding: clamp(2rem, -46.857rem + 54.286vw, 40rem);
           text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5),
             0px 0px 15px rgba(0, 38, 255, 0.404);
           transition: all 0.1s;
+          font-size: clamp(1.65rem, 1.136rem + 1.071vw, 2.1rem);
         }
 
         &:hover {
@@ -221,15 +231,6 @@ $navbarPadding: clamp(2rem, -46.857rem + 54.286vw, 40rem);
         }
       }
     }
-  }
-}
-
-@keyframes slideIn {
-  from {
-    right: -100vw;
-  }
-  to {
-    right: calc(-1 * $navbarPadding);
   }
 }
 

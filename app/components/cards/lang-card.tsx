@@ -1,32 +1,27 @@
 "use client";
-import { TechCardProps } from "@/app/interfaces/landing";
+import { LangProps } from "@/app/interfaces/landing";
 import { urlFor } from "@/app/lib/client";
-import { findClass } from "@/app/utils/utility-functions";
 import React, { useState } from "react";
 import { IoStar } from "react-icons/io5";
 import { PiStudentFill } from "react-icons/pi";
 
-const TechCard = ({
-  category,
+const LangCard = ({
   icon,
   title,
-  features,
+  usedFor,
   description,
   understanding,
-  url,
-}: TechCardProps) => {
+  yearCreated,
+}: LangProps) => {
   const [isFlipped, setIsFlipped] = useState<boolean>(false);
-  const handleFlip = (e) => {
-    if (findClass(e.target, "link-button-button") === null) {
-      e.preventDefault();
-      setIsFlipped(!isFlipped);
-    }
+  const handleFlip = () => {
+    setIsFlipped(!isFlipped);
   };
 
   return (
     <div
       className={`grid-card ${isFlipped ? "flipped" : ""}`}
-      onClick={(e) => handleFlip(e)}
+      onClick={() => handleFlip()}
     >
       <div className="spacer">
         <div className="front">
@@ -43,7 +38,7 @@ const TechCard = ({
               />
             </figure>
             <h5>{title}</h5>
-            <p className="category">{category}</p>
+            <p className="yearCreated">{yearCreated}</p>
             <ul className="features"></ul>
           </div>
         </div>
@@ -52,23 +47,16 @@ const TechCard = ({
             <div className="text-container">
               <p>{description}</p>
               <ul className="features">
-                {features.map((feature: string, index: number) => {
+                {usedFor.map((use: string, index: number) => {
                   return (
                     <li key={index}>
-                      <p className="feature" id={feature}>
-                        {feature}
+                      <p className="feature" id={use}>
+                        {use}
                       </p>
                     </li>
                   );
                 })}
               </ul>
-            </div>
-            <div className="link-button-container">
-              <a href={url} className="link-button-url" target="_blank">
-                <button className="link-button-button">
-                  <p>Visit Site</p>
-                </button>
-              </a>
             </div>
           </div>
           <div
@@ -104,4 +92,4 @@ const TechCard = ({
   );
 };
 
-export default TechCard;
+export default LangCard;
