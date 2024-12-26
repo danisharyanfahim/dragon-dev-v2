@@ -62,11 +62,11 @@ const LangCard = ({
           <div
             className="background-image"
             style={{
-              height: "120%",
+              height: "100%",
               aspectRatio: "1 / 1",
               position: "absolute",
-              top: "10%",
-              left: "25%",
+              top: "33%",
+              left: "33%",
               maskImage: "linear-gradient(135deg, transparent, black)",
               maskSize: "contain",
               maskPosition: "center",
@@ -80,7 +80,6 @@ const LangCard = ({
               backgroundRepeat: "no-repeat",
               backgroundPosition: "center",
               zIndex: -1,
-              borderRadius: "2rem",
               // backgroundBlendMode: "color",
               filter:
                 "grayscale(85%) opacity(10%) brightness(95%) drop-shadow(0px 0px 5px rgba(125 125 140 / 0.6))",
