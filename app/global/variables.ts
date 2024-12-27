@@ -1,5 +1,5 @@
 export const pageSections = [
-  { name: "Home", link: "" },
+  "Home",
   "About",
   { name: "Blog", link: "blog" },
   "Work",

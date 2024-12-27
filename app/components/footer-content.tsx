@@ -35,7 +35,7 @@ const FooterContent = () => {
                 } else {
                   return (
                     <Link
-                      href={`/#${section}`}
+                      href={`/#${section.toLowerCase()}`}
                       key={index}
                       className="nav-button"
                     >

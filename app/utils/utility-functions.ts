@@ -96,3 +96,77 @@ export const findClass = (
   }
   return object;
 };
+
+export const addToFrontAndEnd: {
+  (numberOfElementsAtFront: number, array: any[]): any[];
+  (
+    numberOfElementsAtFront: number,
+    numberOfElementsAtEnd: number,
+    array: any[]
+  ): any[];
+} = (
+  numberOfElementsAtFront: number,
+  numberOfElementsAtEnd: number | any[],
+  array?: any[]
+): any[] => {
+  // If the second argument is an array
+  if (Array.isArray(numberOfElementsAtEnd)) {
+    if (
+      numberOfElementsAtFront <= 0 ||
+      numberOfElementsAtFront > numberOfElementsAtEnd.length
+    )
+      return numberOfElementsAtEnd; // Return the original array if conditions are not met
+    const firstElements = numberOfElementsAtEnd.slice(
+      0,
+      numberOfElementsAtFront
+    );
+    const lastElements = numberOfElementsAtEnd.slice(-numberOfElementsAtFront);
+    return lastElements.concat(numberOfElementsAtEnd, firstElements);
+  }
+
+  // If the second argument is a number
+  if (array && typeof numberOfElementsAtEnd === "number") {
+    if (
+      numberOfElementsAtFront <= 0 ||
+      numberOfElementsAtFront > array.length ||
+      numberOfElementsAtEnd <= 0 ||
+      numberOfElementsAtEnd > array.length
+    ) {
+      return array; // Return the original array if conditions are not met
+    }
+    const firstElements = array.slice(0, numberOfElementsAtEnd);
+    const lastElements = array.slice(-numberOfElementsAtFront);
+    return lastElements.concat(array, firstElements);
+  }
+
+  return []; // Default return if no conditions are met
+};
+
+export const flattenArray = <T>(array: T[]): T[] => {
+  let newArray: T[] = [];
+  array.forEach((item) => {
+    if (Array.isArray(item)) {
+      newArray = [...newArray, ...flattenArray<T>(item as T[])];
+    } else {
+      newArray = [...newArray, item];
+    }
+  });
+
+  return newArray;
+};
+
+export const subtractUntilSmaller = (
+  length: number,
+  subtractor: number
+): number => {
+  return subtractor > length
+    ? subtractUntilSmaller(length, subtractor - length)
+    : subtractor;
+};
+
+//Replaces all white-spaces with hyphens and makes all letters lowercase if they aren't already
+export const formatStringToId = (input: string): string => {
+  return input
+    .replace(/\s+/g, "-") // Replace all white spaces with hyphens
+    .toLowerCase(); // Convert all letters to lowercase
+};

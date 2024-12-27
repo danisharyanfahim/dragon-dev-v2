@@ -38,3 +38,9 @@ export interface LangProps {
 }
 
 export type Understanding = "solid" | "familiar";
+
+export interface SlideData {
+  title: string;
+  description: string;
+  points: string[]; // or any type depending on your structure
+}

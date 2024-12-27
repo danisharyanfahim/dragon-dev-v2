@@ -60,6 +60,28 @@ export const getAllArticles = async (page: number, articlesPerPage: number) => {
   return articleData; //Get rid of last updated in the final version
 };
 
+export const getLatestArticles = async (numberOfArticles: number) => {
+  const query = `
+  *[_type == 'article'][0...${numberOfArticles}] | order(_createdAt desc) {
+  title,
+  'dateCreated': _createdAt,
+  titleImage,
+  'currentSlug': slug.current,
+  categories[] | order(relevance asc) {
+    'text': categoryName,
+    relevance,
+    format
+  },
+  overview,
+  'id': _id
+}`;
+  const articleData = await sanityFetch({
+    query: query,
+    revalidate: 30,
+  });
+  return articleData; //Get rid of last updated in the final version
+};
+
 export const getArticle = async (slug: string) => {
   const query = `
 *[_type == "article" && slug.current == "${slug}"] {

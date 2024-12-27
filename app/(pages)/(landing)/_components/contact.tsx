@@ -1,4 +1,5 @@
 import SplitCard from "@/app/components/cards/split-card";
+import ContactForm from "@/app/components/contact-form";
 import React from "react";
 
 const Contact = () => {
@@ -24,7 +25,7 @@ const Contact = () => {
               </a>
             </div>
           </section>
-          <div className="contact-form"></div>
+          <ContactForm />
         </SplitCard>
       </div>
     </section>

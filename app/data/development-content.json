@@ -1,0 +1,71 @@
+[
+  {
+    "title": "Functionality",
+    "description": "I integrate modern features to enhance the user experience:",
+    "points": [
+      "Lazy loading for fast page loading",
+      "Skeleton screens for smooth loading transitions",
+      "Custom error and loading animations to improve site interactivity"
+    ]
+  },
+  {
+    "title": "My Own UX Library",
+    "description": "I’ve developed a personalized UX library filled with pre-built UI elements, ensuring consistency in design and a seamless user experience across your site:",
+    "points": [
+      "Buttons",
+      "Forms",
+      "Modals",
+      "Accordions",
+      "Drop-downs",
+      "Pagination",
+      "Slideshows and Carousels",
+      "Tickers",
+      "And many more UI elements to keep your interface functional and visually appealing"
+    ]
+  },
+  {
+    "title": "Proficient in Modern Tech",
+    "description": "I use the latest technologies to create high-performance, scalable web applications:",
+    "points": [
+      "React 19 for dynamic and efficient UIs",
+      "Typescript for clean and maintainable code",
+      "NextJS 15+ for server-rendered React applications",
+      "CSS + SCSS for flexible and efficient styling",
+      "JavaScript + ES6 for modular, modern code"
+    ]
+  },
+  {
+    "title": "SEO Optimization",
+    "description": "I ensure your website is optimized for search engines and easily discoverable:",
+    "points": [
+      "robots.txt to guide search engine bots",
+      "Accurate alt tags for all images",
+      "Semantic HTML tags to improve site structure and readability",
+      "Clean URLs and file structure for efficient indexing",
+      "Meta tags and titles to enhance click-through rates"
+    ]
+  },
+  {
+    "title": "Performance-Focused Development (For Users)",
+    "description": "I focus on optimizing the user experience by ensuring fast load times, seamless interaction, and compatibility across devices and networks:",
+    "points": [
+      "Lightning-fast load times through media optimization, lazy loading, and performance testing",
+      "Performance/network testing to ensure the site works flawlessly on various networks and devices, optimizing the browsing experience for all users",
+      "Server-side rendering (SSR) for fast load times"
+    ]
+  },
+  {
+    "title": "Performance-Focused Development (For Developers)",
+    "description": "I streamline development processes by maintaining clean code, thorough documentation, and efficient collaboration to ensure long-term scalability and smooth project execution:",
+    "points": [
+      "Clean, organized code that is easy to understand, maintain, and reuse, ensuring long-term stability and scalability",
+      "Detailed comments and explanations to make the code easy to follow, improving collaboration and ease of maintenance",
+      "Logging, Project Descriptions, and README Files to ensure full transparency in the development process, track performance in production, and provide clear documentation of project structure, dependencies, and setup instructions",
+      "Project outlines to establish clear goals, timelines, and milestones, keeping the project on track from start to finish",
+      "Code snippets and Emmet to reduce development time and minimize the chance of typos and syntax errors by quickly generating repetitive or boilerplate code",
+      "AI and Debugging Tools to streamline development by automating repetitive tasks, generating placeholder assets, and helping identify and fix issues quickly, ensuring smooth development and high-quality, bug-free code",
+      "Unit testing to ensure code reliability and minimize bugs",
+      "AGILE, Waterfall, and DevOps CI/CD methods to efficiently plan and execute the development process, ensuring that the final product meets your expectations"
+    ]
+  }
+]

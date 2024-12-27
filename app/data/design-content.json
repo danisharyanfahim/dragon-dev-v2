@@ -1,0 +1,46 @@
+[
+  {
+    "title": "Functional Design",
+    "description": "I create intuitive, usable designs that ensure easy navigation and clear calls-to-action, helping you achieve your business goals.",
+    "points": []
+  },
+  {
+    "title": "Content-Based Design",
+    "description": "I align the design with your content, ensuring that your message is supported by the visual structure, making information easy to digest.",
+    "points": []
+  },
+  {
+    "title": "Responsiveness",
+    "description": "Every site I create is mobile-friendly, using:",
+    "points": [
+      "Media and container queries",
+      "Min and max values for scalable elements",
+      "Clamping to ensure text readability",
+      "Flexbox and Grid for fluid layouts",
+      "Absolute and relative values for adaptable designs"
+    ]
+  },
+  {
+    "title": "UI Design",
+    "description": "I focus on delivering a seamless user experience (UX) by ensuring clean navigation, quick load times, and overall usability.",
+    "points": []
+  },
+  {
+    "title": "Aesthetic Design",
+    "description": "Your site will have a striking visual design with:",
+    "points": [
+      "Carefully chosen color schemes and gradients",
+      "Smooth animations and transitions for engaging interactivity",
+      "Unique, custom-designed icons and images to elevate your branding"
+    ]
+  },
+  {
+    "title": "Custom-Made Graphics",
+    "description": "I create tailored graphics, including icons, images, and illustrations, using tools like:",
+    "points": [
+      "Illustrator, Photoshop, and Figma for creating high-quality custom SVGs and PNGs",
+      "AI-generated images for creative and dynamic visual elements",
+      "AI-generated resources like presentations to speed up design processes"
+    ]
+  }
+]

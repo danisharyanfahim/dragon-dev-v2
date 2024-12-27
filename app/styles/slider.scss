@@ -1,0 +1,74 @@
+.slider {
+  height: 100%;
+  width: 100%;
+
+  .controls-container {
+    position: absolute;
+    z-index: 2;
+    color: black;
+    height: 100%;
+    width: 100%;
+
+    > * {
+      position: absolute;
+    }
+    .position-indicator {
+      bottom: 1rem;
+      right: 1rem;
+    }
+
+    .control-buttons {
+      height: 100%;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      padding: 1rem;
+      z-index: 2;
+    }
+
+    .play-button {
+      padding: 1rem;
+      background-color: blue;
+      color: white;
+      z-index: 3;
+    }
+
+    p {
+      color: black;
+    }
+  }
+
+  ol li {
+    list-style-type: none;
+  }
+  .slides-container {
+    height: inherit;
+    width: inherit;
+    background-color: white;
+    overflow-x: scroll;
+    scrollbar-width: none;
+    scroll-snap-type: x mandatory;
+    -ms-overflow-style: none;
+    display: flex;
+    flex-basis: 100%;
+
+    .slide-container {
+      height: inherit;
+      flex-basis: inherit;
+      flex-shrink: 0;
+      scroll-snap-align: start;
+
+      .slide {
+        height: inherit;
+        width: inherit;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+  }
+}
+
+.section-card {
+  min-height: 480px;
+}

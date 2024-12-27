@@ -1,7 +1,13 @@
 import SplitCard from "@/app/components/cards/split-card";
+import Carousel from "@/app/components/carousel";
+import Tag from "@/app/components/tag";
+import { ArticleCardProps } from "@/app/interfaces/blog";
+import { getLatestArticles } from "@/app/utils/server-actions";
 import React from "react";
 
-const Blog = () => {
+const Blog = async () => {
+  const articleData: ArticleCardProps[] = await getLatestArticles(5);
+
   return (
     <section className="blog">
       <div className="section-spacer">
@@ -17,15 +23,23 @@ const Blog = () => {
           </section>
         </SplitCard>
         <SplitCard id="blog-carousel">
-          <div className="carousel">
-            <div className="card">
-              {/* Simple card which just by clicking on it, will take you to the article page, this will be different from the main blog cards, categories will also not be clickable */}
-              <div className="title"></div>
-              {/* <img src="" alt="article image" /> */}
-              <div className="overview"></div>
-              <ul className="categories"></ul>
-            </div>
-          </div>
+          <Carousel infinite={true}>
+            {articleData.map((data) => {
+              const { title, overview, categories, id, currentSlug } = data;
+              return (
+                <div className="article-carousel-card" key={id}>
+                  <div className="title">{title}</div>
+                  {/* <img src="" alt="article image" /> */}
+                  <div className="overview">{overview}</div>
+                  <div className="category-container">
+                    {categories.map((category, index) => {
+                      return <Tag key={index} {...category} />;
+                    })}
+                  </div>
+                </div>
+              );
+            })}
+          </Carousel>
         </SplitCard>
       </div>
     </section>
