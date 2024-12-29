@@ -9,13 +9,13 @@ const Projects = () => {
         <SplitCard id="projects-header">
           <section className="text-section">
             <h1>Projects</h1>
-            <h2 className="no-bold">
+            <h3 className="no-bold">
               Here, you'll find my side projects, consisting of various
               applications, tools, and creative coding projects that demonstrate
               my problem-solving abilities and passion for technology, including
               demo sites and other coding experiments outside of web
               development.
-            </h2>
+            </h3>
           </section>
         </SplitCard>
         <SplitCard id="projects-slide-show">

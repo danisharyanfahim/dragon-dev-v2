@@ -9,10 +9,10 @@ const Header = () => {
           <figure className="logo-container"></figure>
           <section>
             <h1 className="title text">Hi, I'm Dan! AKA Dragon Dev</h1>
-            <h2 className="no-bold text">
+            <h3 className="no-bold text">
               I’m a full-stack developer and graphic designer with a passion for
               front-end development and UX/UI design.
-            </h2>
+            </h3>
             <h4 className="no-bold text">
               My mission is to create websites and web applications that deliver
               lightning-fast performance, world-class functionality, and

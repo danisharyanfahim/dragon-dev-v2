@@ -8,6 +8,7 @@ import React, {
 } from "react";
 import { addToFrontAndEnd } from "../utils/utility-functions";
 import CarouselCard from "./cards/carousel-card";
+import { FaChevronLeft, FaChevronRight } from "react-icons/fa6";
 
 const gridGap = 16;
 
@@ -173,18 +174,22 @@ const Carousel = ({
         )}
         {showControlButtons && (
           <div className="control-buttons">
-            <button
-              className="prev-button"
-              onClick={() => toggleSlide(currentCard - 1)}
-            >
-              <p>Prev</p>
-            </button>
-            <button
-              className="next-button"
-              onClick={() => toggleSlide(currentCard + 1)}
-            >
-              <p>Next</p>
-            </button>
+            <div className="button-container">
+              <button
+                className="prev-button"
+                onClick={() => toggleSlide(currentCard - 1)}
+              >
+                <FaChevronLeft />
+              </button>
+            </div>
+            <div className="button-container">
+              <button
+                className="next-button"
+                onClick={() => toggleSlide(currentCard + 1)}
+              >
+                <FaChevronRight />
+              </button>
+            </div>
           </div>
         )}
       </div>

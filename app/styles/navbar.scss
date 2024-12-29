@@ -32,18 +32,29 @@ $navbarPadding: clamp(2rem, -46.857rem + 54.286vw, 40rem);
     align-items: center;
   }
 
-  .logo-button {
-  }
-
-  .logo-button,
   .menu-button,
   .theme-toggle-container {
     height: 100%;
   }
 
-  .logo-button,
   .menu-button {
     aspect-ratio: 1 / 1;
+  }
+
+  .logo-button-container {
+    aspect-ratio: 1 / 1;
+  }
+
+  .logo-button {
+    height: 60%;
+    width: 60%;
+    filter: drop-shadow(0px 0px 5px var(--text-shadow-color-1));
+    img {
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      object-fit: contain;
+    }
   }
 
   .menu-button {
@@ -52,7 +63,7 @@ $navbarPadding: clamp(2rem, -46.857rem + 54.286vw, 40rem);
 
   .right-side {
     display: flex;
-    gap: clamp(0rem, -2.143rem + 4.464vw, 5rem);
+    gap: clamp(1rem, -0.714rem + 3.571vw, 5rem);
     text-shadow: 0px 0px 5px rgba(11, 18, 80, 0.103);
 
     .menu-icon {

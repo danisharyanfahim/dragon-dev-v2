@@ -195,7 +195,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      filter: drop-shadow(0px 0px 10px rgba(151, 146, 199, 0.637));
+      filter: drop-shadow(0px 0px 10px var(--ui-static-shadow-color));
       .icon {
         height: 65%;
         width: 65%;

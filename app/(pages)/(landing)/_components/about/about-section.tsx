@@ -10,56 +10,59 @@ const AboutSection = async ({
   description,
   dataURL,
   direction,
+  logos,
+  mainLogo,
 }: {
   title: string;
   description: string;
   dataURL: string;
   direction: "left-right" | "right-left";
+  logos: React.ReactNode[];
+  mainLogo: React.ReactNode;
 }) => {
   const data: SlideData[] = await getStaticFile(dataURL);
-  const textSection = (
-    <section className="text-container">
-      <h2>{title}</h2>
-      <h3 className="no-bold">{description}</h3>
-    </section>
-  );
-  const slides = (
-    <Slider
-      infinite={true}
-      direction={direction === "left-right" ? "forward" : "reverse"}
-      delay={2500}
-      showPlayButton={false}
-      showPositionIndicator={false}
-    >
-      {data.map((data) => {
-        const { title, description, points } = data;
-        return (
-          <div
-            className="section-card about"
-            id={formatStringToId(title)}
-            key={formatStringToId(title)}
-          >
-            <h2 className="title">{title}</h2>
-            <p className="description">{description}</p>
-            <ul className="points">
-              {points.map((point, index) => {
-                return (
-                  <li key={index}>
-                    <p>{point}</p>
-                  </li>
-                );
-              })}
-            </ul>
-          </div>
-        );
-      })}
-    </Slider>
-  );
   return (
-    <SplitCard id={`${formatStringToId(title)}-section`}>
-      {direction === "left-right"
-        ? [textSection, slides]
-        : [slides, textSection]}
+    <SplitCard
+      id={`${formatStringToId(title)}-section`}
+      reverse={direction === "left-right"}
+    >
+      <section className="text-container">
+        <h2 className="icon">{mainLogo}</h2>
+        <h2 className="title">{title}</h2>
+        <h4 className="no-bold">{description}</h4>
+      </section>
+      <Slider
+        infinite={true}
+        delay={2500}
+        showPlayButton={true}
+        showPositionIndicator={true}
+      >
+        {data.map((data, index) => {
+          const { title, description, points } = data;
+          return (
+            <div
+              className="section-card-container"
+              key={formatStringToId(title)}
+            >
+              <div className="section-card about" id={formatStringToId(title)}>
+                <h3 className="icon">{logos[index]}</h3>
+                <h3 className="title">{title}</h3>
+                <h5 className="description no-bold">{description}</h5>
+                <ul className="points">
+                  {points.map((point, index) => {
+                    return (
+                      <li key={index}>
+                        <p>{point}</p>
+                      </li>
+                    );
+                  })}
+                </ul>
+              </div>
+              <div className="background">{logos[index]}</div>
+            </div>
+          );
+        })}
+      </Slider>
     </SplitCard>
   );
 };

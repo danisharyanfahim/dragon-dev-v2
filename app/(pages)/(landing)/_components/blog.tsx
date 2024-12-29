@@ -14,12 +14,12 @@ const Blog = async () => {
         <SplitCard id="blog-intro">
           <section className="text-section">
             <h1>Blog</h1>
-            <h2 className="no-bold">
+            <h3 className="no-bold">
               Welcome to my blog, where I share insights, tips, and tutorials on
               web development, design, and technology. I write about my
               experiences, the challenges I’ve faced, and the tools I use to
               create better websites and apps.
-            </h2>
+            </h3>
           </section>
         </SplitCard>
         <SplitCard id="blog-carousel">

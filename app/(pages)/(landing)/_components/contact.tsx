@@ -9,13 +9,13 @@ const Contact = () => {
         <SplitCard id="contact-section">
           <section className="text-section">
             <h1>Contact</h1>
-            <h2 className="no-bold">
+            <h3 className="no-bold">
               I'm always open to discussing new projects, collaborations, or
               answering any questions you may have. Whether you're interested in
               working together or just want to connect, feel free to reach out.
               I'll do my best to respond as soon as possible. Looking forward to
               hearing from you!
-            </h2>
+            </h3>
             <div className="email-button-container">
               <a
                 className="email-link"

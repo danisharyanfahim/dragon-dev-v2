@@ -11,7 +11,11 @@ const Navbar = () => {
   return (
     <div className="navbar">
       <div className="navbar-spacer">
-        <Link href="/" className="logo-button center"></Link>
+        <div className="logo-button-container center">
+          <Link href="/" className="logo-button">
+            <img src="/static/icons/dragon-dev-day.svg" alt="logo" />
+          </Link>
+        </div>
         <div className="right-side">
           <div className="theme-toggle-container center">
             <ThemeToggle />

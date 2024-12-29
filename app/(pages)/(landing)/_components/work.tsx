@@ -58,12 +58,12 @@ const Work = () => {
           </Window>
           <section className="text-section">
             <h1>Work</h1>
-            <h2 className="no-bold">
+            <h3 className="no-bold">
               Take a look at my past and ongoing projects to see how I approach
               design, functionality, and user experience. Each project is a
               testament to my commitment to creating high-quality, user-friendly
               websites that not only look great but also perform flawlessly.
-            </h2>
+            </h3>
           </section>
         </SplitCard>
       </div>

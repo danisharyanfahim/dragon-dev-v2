@@ -8,6 +8,8 @@ import React, {
 } from "react";
 import Slide from "./cards/slide";
 import { addToFrontAndEnd } from "../utils/utility-functions";
+import { FaChevronLeft, FaChevronRight, FaPlay } from "react-icons/fa6";
+import { GiPauseButton } from "react-icons/gi";
 
 const Slider = ({
   children,
@@ -155,7 +157,7 @@ const Slider = ({
               className="play-button"
               onClick={() => setIsPlaying(!isPlaying)}
             >
-              <p>{isPlaying ? "Pause" : "Play"}</p>
+              <h3>{isPlaying ? <GiPauseButton /> : <FaPlay />}</h3>
             </button>
           </div>
         )}
@@ -175,18 +177,22 @@ const Slider = ({
         )}
         {showControlButtons && (
           <div className="control-buttons">
-            <button
-              className="prev-button"
-              onClick={() => toggleSlide(currentSlide - 1)}
-            >
-              <p>Prev</p>
-            </button>
-            <button
-              className="next-button"
-              onClick={() => toggleSlide(currentSlide + 1)}
-            >
-              <p>Next</p>
-            </button>
+            <div className="button-container">
+              <button
+                className="prev-button"
+                onClick={() => toggleSlide(currentSlide - 1)}
+              >
+                <FaChevronLeft />
+              </button>
+            </div>
+            <div className="button-container">
+              <button
+                className="next-button"
+                onClick={() => toggleSlide(currentSlide + 1)}
+              >
+                <FaChevronRight />
+              </button>
+            </div>
           </div>
         )}
       </div>

@@ -1,7 +1,7 @@
 [
   {
     "title": "Functionality",
-    "description": "I integrate modern features to enhance the user experience:",
+    "description": "I integrate modern features to enhance the user experience",
     "points": [
       "Lazy loading for fast page loading",
       "Skeleton screens for smooth loading transitions",
@@ -10,7 +10,7 @@
   },
   {
     "title": "My Own UX Library",
-    "description": "I’ve developed a personalized UX library filled with pre-built UI elements, ensuring consistency in design and a seamless user experience across your site:",
+    "description": "I’ve developed a personalized UX library filled with pre-built UI elements, ensuring consistency in design and a seamless user experience across your site",
     "points": [
       "Buttons",
       "Forms",
@@ -25,7 +25,7 @@
   },
   {
     "title": "Proficient in Modern Tech",
-    "description": "I use the latest technologies to create high-performance, scalable web applications:",
+    "description": "I use the latest technologies to create high-performance, scalable web applications",
     "points": [
       "React 19 for dynamic and efficient UIs",
       "Typescript for clean and maintainable code",
@@ -36,7 +36,7 @@
   },
   {
     "title": "SEO Optimization",
-    "description": "I ensure your website is optimized for search engines and easily discoverable:",
+    "description": "I ensure your website is optimized for search engines and easily discoverable",
     "points": [
       "robots.txt to guide search engine bots",
       "Accurate alt tags for all images",
@@ -46,26 +46,32 @@
     ]
   },
   {
-    "title": "Performance-Focused Development (For Users)",
-    "description": "I focus on optimizing the user experience by ensuring fast load times, seamless interaction, and compatibility across devices and networks:",
+    "title": "Performance-Focused Development",
+    "description": "I focus on optimizing the user experience by ensuring fast load times, seamless interaction, and compatibility across devices and networks",
     "points": [
       "Lightning-fast load times through media optimization, lazy loading, and performance testing",
-      "Performance/network testing to ensure the site works flawlessly on various networks and devices, optimizing the browsing experience for all users",
+      "Network testing to ensure the site works flawlessly on various networks and devices, optimizing the browsing experience for all users",
       "Server-side rendering (SSR) for fast load times"
     ]
   },
   {
-    "title": "Performance-Focused Development (For Developers)",
-    "description": "I streamline development processes by maintaining clean code, thorough documentation, and efficient collaboration to ensure long-term scalability and smooth project execution:",
+    "title": "Clear Project Management",
+    "description": "I streamline development processes by maintaining clean code, thorough documentation, and efficient collaboration to ensure long-term scalability and smooth project execution",
     "points": [
-      "Clean, organized code that is easy to understand, maintain, and reuse, ensuring long-term stability and scalability",
-      "Detailed comments and explanations to make the code easy to follow, improving collaboration and ease of maintenance",
-      "Logging, Project Descriptions, and README Files to ensure full transparency in the development process, track performance in production, and provide clear documentation of project structure, dependencies, and setup instructions",
-      "Project outlines to establish clear goals, timelines, and milestones, keeping the project on track from start to finish",
-      "Code snippets and Emmet to reduce development time and minimize the chance of typos and syntax errors by quickly generating repetitive or boilerplate code",
-      "AI and Debugging Tools to streamline development by automating repetitive tasks, generating placeholder assets, and helping identify and fix issues quickly, ensuring smooth development and high-quality, bug-free code",
-      "Unit testing to ensure code reliability and minimize bugs",
-      "AGILE, Waterfall, and DevOps CI/CD methods to efficiently plan and execute the development process, ensuring that the final product meets your expectations"
+      "Project outlines to set clear goals, timelines, and milestones, ensuring the project stays on track.",
+      "Clean, organized code that's easy to understand, maintain, and scale.",
+      "Detailed comments to make the code easier to follow and enhance collaboration.",
+      "AGILE, Waterfall, and DevOps CI/CD methods to efficiently plan and execute the development process."
+    ]
+  },
+  {
+    "title": "Efficiency-Focused Development",
+    "description": "I utilize multiple resources within my development environment to build projects as quickly as possible",
+    "points": [
+      "Use of code snippets and Emmet to speed up development and reduce typos by automating repetitive code generation.",
+      "AI and debugging tools to automate tasks, generate assets, and quickly identify and fix issues, ensuring smooth, bug-free development.",
+      "Unit testing to ensure code reliability and minimize bugs.",
+      "Logging, project descriptions, and README files for transparency, performance tracking, and clear documentation."
     ]
   }
 ]

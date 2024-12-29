@@ -61,6 +61,7 @@
     color: var(--light-text-color);
     background-size: cover;
     background-position: center;
+    background-attachment: fixed;
     text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.35);
 
     .section-spacer {
@@ -78,6 +79,7 @@
     background: linear-gradient(90deg, #360000f8, #680000cb, #0000b69c),
       url("/static/images/technology-background.jpg");
     background-size: cover;
+    background-attachment: fixed;
     background-position: right;
 
     .section-spacer {
@@ -145,19 +147,52 @@
 
 .split-card {
   display: flex;
-  padding: 5rem clamp(1rem, -56rem + 63.333vw, 20rem);
+  padding: 4rem clamp(2rem, -7.529rem + 23.455vw, 30rem);
+  // padding: 5rem clamp(1rem, -56rem + 63.333vw, 20rem);
   flex-wrap: wrap;
   flex-direction: row;
   justify-content: center;
+  align-items: center;
   container-type: inline-size;
-  container-name: card-container;
+  container-name: section-container;
   width: 100%;
+  gap: 5rem;
+
+  .icon {
+    filter: drop-shadow(0px 0px 10px var(--text-shadow-color-1));
+  }
 
   > * {
     container-type: inline-size;
-    flex: 1 1 320px;
-    min-width: 320px;
-    max-width: 800px;
+    flex: 1 1 300px;
+    min-width: 300px;
+  }
+
+  h1 {
+    font-size: clamp(3rem, 2.357rem + 1.339vw, 4.5rem);
+  }
+  h2 {
+    font-size: clamp(2.25rem, 1.736rem + 1.071vw, 3.45rem);
+  }
+
+  h3 {
+    font-size: clamp(1.95rem, 1.886rem + 0.134vw, 2.1rem);
+  }
+
+  h4 {
+    font-size: clamp(1.5rem, 1.286rem + 0.446vw, 2rem);
+  }
+
+  h5 {
+    font-size: clamp(1.15rem, 0.936rem + 0.446vw, 1.65rem);
+  }
+
+  li {
+    margin-inline-start: 0.5rem;
+    p {
+      // font-size: 1.25rem;
+      font-size: clamp(0.9rem, 0.716rem + 0.384vw, 1.33rem);
+    }
   }
 }
 
@@ -196,9 +231,15 @@ header {
 }
 
 // Center text when the container is <= 600px
-@container card-container (max-width: 640px) {
+@container section-container (max-width: 600px) {
   .text-container .text {
     text-align: center;
+  }
+}
+
+@media (min-width: 828px) {
+  .split-card.reverse {
+    flex-direction: row-reverse;
   }
 }
 
