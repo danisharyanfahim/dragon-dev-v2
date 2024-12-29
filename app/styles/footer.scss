@@ -25,7 +25,16 @@ footer {
     .logo-container {
       display: flex;
       justify-content: center;
+      align-items: center;
       width: 100%;
+      min-height: 200px;
+
+      img {
+        height: 90%;
+        width: 90%;
+        position: absolute;
+        object-fit: contain;
+      }
     }
 
     .container {
@@ -110,7 +119,7 @@ footer {
 
       a p {
         &:hover {
-          color: red;
+          color: var(--ui-primary-accent-color-1);
           transition: all 0.1s;
         }
       }
@@ -134,6 +143,8 @@ footer {
       .mission-text {
         display: table-cell;
         vertical-align: middle;
+        text-align: justify;
+        padding-right: 0.5rem;
       }
 
       .mission-text {

@@ -13,11 +13,6 @@ const Header = () => {
               I’m a full-stack developer and graphic designer with a passion for
               front-end development and UX/UI design.
             </h3>
-            <h4 className="no-bold text">
-              My mission is to create websites and web applications that deliver
-              lightning-fast performance, world-class functionality, and
-              flawless design.
-            </h4>
           </section>
         </SplitCard>
       </div>

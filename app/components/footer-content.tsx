@@ -8,12 +8,12 @@ const FooterContent = () => {
       <div className="top-section">
         <section className="mission-section">
           <figure className="logo-container">
-            <img src={null} alt="logo" />
+            <img src={"/static/icons/dragon-dev-day.svg"} alt="logo" />
           </figure>
           <p className="mission-text">
-            Our mission is to provide you with the most advanced and effective
-            security services to protect your business from evolving digital
-            threats
+            My mission is to create websites and web applications that deliver
+            lightning-fast performance, world-class functionality, and flawless
+            design
           </p>
           {/* <div className="social-media-icons-container"></div> */}
         </section>

@@ -105,6 +105,10 @@
   align-items: flex-start;
   flex-direction: column;
   max-width: 600px;
+
+  > * {
+    margin-bottom: 0.25rem;
+  }
 }
 
 .button-container {
