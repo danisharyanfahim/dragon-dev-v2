@@ -6,9 +6,14 @@ const Header = () => {
     <header id="home">
       <div className="section-spacer">
         <SplitCard id="intro">
-          <figure className="logo-container"></figure>
-          <section>
-            <h1 className="title text">Hi, I'm Dan! AKA Dragon Dev</h1>
+          <figure className="logo-container">
+            <img src="/static/icons/dragon-dev-day.svg" alt="logo" />
+          </figure>
+          <section className="text-container">
+            <h1 className="title text">
+              Hi, I'm <span className="colorful">Dan</span>! AKA
+              <span className="colorful"> Dragon Dev</span>
+            </h1>
             <h3 className="no-bold text">
               I’m a full-stack developer and graphic designer with a passion for
               front-end development and UX/UI design.

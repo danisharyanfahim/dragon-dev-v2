@@ -1,20 +1,29 @@
 import SplitCard from "@/app/components/cards/split-card";
 import Window from "@/app/components/window";
 import React from "react";
+import { MdOutlineWork } from "react-icons/md";
 
 const Work = () => {
   return (
     <section className="work" id="work">
       <div className="section-spacer">
         <SplitCard id="work-window">
-          <section className="text-section">
-            <h1>Work</h1>
-            <h3 className="no-bold">
-              Take a look at my past and ongoing projects to see how I approach
-              design, functionality, and user experience. Each project is a
-              testament to my commitment to creating high-quality, user-friendly
-              websites that not only look great but also perform flawlessly.
-            </h3>
+          <section className="work-header">
+            <div className="work-icon-container">
+              <h1 className="icon">
+                <MdOutlineWork />
+              </h1>
+            </div>
+            <div className="text-section">
+              <h1 className="title">Work</h1>
+              <h4 className="no-bold">
+                Take a look at my past and ongoing projects to see how I
+                approach design, functionality, and user experience. Each
+                project is a testament to my commitment to creating
+                high-quality, user-friendly websites that not only look great
+                but also perform flawlessly.
+              </h4>
+            </div>
           </section>
         </SplitCard>
         <SplitCard id="work-intro">

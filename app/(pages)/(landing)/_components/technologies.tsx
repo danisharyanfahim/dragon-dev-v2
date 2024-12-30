@@ -4,6 +4,7 @@ import Window from "@/app/components/window";
 import { LangProps, TechCardProps } from "@/app/interfaces/landing";
 import { getLang, getTech } from "@/app/utils/server-actions";
 import React from "react";
+import { BsFileEarmarkCodeFill, BsPcDisplay } from "react-icons/bs";
 import { GrPersonalComputer } from "react-icons/gr";
 import { IoStar } from "react-icons/io5";
 import { PiStudentFill } from "react-icons/pi";
@@ -41,7 +42,10 @@ const Technologies = async () => {
           Ticker
         </div> */}
         <Window
-          buttonInfo={[{ title: "Languages" }, { title: "Technologies" }]}
+          buttonInfo={[
+            { title: "Languages", icon: <BsFileEarmarkCodeFill /> },
+            { title: "Technologies", icon: <BsPcDisplay /> },
+          ]}
         >
           <div className="page-container">
             <div className="grid">

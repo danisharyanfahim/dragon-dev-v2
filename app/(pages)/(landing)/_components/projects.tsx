@@ -1,6 +1,7 @@
 import SplitCard from "@/app/components/cards/split-card";
 import SlideShow from "@/app/components/slide-show";
 import React from "react";
+import { GiPencilRuler } from "react-icons/gi";
 
 const Projects = () => {
   return (
@@ -8,13 +9,14 @@ const Projects = () => {
       <div className="section-spacer">
         <SplitCard id="projects-header" reverse={true}>
           <section className="text-section">
+            <h1 className="icon">
+              <GiPencilRuler />
+            </h1>
             <h1>Projects</h1>
             <h3 className="no-bold">
               Here, you'll find my side projects, consisting of various
-              applications, tools, and creative coding projects that demonstrate
-              my problem-solving abilities and passion for technology, including
-              demo sites and other coding experiments outside of web
-              development.
+              applications, tools, and creative coding projects, including demo
+              sites and other coding experiments outside of web development.
             </h3>
           </section>
           <SlideShow infinite={true}>

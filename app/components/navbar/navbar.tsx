@@ -4,6 +4,22 @@ import React, { useState } from "react";
 import ThemeToggle from "../theme-toggle";
 import { pageSections } from "@/app/global/variables";
 import { CgMenuGridR } from "react-icons/cg";
+import { IoHome, IoNewspaperSharp } from "react-icons/io5";
+import { BsFillInfoSquareFill } from "react-icons/bs";
+import { GrPersonalComputer } from "react-icons/gr";
+import { GiPencilRuler } from "react-icons/gi";
+import { MdOutlineWork } from "react-icons/md";
+import { HiPhone } from "react-icons/hi2";
+
+const navMenuIcons = [
+  <IoHome className="icon" />,
+  <BsFillInfoSquareFill className="icon" />,
+  <GrPersonalComputer className="icon" />,
+  <GiPencilRuler className="icon" />,
+  <MdOutlineWork className="icon" />,
+  <IoNewspaperSharp className="icon" />,
+  <HiPhone className="icon" />,
+];
 
 const Navbar = () => {
   const [showing, setShowing] = useState<boolean>(false);
@@ -13,7 +29,12 @@ const Navbar = () => {
       <div className="navbar-spacer">
         <div className="logo-button-container center">
           <Link href="/" className="logo-button">
-            <img src="/static/icons/dragon-dev-day.svg" alt="logo" />
+            <h1 className="logo-text">
+              Dragon<span className="colorful">Dev</span>
+            </h1>
+            <figure className="image-container">
+              <img src="/static/icons/dragon-dev-day.svg" alt="logo" />
+            </figure>
           </Link>
         </div>
         <div className="right-side">
@@ -40,7 +61,10 @@ const Navbar = () => {
                     className="nav-button"
                     onClick={() => setShowing(false)}
                   >
-                    <h4>{section.name}</h4>
+                    <h4>
+                      {section.name}
+                      {navMenuIcons[index]}
+                    </h4>
                   </Link>
                 );
               } else {
@@ -51,7 +75,10 @@ const Navbar = () => {
                     className="nav-button"
                     onClick={() => setShowing(false)}
                   >
-                    <h4>{section}</h4>
+                    <h4>
+                      {section}
+                      {navMenuIcons[index]}
+                    </h4>
                   </Link>
                 );
               }

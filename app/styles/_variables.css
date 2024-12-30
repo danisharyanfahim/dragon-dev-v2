@@ -49,6 +49,7 @@
   --glass-border-color-2: rgba(0, 0, 0, 0.1);
   --ui-static-shadow-color: rgba(151, 146, 199, 0.637);
   --ui-static-shadow-color-dim: rgba(151, 146, 199, 0.367);
+  --logo-primary-color: rgb(1, 1, 7);
 
   /* dimensions */
   --border-radius-outer: 1rem;
@@ -85,4 +86,5 @@
   --text-shadow-color-1: rgba(255, 0, 0, 0.274);
   --ui-primary-accent-color-1-transparent: rgb(146, 0, 0, 0.8);
   --ui-primary-accent-color-2-transparent: rgb(102, 0, 0, 0.7);
+  --logo-primary-color: rgb(241, 243, 255);
 }

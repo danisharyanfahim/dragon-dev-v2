@@ -17,7 +17,7 @@ Basically a giant stack of cards, which allow you to click which one is shown, e
 */
 
 interface WindowProps {
-  buttonInfo: { title: string }[];
+  buttonInfo: { title: string; icon?: React.ReactNode }[];
   initialPage?: number;
   children: React.ReactNode[];
 }
@@ -52,7 +52,10 @@ const Window = ({ buttonInfo, initialPage, children }: WindowProps) => {
                 key={index}
               >
                 <button onClick={() => togglePage(index)}>
-                  <h4>{button.title}</h4>
+                  <h4>
+                    {button.icon ?? <></>}
+                    {button.title}
+                  </h4>
                 </button>
               </li>
             );

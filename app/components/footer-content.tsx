@@ -10,11 +10,11 @@ const FooterContent = () => {
           <figure className="logo-container">
             <img src={"/static/icons/dragon-dev-day.svg"} alt="logo" />
           </figure>
-          <h5 className="mission-text no-bold">
+          <p className="mission-text">
             My mission is to create websites and web applications that deliver
             lightning-fast performance, world-class functionality, and flawless
             design
-          </h5>
+          </p>
           {/* <div className="social-media-icons-container"></div> */}
         </section>
         <section className="links-section">

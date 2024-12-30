@@ -1,10 +1,10 @@
 export const pageSections = [
   "Home",
   "About",
-  { name: "Blog", link: "blog" },
-  "Work",
-  "Projects",
   "Technologies",
+  "Projects",
+  "Work",
+  { name: "Blog", link: "blog" },
   "Contact",
 ];
 

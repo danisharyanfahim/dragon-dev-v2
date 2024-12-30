@@ -5,6 +5,7 @@ import { ArticleCardProps } from "@/app/interfaces/blog";
 import { getLatestArticles } from "@/app/utils/server-actions";
 import Link from "next/link";
 import React from "react";
+import { IoNewspaperSharp } from "react-icons/io5";
 
 const Blog = async () => {
   const articleData: ArticleCardProps[] = await getLatestArticles(5);
@@ -14,6 +15,9 @@ const Blog = async () => {
       <div className="section-spacer">
         <SplitCard id="blog-intro">
           <section className="text-section">
+            <h1 className="icon">
+              <IoNewspaperSharp />
+            </h1>
             <h1>Blog</h1>
             <h3 className="no-bold">
               Welcome to my blog, where I share insights, tips, and tutorials on

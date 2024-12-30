@@ -178,7 +178,7 @@ const Carousel = ({
             <div className="button-container">
               <button
                 className="prev-button"
-                onClick={() => toggleSlide(currentCard - 1)}
+                onClick={() => toggleSlide(currentCard + 1)}
               >
                 <FaChevronLeft />
               </button>
@@ -186,7 +186,7 @@ const Carousel = ({
             <div className="button-container">
               <button
                 className="next-button"
-                onClick={() => toggleSlide(currentCard + 1)}
+                onClick={() => toggleSlide(currentCard - 1)}
               >
                 <FaChevronRight />
               </button>

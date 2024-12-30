@@ -6,7 +6,7 @@
   gap: 5rem;
   padding: 0.5rem;
   border-radius: 2rem;
-  margin: 3rem 0rem;
+  margin: 5rem 0rem 8rem;
   box-shadow: inset $borderSize $borderSize 0px $borderSize
       var(--glass-border-color-1),
     inset -1 * $borderSize -1 * $borderSize 0px $borderSize
@@ -89,6 +89,7 @@
         display: table-cell;
         text-align: center;
         vertical-align: middle;
+        font-size: 1.15rem;
       }
 
       > * {

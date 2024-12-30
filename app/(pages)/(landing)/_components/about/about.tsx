@@ -6,6 +6,7 @@ import { SlSpeech } from "react-icons/sl";
 import {
   BsFileEarmarkCodeFill,
   BsFillFileEarmarkRichtextFill,
+  BsFillInfoSquareFill,
   BsFillLightningFill,
   BsGraphUpArrow,
   BsReverseLayoutTextWindowReverse,
@@ -57,7 +58,10 @@ const About = () => {
         <SplitCard id="about-header" reverse={true}>
           <figure className="image-container"></figure>
           <section className="text-section">
-            <h1 className="title">Why Choose Me?</h1>
+            <h1 className="icon">
+              <BsFillInfoSquareFill />
+            </h1>
+            <h1 className="title">What can I do?</h1>
             <h3 className="no-bold">
               My philosophy is to build websites and web applications that not
               only captivate users with their design but also deliver fast,
