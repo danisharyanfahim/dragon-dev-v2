@@ -99,11 +99,10 @@ const ContactForm = () => {
   };
 
   return (
-    <div className="contact-form container">
+    <div className="contact-form">
       <div className="form container">
         <form onSubmit={handleSubmit} className="email-form container">
           <section>
-            <label htmlFor="firstName">First Name</label>
             <input
               type="text"
               id="firstName"
@@ -113,7 +112,6 @@ const ContactForm = () => {
             />
           </section>
           <section>
-            <label htmlFor="lastName">Last Name</label>
             <input
               type="text"
               id="lastName"
@@ -123,7 +121,6 @@ const ContactForm = () => {
             />
           </section>
           <section>
-            <label htmlFor="email">Email</label>
             <input
               type="email"
               id="email"
@@ -133,34 +130,35 @@ const ContactForm = () => {
             />
           </section>
           <section>
-            <label htmlFor="country">Country</label>
             <select id="country" onChange={(e) => setCountry(e.target.value)}>
               {countryInfo.map((country, index) => {
                 return (
                   <option
-                    selected={country.name === "Canada"}
+                    // selected={country.name === "Canada"}
                     key={country.name + index}
                     className="country-option"
+                    style={{ backgroundColor: "var(--ui-background-color-1)" }}
                   >
                     {country.name}
                   </option>
                 );
               })}
+              <option value="" disabled selected>
+                Country
+              </option>
             </select>
           </section>
           <section>
-            <label htmlFor="phone">Phone</label>
             <input
               type="tel"
               id="phone"
-              placeholder="123-456-7890"
+              placeholder="Phone Number"
               value={phoneNumber}
               onChange={(e) => setPhoneNumber(e.target.value)}
               pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}"
             />
           </section>
           <section>
-            <label htmlFor="jobTitle">Job Title</label>
             <input
               type="text"
               id="jobTitle"
@@ -170,7 +168,6 @@ const ContactForm = () => {
             />
           </section>
           <section>
-            <label htmlFor="companyName">Company Name</label>
             <input
               type="text"
               id="companyName"
@@ -180,7 +177,6 @@ const ContactForm = () => {
             />
           </section>
           <section>
-            <label htmlFor="subject">Subject</label>
             <input
               type="text"
               id="subject"
@@ -189,18 +185,16 @@ const ContactForm = () => {
               onChange={(e) => setSubject(e.target.value)}
             />
           </section>
-          <section>
-            <label htmlFor="message">Message</label>
+          <section className="message">
             <textarea
               id="message"
-              cols={30}
-              rows={5}
               placeholder="Message"
               value={message}
+              rows={10}
               onChange={(e) => setMessage(e.target.value)}
             ></textarea>
           </section>
-          <section>
+          {/* <section>
             <div>
               <div className="box-container">
                 <input
@@ -224,11 +218,17 @@ const ContactForm = () => {
                 </span>
               </div>
             </div>
-          </section>
-          <section>
+          </section> */}
+          <section className="buttons">
             <button className="send" type="submit">
-              Send
+              <p>Send</p>
             </button>
+            <a
+              className="email-button"
+              href="mailto:danisharyanfahim@gmail.com"
+            >
+              <p>Custom Email</p>
+            </a>
             {/* <button className="reset" onClick={() => console.log("H")}>
         Reset
       </button> */}

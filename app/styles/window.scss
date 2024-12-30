@@ -6,6 +6,7 @@
   padding: 0.5rem;
   background: var(--ui-background-glass-color);
   backdrop-filter: blur(30px);
+  margin-bottom: 3rem;
   box-shadow: inset $borderSize $borderSize 0px $borderSize
       var(--glass-border-color-1),
     inset -1 * $borderSize -1 * $borderSize 0px $borderSize
@@ -21,15 +22,20 @@
   .tabs-container {
     width: 100%;
     margin-bottom: clamp(0.5rem, 0.143rem + 1.786vw, 1rem);
+    container-type: inline;
+    container-name: tabs-container;
     .tabs {
       width: 100%;
       display: flex;
-      align-items: flex-start;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+
       .tab {
         padding: clamp(0.5rem, 0.143rem + 1.786vw, 1rem)
           clamp(1rem, 0.286rem + 3.571vw, 2rem);
-        border-bottom: 2px solid transparent;
+        // border-bottom: 2px solid transparent;
         transition: all 0.5s;
+        min-width: 100px;
 
         h4 {
           color: rgba(111, 136, 170, 0.527);
@@ -38,7 +44,7 @@
         }
 
         &.active {
-          border-bottom: 2px solid #e6ebfdf0;
+          // border-bottom: 2px solid #e6ebfdf0;
           transition: all 0.5s;
 
           h4 {
@@ -51,6 +57,7 @@
   }
 
   .pages-container {
+    min-height: 500px;
     max-height: 800px;
     overflow-y: scroll;
     border-radius: 0rem 0rem 0rem 0.75rem;
@@ -78,5 +85,11 @@
         padding: 0.25rem;
       }
     }
+  }
+}
+
+@media (max-width: 770px) {
+  .window-menu .tabs-container .tabs {
+    justify-content: center;
   }
 }

@@ -7,25 +7,19 @@ const Contact = () => {
     <section className="contact" id="contact">
       <div className="section-spacer">
         <SplitCard id="contact-section">
-          <section className="text-section">
-            <h1>Contact</h1>
-            <h3 className="no-bold">
-              I'm always open to discussing new projects, collaborations, or
-              answering any questions you may have. Whether you're interested in
-              working together or just want to connect, feel free to reach out.
-              I'll do my best to respond as soon as possible. Looking forward to
-              hearing from you!
-            </h3>
-            <div className="email-button-container">
-              <a
-                className="email-link"
-                href="mailto:danisharyanfahim@gmail.com"
-              >
-                <button className="email-button">Email Me</button>
-              </a>
-            </div>
-          </section>
-          <ContactForm />
+          <div className="contact-section">
+            <section className="text-section">
+              <h1>Get In Touch</h1>
+              <h4 className="no-bold">
+                I'm always open to discussing new projects, collaborations, or
+                answering any questions you may have. Whether you're interested
+                in working together or just want to connect, feel free to reach
+                out. I'll do my best to respond as soon as possible. Looking
+                forward to hearing from you!
+              </h4>
+            </section>
+            <ContactForm />
+          </div>
         </SplitCard>
       </div>
     </section>

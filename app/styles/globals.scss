@@ -9,7 +9,7 @@
 @use "./slider.scss";
 @use "./slideshow.scss";
 @use "./carousel.scss";
-@use "./contact-form.scss";
+@use "./contact.scss";
 @import url("./_fonts.css");
 @import url("./_variables.css");
 @import url("./_animations.css");
@@ -71,11 +71,26 @@ figure {
 }
 
 textarea,
-input {
+input,
+select {
   outline: none;
   border: none;
   -webkit-appearance: none;
+  -moz-appearance: none;
   appearance: none;
+  width: 100px;
+  font-family: paragraph, sans-serif;
+
+  &:is(:-webkit-autofill, :autofill, :-moz-placeholder) {
+    background-color: transparent !important;
+    color: inherit !important;
+    border: none !important;
+    box-shadow: none !important;
+  }
+}
+
+textarea {
+  all: unset;
 }
 
 small {

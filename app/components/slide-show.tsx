@@ -1,6 +1,8 @@
 "use client";
-import React, { useEffect, useMemo, useState } from "react";
+import React, { useEffect, useMemo, useRef, useState } from "react";
 import Slide from "./cards/slide";
+import { FaChevronLeft, FaChevronRight, FaPlay } from "react-icons/fa6";
+import { GiPauseButton } from "react-icons/gi";
 
 /* 
 // -infinite/wrapping
@@ -38,9 +40,8 @@ const SlideShow = ({
   showPositionButtons?: boolean;
 }) => {
   const [currentSlide, setCurrentSlide] = useState<number>(initialSlide ?? 0);
-  const [isPaused, setIsPaused] = useState<boolean | undefined>(
-    autoPlay && delay !== undefined ? false : undefined
-  );
+  const lastSlide = useRef<number>(0);
+  const [isPlaying, setIsPlaying] = useState<boolean>(autoPlay);
 
   const slides = useMemo(() => {
     return children.map((child, index) => {
@@ -71,16 +72,17 @@ const SlideShow = ({
 
   const toggleSlide = (nextSlide: number) => {
     nextSlide = clamp(nextSlide);
+    lastSlide.current = currentSlide;
     setCurrentSlide(nextSlide);
   };
 
   const togglePause = () => {
-    setIsPaused((prev) => !prev);
+    setIsPlaying((prev) => !prev);
   };
 
   useEffect(() => {
     const interval = setInterval(() => {
-      if (autoPlay && !isPaused) {
+      if (autoPlay && isPlaying) {
         if (direction === "forward") {
           toggleSlide(currentSlide + 1);
         } else {
@@ -89,30 +91,36 @@ const SlideShow = ({
       }
     }, delay);
     return () => clearInterval(interval);
-  }, [currentSlide, autoPlay, isPaused, delay]);
+  }, [currentSlide, autoPlay, isPlaying, delay]);
 
   return (
     <section className="slide-show">
       <div className="controls-container">
         {showControlButtons && (
           <div className="control-buttons">
-            <button
-              className="prev-button"
-              onClick={() => toggleSlide(currentSlide - 1)}
-            >
-              ❮
-            </button>
-            <button
-              className="next-button"
-              onClick={() => toggleSlide(currentSlide + 1)}
-            >
-              ❯
-            </button>
+            <div className="button-container">
+              <button
+                className="prev-button"
+                onClick={() => toggleSlide(currentSlide - 1)}
+              >
+                <FaChevronLeft />
+              </button>
+            </div>
+            <div className="button-container">
+              <button
+                className="next-button"
+                onClick={() => toggleSlide(currentSlide + 1)}
+              >
+                <FaChevronRight />
+              </button>
+            </div>
           </div>
         )}
         {showPositionIndicator && (
           <div className="position-indicator">
-            {currentSlide + 1}/{slides.length}
+            <p>
+              {currentSlide + 1}/{slides.length}
+            </p>
           </div>
         )}
         {showPositionButtons && (
@@ -143,13 +151,31 @@ const SlideShow = ({
         {autoPlay && showPlayButton && (
           <div className="play-button-container">
             <button className="play-button" onClick={togglePause}>
-              {isPaused ? "Resume" : "Pause"}
+              <h3>{isPlaying ? <GiPauseButton /> : <FaPlay />}</h3>
             </button>
           </div>
         )}
       </div>
-      <div className="slide-container">
-        <ul className="slides">{slides[currentSlide]}</ul>
+      <div className="slides-container">
+        <ol className="slides">
+          {slides.map((slide, index) => {
+            if (index === lastSlide.current) {
+              return (
+                <div className="prev-slide-container" key={index}>
+                  {slide}
+                </div>
+              );
+            } else if (index === currentSlide) {
+              return (
+                <div className="current-slide-container" key={index}>
+                  {slide}
+                </div>
+              );
+            } else {
+              return <></>;
+            }
+          })}
+        </ol>
       </div>
     </section>
   );

@@ -13,6 +13,7 @@
   --ui-background-color-transparent-1: #f0f0ff6e;
   --ui-background-color-transparent-2: #e4e4f7c2;
   --nav-menu-icon-color: rgb(14, 32, 194);
+  --nav-menu-icon-color-glow: rgb(2, 1, 54);
   --ui-primary-accent-color-1: rgb(6, 24, 184);
   --ui-primary-accent-color-2: rgb(16, 37, 224);
   --ui-secondary-accent-color-1: rgb(40, 68, 228);
@@ -29,7 +30,7 @@
   --text-color-title: #202849;
   --text-color-p: rgb(62, 68, 92);
   --text-color-p-2: rgb(101, 108, 139);
-  --text-color-p-3: rgb(171, 178, 204);
+  --text-color-p-3: rgb(156, 163, 187);
   --background-color-1: rgb(13, 8, 100);
   --background-color-2: rgb(117, 0, 0);
   --border-color-1: rgb(156, 162, 199);
@@ -43,7 +44,7 @@
   --highlight-color: rgba(0, 132, 255, 0.767);
   --red: rgba(200, 0, 0);
   --blue: rgba(0, 50, 200);
-  --ui-background-glass-color: rgba(245, 242, 255, 0.35);
+  --ui-background-glass-color: rgba(245, 242, 255, 0.05);
   --glass-border-color-1: rgba(255, 255, 255, 0.1);
   --glass-border-color-2: rgba(0, 0, 0, 0.1);
   --ui-static-shadow-color: rgba(151, 146, 199, 0.637);
@@ -61,7 +62,7 @@
   --text-color-title: rgb(171, 176, 204);
   --text-color-p: #7b7f96;
   --text-color-p-2: rgb(95, 100, 126);
-  --text-color-p-3: rgb(49, 56, 85);
+  --text-color-p-3: rgb(64, 70, 94);
   --ui-background-color-1: #0a0e22;
   --ui-background-color-2: #08081a;
   --ui-background-color-3: #f0f0ff;
@@ -71,11 +72,12 @@
   --border-color-1: rgb(21, 23, 46);
   --border-color-2: rgb(35, 35, 66);
   --border-color-3: rgb(3, 4, 22);
-  --nav-menu-icon-color: rgb(219, 223, 255);
+  --nav-menu-icon-color: rgb(235, 0, 0);
+  --nav-menu-icon-color-glow: rgb(219, 223, 255);
   --highlight-color: rgba(133, 9, 9, 0.767);
   --red: rgb(211, 68, 68);
   --blue: rgb(87, 113, 192);
-  --ui-background-glass-color: rgba(20, 15, 40, 0.4);
+  --ui-background-glass-color: rgba(10, 5, 20, 0.6);
   --ui-primary-accent-color-1: rgb(146, 0, 0);
   --ui-primary-accent-color-2: rgb(102, 0, 0);
   --ui-secondary-accent-color-1: rgb(255, 0, 0);

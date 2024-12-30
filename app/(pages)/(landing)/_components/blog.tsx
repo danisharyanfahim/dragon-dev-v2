@@ -3,6 +3,7 @@ import Carousel from "@/app/components/carousel";
 import Tag from "@/app/components/tag";
 import { ArticleCardProps } from "@/app/interfaces/blog";
 import { getLatestArticles } from "@/app/utils/server-actions";
+import Link from "next/link";
 import React from "react";
 
 const Blog = async () => {
@@ -20,10 +21,17 @@ const Blog = async () => {
               experiences, the challenges I’ve faced, and the tools I use to
               create better websites and apps.
             </h3>
+            <div className="button-container">
+              <Link href="/blog">
+                <button className="blog-button">
+                  <p>Visit Blog</p>
+                </button>
+              </Link>
+            </div>
           </section>
         </SplitCard>
         <SplitCard id="blog-carousel">
-          <Carousel infinite={true}>
+          <Carousel infinite={true} showPlayButton={true} autoPlay={true}>
             {articleData.map((data) => {
               const { title, overview, categories, id, currentSlug } = data;
               return (

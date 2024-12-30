@@ -14,10 +14,10 @@ const Landing = () => {
       <Header />
       <About />
       <Technologies />
-      <Work />
       <Projects />
-      <Contact />
+      <Work />
       <Blog />
+      <Contact />
       <Footer />
     </div>
   );

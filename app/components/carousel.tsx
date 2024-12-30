@@ -8,7 +8,8 @@ import React, {
 } from "react";
 import { addToFrontAndEnd } from "../utils/utility-functions";
 import CarouselCard from "./cards/carousel-card";
-import { FaChevronLeft, FaChevronRight } from "react-icons/fa6";
+import { FaChevronLeft, FaChevronRight, FaPlay } from "react-icons/fa6";
+import { GiPauseButton } from "react-icons/gi";
 
 const gridGap = 16;
 
@@ -168,7 +169,7 @@ const Carousel = ({
               className="play-button"
               onClick={() => setIsPlaying(!isPlaying)}
             >
-              <p>{isPlaying ? "Pause" : "Play"}</p>
+              <h3>{isPlaying ? <GiPauseButton /> : <FaPlay />}</h3>
             </button>
           </div>
         )}

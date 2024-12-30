@@ -50,7 +50,7 @@ const TechCard = ({
         <div className="back">
           <div className="spacer">
             <div className="text-container">
-              <p>{description}</p>
+              <p className="description">{description}</p>
               <ul className="features">
                 {features.map((feature: string, index: number) => {
                   return (
