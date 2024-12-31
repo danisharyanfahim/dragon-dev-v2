@@ -152,48 +152,40 @@ const Carousel = ({
 
   return (
     <div className="carousel" style={{ "--grid-gap": gridGap + "px" }}>
-      <div className="controls-container">
-        {showPositionIndicator && (
-          <div className="position-indicator">
-            <p>
-              {currentCard + 1 > children.length
-                ? currentCard - children.length + 1
-                : currentCard + 1}
-              /{children.length}
-            </p>
-          </div>
-        )}
-        {autoPlay && showPlayButton && (
-          <div className="play-button-container">
-            <button
-              className="play-button"
-              onClick={() => setIsPlaying(!isPlaying)}
-            >
-              <h3>{isPlaying ? <GiPauseButton /> : <FaPlay />}</h3>
-            </button>
-          </div>
-        )}
-        {showControlButtons && (
-          <div className="control-buttons">
-            <div className="button-container">
-              <button
-                className="prev-button"
-                onClick={() => toggleSlide(currentCard + 1)}
-              >
-                <FaChevronLeft />
-              </button>
-            </div>
-            <div className="button-container">
-              <button
-                className="next-button"
-                onClick={() => toggleSlide(currentCard - 1)}
-              >
-                <FaChevronRight />
-              </button>
-            </div>
-          </div>
-        )}
-      </div>
+      {showPositionIndicator && (
+        <div className="position-indicator">
+          <p>
+            {currentCard + 1 > children.length
+              ? currentCard - children.length + 1
+              : currentCard + 1}
+            /{children.length}
+          </p>
+        </div>
+      )}
+      {autoPlay && showPlayButton && (
+        <button
+          className="play-button"
+          onClick={() => setIsPlaying(!isPlaying)}
+        >
+          <h3>{isPlaying ? <GiPauseButton /> : <FaPlay />}</h3>
+        </button>
+      )}
+      {showControlButtons && (
+        <>
+          <button
+            className="prev-button"
+            onClick={() => toggleSlide(currentCard + 1)}
+          >
+            <FaChevronRight />
+          </button>
+          <button
+            className="next-button"
+            onClick={() => toggleSlide(currentCard - 1)}
+          >
+            <FaChevronLeft />
+          </button>
+        </>
+      )}
       <ol className="cards-container" ref={carouselRef}>
         {cards}
       </ol>

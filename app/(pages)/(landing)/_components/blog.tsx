@@ -2,6 +2,7 @@ import SplitCard from "@/app/components/cards/split-card";
 import Carousel from "@/app/components/carousel";
 import Tag from "@/app/components/tag";
 import { ArticleCardProps } from "@/app/interfaces/blog";
+import { urlFor } from "@/app/lib/client";
 import { getLatestArticles } from "@/app/utils/server-actions";
 import Link from "next/link";
 import React from "react";
@@ -35,18 +36,39 @@ const Blog = async () => {
           </section>
         </SplitCard>
         <SplitCard id="blog-carousel">
-          <Carousel infinite={true} showPlayButton={true} autoPlay={true}>
+          <Carousel
+            infinite={true}
+            showPlayButton={true}
+            autoPlay={true}
+            delay={3000}
+          >
             {articleData.map((data) => {
-              const { title, overview, categories, id, currentSlug } = data;
+              const {
+                title,
+                titleImage,
+                overview,
+                categories,
+                id,
+                currentSlug,
+              } = data;
               return (
                 <div className="article-carousel-card" key={id}>
-                  <div className="title">{title}</div>
-                  {/* <img src="" alt="article image" /> */}
-                  <div className="overview">{overview}</div>
-                  <div className="category-container">
-                    {categories.map((category, index) => {
-                      return <Tag key={index} {...category} />;
-                    })}
+                  <div className="image-container">
+                    <img src={urlFor(titleImage).url()} alt="article-image" />
+                  </div>
+                  <div className="text-container">
+                    <h5 className="title">{title}</h5>
+                    <p className="overview">{overview}</p>
+                    <div className="category-container">
+                      {categories.map((category, index) => {
+                        return <Tag key={index} {...category} />;
+                      })}
+                    </div>
+                    <div className="link-button-container">
+                      <button className="link-button">
+                        <p>Read More</p>
+                      </button>
+                    </div>
                   </div>
                 </div>
               );

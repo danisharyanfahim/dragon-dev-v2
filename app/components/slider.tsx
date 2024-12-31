@@ -180,7 +180,7 @@ const Slider = ({
             <div className="button-container">
               <button
                 className="prev-button"
-                onClick={() => toggleSlide(currentSlide + 1)}
+                onClick={() => toggleSlide(currentSlide - 1)}
               >
                 <FaChevronLeft />
               </button>
@@ -188,7 +188,7 @@ const Slider = ({
             <div className="button-container">
               <button
                 className="next-button"
-                onClick={() => toggleSlide(currentSlide - 1)}
+                onClick={() => toggleSlide(currentSlide + 1)}
               >
                 <FaChevronRight />
               </button>

@@ -260,6 +260,103 @@
     box-shadow: 0 0 10px 0px var(--text-shadow-color-1);
     border-radius: 50px;
   }
+
+  .article-carousel-card {
+    margin-left: 0.2rem;
+    margin-right: 0.2rem;
+    min-height: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+    border-radius: 1rem;
+    background: linear-gradient(
+      135deg,
+      var(--ui-background-color-1),
+      var(--ui-background-color-2)
+    );
+    overflow: hidden;
+    box-shadow: 0px 0px 5px 0px var(--ui-static-shadow-color-dim);
+
+    .image-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 240px;
+      width: 100%;
+      img {
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        object-fit: cover;
+      }
+    }
+
+    .text-container {
+      height: 66%;
+      flex-grow: 1;
+      flex-basis: 66%;
+      padding: 1rem;
+
+      > * {
+        padding: 0.25rem 0rem;
+      }
+
+      .link-button-container {
+        margin: 0.5rem 0rem 0rem;
+        .link-button {
+          background: linear-gradient(
+            135deg,
+            var(--ui-primary-accent-color-1),
+            var(--ui-primary-accent-color-2)
+          );
+          padding: 0.5rem 1.25rem;
+          border-radius: 10px;
+          box-shadow: 0px 0px 10px 0px var(--shadow-color-1);
+          transform: scale(100%);
+          transition: all 0.15s;
+
+          p {
+            font-size: clamp(0.8rem, -0.6rem + 8cqw, 1.2rem);
+          }
+        }
+      }
+
+      .category-container {
+        width: 80%;
+        display: flex;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        margin-top: 0.5rem;
+
+        .tag {
+          &.relevance-1 {
+            background: rgb(0, 68, 255);
+          }
+          &.relevance-2 {
+            background: rgb(98, 0, 255);
+          }
+          &.relevance-3 {
+            background: rgb(175, 4, 175);
+          }
+          &.relevance-4 {
+            background: rgb(255, 0, 140);
+          }
+          &.relevance-5 {
+            background: rgb(255, 0, 0);
+          }
+          border-radius: 0.25rem;
+          padding: 0.1rem 0.33rem;
+          box-shadow: 0px 0px 10px 0px rgba(38, 43, 82, 0.2);
+
+          small {
+            font-size: 0.8rem;
+          }
+        }
+      }
+    }
+  }
 }
 
 .split-card#intro {

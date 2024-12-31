@@ -22,7 +22,7 @@ const Projects = () => {
           <SlideShow infinite={true}>
             <div className="project-slide">
               <h3>Project Name</h3>
-              <h4>Site Description</h4>
+              <h5>Site Description</h5>
               <p className="date">2024</p>
               <img alt="image of the project or screenshot to the top" />
               <ul className="Tech used"></ul>
