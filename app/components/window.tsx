@@ -53,7 +53,11 @@ const Window = ({ buttonInfo, initialPage, children }: WindowProps) => {
               >
                 <button onClick={() => togglePage(index)}>
                   <h4>
-                    {button.icon ?? <></>}
+                    {button.icon ? (
+                      <span className="icon">{button.icon}</span>
+                    ) : (
+                      <></>
+                    )}
                     {button.title}
                   </h4>
                 </button>

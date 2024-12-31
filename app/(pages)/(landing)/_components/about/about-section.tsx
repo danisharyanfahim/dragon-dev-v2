@@ -27,8 +27,10 @@ const AboutSection = async ({
       reverse={direction === "left-right"}
     >
       <section className="text-container">
-        <h2 className="icon">{mainLogo}</h2>
-        <h2 className="title">{title}</h2>
+        <h2 className="title">
+          {title}
+          <span className="icon">{mainLogo}</span>
+        </h2>
         <h4 className="no-bold">{description}</h4>
       </section>
       <Slider

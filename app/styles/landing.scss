@@ -102,7 +102,7 @@
         text-shadow: 0px 0px 5px var(--dark-transparent-shade-1);
 
         .tech-icon-container {
-          padding-right: 1rem;
+          padding-right: 2rem;
           .tech-icon {
             font-size: clamp(4rem, 3.429rem + 2.857vw, 8rem);
           }
@@ -113,7 +113,7 @@
           text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.253);
           container-type: inline-size;
           border-left: 4px solid var(--light-text-color);
-          padding-left: 1rem;
+          padding-left: 2rem;
           flex: 1 1 450px;
           max-width: 1000px;
 
@@ -194,17 +194,32 @@
 
   h1 {
     font-size: clamp(3rem, 2.357rem + 1.339vw, 4.5rem);
+    margin-bottom: 0.5rem;
+
+    &.icon {
+      margin: 0rem;
+      top: 10px;
+    }
   }
   h2 {
     font-size: clamp(2.25rem, 1.736rem + 1.071vw, 3.45rem);
+    margin-bottom: 0.33rem;
+    display: flex;
+    gap: 2rem;
+
+    .icon {
+      top: 5px;
+    }
   }
 
   h3 {
     font-size: clamp(1.95rem, 1.886rem + 0.134vw, 2.1rem);
+    margin-bottom: 0.25rem;
   }
 
   h4 {
     font-size: clamp(1.33rem, 0.564rem + 1.595vw, 2rem);
+    margin-bottom: 0.18rem;
   }
 
   h5 {
@@ -269,8 +284,6 @@ header {
         text-wrap: balance;
 
         .colorful {
-          -webkit-background-clip: text;
-          -webkit-text-fill-color: transparent;
           background: linear-gradient(
             -45deg,
             rgb(0, 9, 134),
@@ -279,6 +292,8 @@ header {
             rgb(79, 111, 255)
           );
           background-clip: text;
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
         }
       }
     }
@@ -397,7 +412,7 @@ header {
     flex-wrap: wrap;
 
     .work-icon-container {
-      padding-right: 1rem;
+      padding-right: 2rem;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -413,7 +428,7 @@ header {
       text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.253);
       container-type: inline-size;
       border-left: 4px solid var(--light-text-color);
-      padding-left: 1rem;
+      padding-left: 2rem;
       flex: 1 1 450px;
       max-width: 1000px;
       text-shadow: 0px 0px 5px var(--dark-transparent-shade-1);

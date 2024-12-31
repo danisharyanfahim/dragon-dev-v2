@@ -42,7 +42,12 @@
           transition: all 0.5s;
           text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.253);
           display: flex;
-          gap: 0.25rem;
+          gap: 1rem;
+          .icon {
+            top: 5px;
+            transition: all 0.5s;
+            color: rgba(111, 136, 170, 0.527);
+          }
         }
 
         &.active {
@@ -52,6 +57,11 @@
           h4 {
             color: #e6ebfdf0;
             transition: all 0.5s;
+
+            .icon {
+              transition: all 0.5s;
+              color: #e6ebfdf0;
+            }
           }
         }
       }

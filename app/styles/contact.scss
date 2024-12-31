@@ -15,6 +15,7 @@
     inset 30px 30px 70px 0px var(--glass-border-color-2),
     inset -30px -30px 70px 0px var(--glass-border-color-1);
   backdrop-filter: blur(30px);
+  min-height: 750px;
 
   > * {
     container-type: inline-size;
