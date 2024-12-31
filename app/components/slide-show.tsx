@@ -172,7 +172,7 @@ const SlideShow = ({
                 </div>
               );
             } else {
-              return <></>;
+              return <div key={index} style={{ display: "none" }}></div>;
             }
           })}
         </ol>

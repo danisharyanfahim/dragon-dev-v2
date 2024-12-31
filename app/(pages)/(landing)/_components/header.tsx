@@ -7,7 +7,7 @@ const Header = () => {
       <div className="section-spacer">
         <SplitCard id="intro">
           <figure className="logo-container">
-            <img src="/static/icons/dragon-dev-day.svg" alt="logo" />
+            <div className="logo"></div>
           </figure>
           <section className="text-container">
             <h1 className="title text">

@@ -1,14 +1,29 @@
-import React from "react";
+"use client";
+import React, { useEffect, useState } from "react";
 import { footerInfo, pageSections } from "../global/variables";
 import Link from "next/link";
+import { useTheme } from "next-themes";
 
 const FooterContent = () => {
+  const { theme } = useTheme();
+
+  const [mounted, setMounted] = useState<boolean>(false);
+
+  useEffect(() => setMounted(true), []);
+
   return (
     <>
       <div className="top-section">
         <section className="mission-section">
           <figure className="logo-container">
-            <img src={"/static/icons/dragon-dev-day.svg"} alt="logo" />
+            <img
+              src={
+                theme === "dark" || !mounted
+                  ? "/static/icons/dragon-dev-night.svg"
+                  : "/static/icons/dragon-dev-day.svg"
+              }
+              alt="logo"
+            />
           </figure>
           <p className="mission-text">
             My mission is to create websites and web applications that deliver

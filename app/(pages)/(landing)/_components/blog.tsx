@@ -19,12 +19,12 @@ const Blog = async () => {
               <IoNewspaperSharp />
             </h1>
             <h1>Blog</h1>
-            <h3 className="no-bold">
+            <h4 className="no-bold">
               Welcome to my blog, where I share insights, tips, and tutorials on
               web development, design, and technology. I write about my
               experiences, the challenges I’ve faced, and the tools I use to
               create better websites and apps.
-            </h3>
+            </h4>
             <div className="button-container">
               <Link href="/blog">
                 <button className="blog-button">

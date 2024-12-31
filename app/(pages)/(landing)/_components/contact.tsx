@@ -10,16 +10,20 @@ const Contact = () => {
         <SplitCard id="contact-section">
           <div className="contact-section">
             <section className="text-section">
-              <h1 className="icon">
-                <HiPhone />
+              <h1>
+                Get In Touch
+                <HiPhone className="icon" />
               </h1>
-              <h1>Get In Touch</h1>
               <h4 className="no-bold">
                 I'm always open to discussing new projects, collaborations, or
-                answering any questions you may have. I'll do my best to respond
-                as soon as possible. Looking forward to hearing from you!
+                answering any questions you may have. Looking forward to hearing
+                from you!
               </h4>
+              <figure className="image-container">
+                <img src="/static/icons/paper-plane.svg" alt="paper-plane" />
+              </figure>
             </section>
+
             <ContactForm />
           </div>
         </SplitCard>

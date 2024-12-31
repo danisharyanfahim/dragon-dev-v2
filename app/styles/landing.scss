@@ -91,12 +91,8 @@
     background-position: right;
 
     .section-spacer {
-      padding: 10rem clamp(2rem, -7.529rem + 23.455vw, 30rem);
-      display: flex;
-      flex-direction: column;
-      gap: 5rem;
       .tech-header {
-        margin-top: 2rem;
+        margin-top: 7rem;
         display: flex;
         color: var(--light-text-color);
         width: 100%;
@@ -125,6 +121,10 @@
             text-wrap: balance;
           }
         }
+      }
+
+      #tech-window {
+        margin-bottom: 7rem;
       }
     }
   }
@@ -183,6 +183,7 @@
 
   .icon {
     filter: drop-shadow(0px 0px 15px var(--dark-transparent-shade-2));
+    color: var(--text-color-p-3);
   }
 
   > * {
@@ -203,7 +204,7 @@
   }
 
   h4 {
-    font-size: clamp(1.5rem, 1.286rem + 0.446vw, 2rem);
+    font-size: clamp(1.33rem, 0.564rem + 1.595vw, 2rem);
   }
 
   h5 {
@@ -257,12 +258,11 @@ header {
   // align-items: center;
 
   .section-spacer {
-    filter: drop-shadow(0px 0px 5px var(--dark-transparent-shade-1));
-
     .text-container {
       display: flex;
       flex-direction: column;
       justify-content: center;
+      filter: drop-shadow(0px 0px 5px var(--dark-transparent-shade-1));
 
       .text {
         text-wrap: balance;
@@ -283,17 +283,25 @@ header {
     }
 
     .logo-container {
+      filter: drop-shadow(0px 0px 10px rgba(0, 47, 255, 0.76));
       max-height: 400px;
       height: 100%;
       width: 100%;
       min-height: 200px;
       margin: 2rem;
 
-      img {
-        width: 100%;
+      .logo {
         height: 100%;
-        position: absolute;
-        object-fit: contain;
+        width: 100%;
+        mask-image: url("/static/icons/dragon-dev.svg");
+        mask-size: contain;
+        mask-repeat: no-repeat;
+        mask-position: center;
+        background: linear-gradient(
+          0deg,
+          var(--moon-color),
+          var(--light-text-color)
+        );
       }
     }
   }
@@ -305,6 +313,13 @@ header {
       text-align: center;
     }
   }
+
+  .about .section-spacer #about-header {
+    gap: 1rem;
+    .description-2 {
+      visibility: hidden;
+    }
+  }
 }
 
 // Center text when the container is <= 600px
@@ -314,27 +329,56 @@ header {
   }
 }
 
+.about .section-spacer {
+  #about-header {
+    margin-top: 3rem;
+    margin-bottom: 8rem;
+
+    .text-section {
+      .description-1 {
+        margin-bottom: 1rem;
+      }
+
+      > * {
+        text-wrap: balance;
+      }
+
+      .description-2 {
+        color: var(--text-color-p-2);
+      }
+    }
+
+    .image-container {
+      max-height: 400px;
+      height: 100%;
+      width: 100%;
+      min-height: 200px;
+      margin: 2rem;
+      filter: drop-shadow(0px 0px 12px var(--text-shadow-color-1));
+      img {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        object-fit: contain;
+      }
+    }
+  }
+}
+
+@media (min-width: 1440px) {
+  .about .section-spacer #about-header .image-container img {
+    height: 130%;
+    width: 130%;
+  }
+}
+
 @media (min-width: 828px) {
   .split-card.reverse {
     flex-direction: row-reverse;
   }
 }
 
-.about .section-spacer {
-  #about-header {
-    margin-top: 3rem;
-
-    > * {
-      text-wrap: balance;
-    }
-  }
-}
-
 .work {
-  .section-spacer .text-section {
-    margin-top: 3rem;
-  }
-
   .work-header {
     margin-top: 2rem;
     display: flex;
@@ -350,6 +394,7 @@ header {
       justify-content: center;
       align-items: center;
       h1 {
+        color: var(--light-text-color);
         font-size: clamp(4rem, 3.429rem + 2.857vw, 8rem);
         text-shadow: 0px 0px 5px var(--dark-transparent-shade-1);
       }

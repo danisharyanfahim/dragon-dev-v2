@@ -102,6 +102,7 @@
           var(--ui-primary-accent-color-2)
         );
         box-shadow: 0px 0px 10px 0px var(--text-shadow-color-1);
+        transition: all 0.15s;
 
         &:hover {
           transform: scale(108%);
@@ -119,12 +120,53 @@
 
   .text-section {
     padding: 2rem;
+
+    .image-container {
+      max-height: 400px;
+      height: 50%;
+      width: 100%;
+      min-height: 200px;
+      margin: 2rem 0rem;
+      filter: drop-shadow(0px 0px 12px var(--dark-transparent-shade-1));
+      img {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        object-fit: contain;
+      }
+    }
+
+    h1 {
+      display: flex;
+      gap: 1rem;
+
+      .icon {
+        color: var(--ui-primary-accent-color-1);
+        filter: drop-shadow(0px 0px 12px var(--text-shadow-color-1));
+      }
+    }
+
+    h4 {
+      text-shadow: 0px 0px 12px var(--dark-transparent-shade-1);
+    }
   }
 }
 
 @media (max-width: 450px) {
-  .contact .contact-form form {
-    display: flex;
-    flex-direction: column;
+  .contact-section {
+    padding: 0.2rem;
+    gap: 3rem;
+
+    .text-section .image-container {
+      margin-top: 1rem;
+      margin-bottom: 3rem;
+    }
+  }
+  .contact .contact-form {
+    padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+    form {
+      display: flex;
+      flex-direction: column;
+    }
   }
 }

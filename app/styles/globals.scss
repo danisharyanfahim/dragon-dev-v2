@@ -171,6 +171,7 @@ button {
   p {
     color: var(--light-text-color);
   }
+  transition: all 0.15s;
 
   &:hover {
     transform: scale(108%);

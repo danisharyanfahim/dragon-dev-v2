@@ -1,4 +1,5 @@
 import LangCard from "@/app/components/cards/lang-card";
+import SplitCard from "@/app/components/cards/split-card";
 import TechCard from "@/app/components/cards/tech-card";
 import Window from "@/app/components/window";
 import { LangProps, TechCardProps } from "@/app/interfaces/landing";
@@ -18,110 +19,106 @@ const Technologies = async () => {
   return (
     <section className="technologies" id="technologies">
       <div className="section-spacer">
-        <div className="tech-header">
-          <div className="tech-icon-container">
-            <GrPersonalComputer className="tech-icon" />
-          </div>
-          <div className="tech-description">
-            <h2>Technologies</h2>
-            <h3 className="no-bold">
-              These are the various technologies I've worked with and use in my
-              web development projects. Below, you'll find a breakdown of the
-              tools and tech I am proficient with, as well as those I am
-              familiar with.
-            </h3>
-          </div>
-        </div>
-        {/* <div className="ticker" id="programming-languages">
-          Ticker
-        </div>
-        <div className="ticker" id="web-dev-technology">
-          Ticker
-        </div>
-        <div className="ticker" id="other-software">
-          Ticker
-        </div> */}
-        <Window
-          buttonInfo={[
-            { title: "Languages", icon: <BsFileEarmarkCodeFill /> },
-            { title: "Technologies", icon: <BsPcDisplay /> },
-          ]}
-        >
-          <div className="page-container">
-            <div className="grid">
-              <div className="title-card" id="lang-solid">
-                <div className="spacer">
-                  <div className="badge-container">
-                    <IoStar />
-                  </div>
-                  <h2>Languages I Know Well</h2>
-                  <h5 className="short-description no-bold">
-                    These are the programming languages I have extensive
-                    experience with and feel confident using for various tasks.
-                  </h5>
-                </div>
-              </div>
-              {langDataSolid.map((lang: LangProps) => {
-                const { id } = lang;
-                return <LangCard key={id} {...lang} />;
-              })}
-              <div className="title-card" id="lang-familiar">
-                <div className="spacer">
-                  <div className="badge-container">
-                    <PiStudentFill />
-                  </div>
-                  <h2>Languages I've Used Before</h2>
-                  <h5 className="short-description no-bold">
-                    I've worked with these languages in the past but my
-                    understanding is more basic when compared to the above.
-                  </h5>
-                </div>
-              </div>
-              {langDataFamiliar.map((lang: LangProps) => {
-                const { id } = lang;
-                return <LangCard key={id} {...lang} />;
-              })}
+        <SplitCard id="tech-header">
+          <div className="tech-header">
+            <div className="tech-icon-container">
+              <GrPersonalComputer className="tech-icon" />
+            </div>
+            <div className="tech-description">
+              <h1>Technologies</h1>
+              <h4 className="no-bold">
+                These are the various technologies I've worked with and use in
+                my web development projects. Below, you'll find a breakdown of
+                the tools and tech I am proficient with, as well as those I am
+                familiar with.
+              </h4>
             </div>
           </div>
-          <div className="page-container">
-            <div className="grid">
-              <div className="title-card" id="tech-solid">
-                <div className="spacer">
-                  <div className="badge-container">
-                    <IoStar />
+        </SplitCard>
+        <SplitCard id="tech-window">
+          <Window
+            buttonInfo={[
+              { title: "Languages", icon: <BsFileEarmarkCodeFill /> },
+              { title: "Technologies", icon: <BsPcDisplay /> },
+            ]}
+          >
+            <div className="page-container">
+              <div className="grid">
+                <div className="title-card" id="lang-solid">
+                  <div className="spacer">
+                    <div className="badge-container">
+                      <IoStar />
+                    </div>
+                    <h2>Languages I Know Well</h2>
+                    <h5 className="short-description no-bold">
+                      These are the programming languages I have extensive
+                      experience with and feel confident using for various
+                      tasks.
+                    </h5>
                   </div>
-                  <h2>Technology I Am Proficient With</h2>
-                  <h5 className="short-description no-bold">
-                    These cards highlights the technologies I have solid
-                    understanding of and use confidently in my daily development
-                    work
-                  </h5>
                 </div>
-              </div>
-              {techDataSolid.map((tech: TechCardProps) => {
-                const { id } = tech;
-                return <TechCard key={id} {...tech} />;
-              })}
-              <div className="title-card" id="tech-familiar">
-                <div className="spacer">
-                  <div className="badge-container">
-                    <PiStudentFill />
+                {langDataSolid.map((lang: LangProps) => {
+                  const { id } = lang;
+                  return <LangCard key={id} {...lang} />;
+                })}
+                <div className="title-card" id="lang-familiar">
+                  <div className="spacer">
+                    <div className="badge-container">
+                      <PiStudentFill />
+                    </div>
+                    <h2>Languages I've Used Before</h2>
+                    <h5 className="short-description no-bold">
+                      I've worked with these languages in the past but my
+                      understanding is more basic when compared to the above.
+                    </h5>
                   </div>
-                  <h2>Technology I Am Familiar With</h2>
-                  <h5 className="short-description no-bold">
-                    These cards showcase the technologies I have either used
-                    before or am currently exploring and working to improve my
-                    understanding of
-                  </h5>
                 </div>
+                {langDataFamiliar.map((lang: LangProps) => {
+                  const { id } = lang;
+                  return <LangCard key={id} {...lang} />;
+                })}
               </div>
-              {techDataFamiliar.map((tech: TechCardProps) => {
-                const { id } = tech;
-                return <TechCard key={id} {...tech} />;
-              })}
             </div>
-          </div>
-        </Window>
+            <div className="page-container">
+              <div className="grid">
+                <div className="title-card" id="tech-solid">
+                  <div className="spacer">
+                    <div className="badge-container">
+                      <IoStar />
+                    </div>
+                    <h2>Technology I Am Proficient With</h2>
+                    <h5 className="short-description no-bold">
+                      These cards highlights the technologies I have solid
+                      understanding of and use confidently in my daily
+                      development work
+                    </h5>
+                  </div>
+                </div>
+                {techDataSolid.map((tech: TechCardProps) => {
+                  const { id } = tech;
+                  return <TechCard key={id} {...tech} />;
+                })}
+                <div className="title-card" id="tech-familiar">
+                  <div className="spacer">
+                    <div className="badge-container">
+                      <PiStudentFill />
+                    </div>
+                    <h2>Technology I Am Familiar With</h2>
+                    <h5 className="short-description no-bold">
+                      These cards showcase the technologies I have either used
+                      before or am currently exploring and working to improve my
+                      understanding of
+                    </h5>
+                  </div>
+                </div>
+                {techDataFamiliar.map((tech: TechCardProps) => {
+                  const { id } = tech;
+                  return <TechCard key={id} {...tech} />;
+                })}
+              </div>
+            </div>
+          </Window>
+        </SplitCard>
       </div>
     </section>
   );

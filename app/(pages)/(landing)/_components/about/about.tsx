@@ -56,21 +56,26 @@ const About = () => {
     <section className="about" id="about">
       <div className="section-spacer">
         <SplitCard id="about-header" reverse={true}>
-          <figure className="image-container"></figure>
+          <figure className="image-container">
+            <img src="/static/icons/isometric-laptop.svg" alt="laptop" />
+          </figure>
           <section className="text-section">
             <h1 className="icon">
               <BsFillInfoSquareFill />
             </h1>
             <h1 className="title">What can I do?</h1>
-            <h3 className="no-bold">
+            <h3 className="no-bold description-1">
               My philosophy is to build websites and web applications that not
               only captivate users with their design but also deliver fast,
               efficient, and optimized performance for the best user experience.
             </h3>
-            <h4 className="no-bold">
+            <h4 className="no-bold description-2">
               I'll work closely with you to ensure every detail is tailored to
               your vision, helping you build the website or web app of your
-              dreams—exactly how you envision it.
+              dreams
+            </h4>
+            <h4 className="no-bold description-2">
+              —exactly how you envision it.
             </h4>
           </section>
         </SplitCard>

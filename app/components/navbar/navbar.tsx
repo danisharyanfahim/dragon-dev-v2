@@ -1,6 +1,6 @@
 "use client";
 import Link from "next/link";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import ThemeToggle from "../theme-toggle";
 import { pageSections } from "@/app/global/variables";
 import { CgMenuGridR } from "react-icons/cg";
@@ -10,6 +10,7 @@ import { GrPersonalComputer } from "react-icons/gr";
 import { GiPencilRuler } from "react-icons/gi";
 import { MdOutlineWork } from "react-icons/md";
 import { HiPhone } from "react-icons/hi2";
+import { useTheme } from "next-themes";
 
 const navMenuIcons = [
   <IoHome className="icon" />,
@@ -23,7 +24,11 @@ const navMenuIcons = [
 
 const Navbar = () => {
   const [showing, setShowing] = useState<boolean>(false);
+  const { theme } = useTheme();
 
+  const [mounted, setMounted] = useState<boolean>(false);
+
+  useEffect(() => setMounted(true), []);
   return (
     <div className="navbar">
       <div className="navbar-spacer">
@@ -32,10 +37,20 @@ const Navbar = () => {
             <h1 className="logo-text">
               Dragon<span className="colorful">Dev</span>
             </h1>
-            <figure className="image-container">
-              <img src="/static/icons/dragon-dev-day.svg" alt="logo" />
-            </figure>
+            <img
+              src={
+                theme === "dark" || !mounted
+                  ? "/static/icons/dragon-dev-night.svg"
+                  : "/static/icons/dragon-dev-day.svg"
+              }
+              alt="logo"
+            />
           </Link>
+        </div>
+        <div className="centered">
+          <div className="theme-toggle-container center">
+            <ThemeToggle />
+          </div>
         </div>
         <div className="right-side">
           <div className="theme-toggle-container center">

@@ -37,7 +37,8 @@ $navbarPadding: clamp(2rem, -46.857rem + 54.286vw, 40rem);
     height: 100%;
   }
 
-  .menu-button {
+  .menu-button,
+  .logo-button-container {
     aspect-ratio: 1 / 1;
   }
 
@@ -59,8 +60,8 @@ $navbarPadding: clamp(2rem, -46.857rem + 54.286vw, 40rem);
         -webkit-text-fill-color: transparent;
         background: linear-gradient(
           135deg,
-          var(--ui-primary-accent-color-1),
-          var(--ui-primary-accent-color-2)
+          var(--ui-secondary-accent-color-1),
+          var(--ui-primary-accent-color-1)
         );
         background-clip: text;
         filter: drop-shadow(0px 0px 5px var(--text-shadow-color-1));
@@ -83,6 +84,10 @@ $navbarPadding: clamp(2rem, -46.857rem + 54.286vw, 40rem);
 
   .menu-button {
     font-size: 3.4rem;
+  }
+
+  .centered {
+    visibility: hidden;
   }
 
   .right-side {
@@ -308,5 +313,14 @@ $navbarPadding: clamp(2rem, -46.857rem + 54.286vw, 40rem);
 @media (max-width: 600px) {
   .navbar .logo-button-container .logo-button .logo-text {
     display: none;
+  }
+}
+
+@media (max-width: 450px) {
+  .navbar .navbar-spacer .right-side .theme-toggle-container {
+    display: none;
+  }
+  .navbar .navbar-spacer .centered {
+    visibility: visible;
   }
 }
