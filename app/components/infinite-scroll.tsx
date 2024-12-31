@@ -12,10 +12,10 @@ import {
   getArticlesByPage,
   getNumberOfArticles,
 } from "../utils/server-actions";
-import useOnScreen from "../hooks/useOnScreen";
 import ArticleCard from "./cards/article-card";
 import { ArticleCardProps, SearchParamProps } from "../interfaces/blog";
 import SkeletonArticleCard from "./skeleton-article-card";
+import { useIntersectionObserver } from "usehooks-ts";
 
 const InfiniteScroll = ({
   searchParams,
@@ -27,9 +27,8 @@ const InfiniteScroll = ({
   const [totalArticles, setTotalArticles] = useState<number>(0); //Start at -1, so that it doesn't show no results immediately after the component mounts
   const [articles, setArticles] = useState<ArticleCardProps[]>([]);
   const hasMore = useRef(false);
-  const loaderRef = useRef<HTMLDivElement>(null);
   const page = useRef(0);
-  const reachedBottom = useOnScreen(loaderRef, 0.25); //Only when 25% of the loader is visible will the OnScreenHook be triggered
+  const { isIntersecting, ref } = useIntersectionObserver({ threshold: 0.25 }); //Only when 25% of the loader is visible will the OnScreenHook be triggered
   const renderCount = useRef(0);
   const [isPending, startTransition] = useTransition();
 
@@ -91,12 +90,12 @@ const InfiniteScroll = ({
 
   // if the bottom has been reached and there are more articles, then increment the page number and load in the next batch of articles
   useEffect(() => {
-    if (reachedBottom && hasMore.current) {
+    if (isIntersecting && hasMore.current) {
       // debugger;
       page.current += 1;
       loadArticles();
     }
-  }, [reachedBottom]);
+  }, [isIntersecting]);
 
   renderCount.current++;
   return (
@@ -109,7 +108,7 @@ const InfiniteScroll = ({
           zIndex: 100,
         }}
       >
-        <div>reachedBottom: {reachedBottom.toString()}</div>
+        <div>isIntersecting: {isIntersecting.toString()}</div>
         <div>hasMore: {hasMore.current.toString()}</div>
         <div>page: {page.current}</div>
         <div>Render Count: {renderCount.current}</div>
@@ -124,7 +123,7 @@ const InfiniteScroll = ({
         </div>
         {totalArticles > 0 && hasMore.current && (
           <div
-            ref={loaderRef}
+            ref={ref}
             className="loading-container"
             style={{ marginTop: articles.length >= 3 ? "2rem" : "0rem" }}
           >

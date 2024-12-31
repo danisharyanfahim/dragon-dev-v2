@@ -24,6 +24,7 @@ $navbarPadding: clamp(2rem, -46.857rem + 54.286vw, 40rem);
     height: inherit;
     display: flex;
     justify-content: space-between;
+    animation: fadeIn 0.5s linear forwards;
   }
 
   .center {

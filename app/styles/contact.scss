@@ -133,6 +133,7 @@
         height: 100%;
         width: 100%;
         object-fit: contain;
+        animation: float 2s alternate ease-in-out forwards infinite;
       }
     }
 
