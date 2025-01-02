@@ -59,12 +59,12 @@
     z-index: 2;
     background: linear-gradient(
         90deg,
-        #000000d8,
-        #680000cb,
-        #cf00009c,
-        #4f00cf9c
+        #00000045,
+        #68000045,
+        #cf000045,
+        #4f00cf45
       ),
-      url("/static/images/technology-background.jpg");
+      url("/static/images/backgrounds/technology-background.jpg");
     color: var(--light-text-color);
     background-size: cover;
     background-position: center;
@@ -84,8 +84,14 @@
     border-bottom-left-radius: 400% 60%;
     display: flex;
     justify-content: center;
-    background: linear-gradient(90deg, #360000f8, #680000cb, #0000b69c),
-      url("/static/images/technology-background.jpg");
+    background: linear-gradient(
+        0deg,
+        #00000045,
+        #68000045,
+        #cf000045,
+        #4f00cf45
+      ),
+      url("/static/images/backgrounds/lava-lamp-background.svg");
     background-size: cover;
     background-attachment: fixed;
     background-position: right;
@@ -135,8 +141,14 @@
     align-self: flex-start;
     border-top-right-radius: 400% 60%;
     border-bottom-left-radius: 500% 15%;
-    background: linear-gradient(90deg, #000000d8, #680000cb, #0000b69c),
-      url("/static/images/technology-background.jpg");
+    background: linear-gradient(
+        90deg,
+        #00000045,
+        #68000045,
+        #cf000045,
+        #4f00cf45
+      ),
+      url("/static/images/backgrounds/lava-lamp-background.svg");
     color: var(--light-text-color);
     background-size: cover;
     background-position: center;
@@ -153,15 +165,20 @@
     border-top-right-radius: 200% 20%;
     border-bottom-right-radius: 300% 80%;
     border-bottom-left-radius: 80% 3%;
-    background: linear-gradient(90deg, #000000d8, #680000cb, #0000b69c),
-      url("/static/images/technology-background.jpg");
+    background: linear-gradient(
+        90deg,
+        #00000045,
+        #68000045,
+        #cf000045,
+        #4f00cf45
+      ),
+      url("/static/images/backgrounds/balls-background.svg");
     color: var(--light-text-color);
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
     text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.35);
   }
-
   footer {
     padding-top: 3rem;
     min-height: 500px;
