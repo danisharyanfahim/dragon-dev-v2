@@ -76,34 +76,40 @@ const BlogArticle = async ({ params }: { params: { slug: string } }) => {
   const { title, titleImage, dateCreated, lastUpdated, content, categories } =
     data;
   return (
-    <div className="blog-article-container">
-      <main className="blog-article">
-        <figure className="image-container">
-          <img
-            className="hero-image"
-            src={urlFor(titleImage).url()}
-            alt="Hero"
-          />
-        </figure>
-        <article>
-          <section className="article-head">
-            <h4 className="author-info">Dans - Blog</h4>
-            <h1 className="title">{title}</h1>
-            <div className="dates-container">
-              <p className="date-created">Written: {formatDate(dateCreated)}</p>
-              <p className="date-updated">
-                Last Updated: {formatDate(lastUpdated)}
-              </p>
-            </div>
-            <div className="category-container">
-              {categories.map((category, index) => {
-                return <Tag {...category} key={index} />;
-              })}
-            </div>
-          </section>
-          <section className="article-body">{generateContent(content)}</section>
-        </article>
-      </main>
+    <div className="blog-article-page">
+      <div className="blog-article-container">
+        <main className="blog-article">
+          <figure className="image-container">
+            <img
+              className="hero-image"
+              src={urlFor(titleImage).url()}
+              alt="Hero"
+            />
+          </figure>
+          <article>
+            <section className="article-head">
+              <h4 className="author-info">Dans - Blog</h4>
+              <h1 className="title">{title}</h1>
+              <div className="dates-container">
+                <p className="date-created">
+                  Written: {formatDate(dateCreated)}
+                </p>
+                <p className="date-updated">
+                  Last Updated: {formatDate(lastUpdated)}
+                </p>
+              </div>
+              <div className="category-container">
+                {categories.map((category, index) => {
+                  return <Tag {...category} key={index} />;
+                })}
+              </div>
+            </section>
+            <section className="article-body">
+              {generateContent(content)}
+            </section>
+          </article>
+        </main>
+      </div>
     </div>
   );
 };

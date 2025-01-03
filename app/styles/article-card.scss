@@ -1,9 +1,17 @@
-.blog-page,
-.blog-search-page {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 0rem clamp(1rem, -15.714rem + 34.821vw, 40rem);
+.blog-page {
+  background: linear-gradient(90deg, #00000045, #68000045, #cf000045, #4f00cf45),
+    url("/static/images/backgrounds/balls-background.png");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  padding-bottom: 5rem;
+
+  .blog-search-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0rem clamp(1rem, -15.714rem + 34.821vw, 40rem);
+  }
 }
 
 .infinite-scroll-container {
@@ -11,7 +19,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 5rem;
   min-height: 50dvh;
 
   .no-results-text {

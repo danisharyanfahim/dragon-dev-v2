@@ -196,7 +196,7 @@ main {
     top: -5rem;
     font-size: 15rem;
     color: var(--light-text-color);
-    animation: spinClockwise 1s linear infinite;
+    animation: breathe 0.5s linear ease-in-out infinite;
     filter: drop-shadow(0px 0px 10px rgba(47, 0, 255, 0.678));
   }
 }

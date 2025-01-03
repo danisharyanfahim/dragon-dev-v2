@@ -100,7 +100,7 @@ const InfiniteScroll = ({
   renderCount.current++;
   return (
     <>
-      <div
+      {/* <div
         style={{
           position: "fixed",
           margin: "1rem",
@@ -113,7 +113,7 @@ const InfiniteScroll = ({
         <div>page: {page.current}</div>
         <div>Render Count: {renderCount.current}</div>
         <div>Total Articles: {totalArticles}</div>
-      </div>
+      </div> */}
       <div className="infinite-scroll-container">
         <div className="article-card-container">
           {articles.map((article: ArticleCardProps, index) => {

@@ -13,9 +13,18 @@
   }
 }
 
+.blog-article-page {
+  background: linear-gradient(90deg, #00000045, #68000045, #cf000045, #4f00cf45),
+    url("/static/images/backgrounds/balls-background.png");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  padding: 10rem 0rem;
+}
 .blog-article-container {
   height: 10%;
-  margin: 10rem clamp(1rem, 27.5vw - 11rem, 35rem);
+  margin: 0rem clamp(1rem, 27.5vw - 11rem, 35rem);
+
   .blog-article {
     width: 100%;
     background: linear-gradient(
@@ -27,7 +36,7 @@
     border: 4px solid var(--border-color-1);
     z-index: 3;
     border-radius: var(--border-radius-outer);
-    padding: clamp(0.813rem, 6vw - 0.75rem, 8rem);
+    padding: clamp(0.813rem, -3.817rem + 16.464vw, 11rem);
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -168,6 +177,19 @@
           }
         }
       }
+    }
+  }
+}
+
+@media (max-width: 450px) {
+  .blog-article-container {
+    margin: 0rem;
+    .blog-article {
+      border: 0px solid transparent;
+      border-bottom: 2px solid var(--border-color-1);
+      border-top: 2px solid var(--border-color-1);
+      border-radius: 0rem;
+      padding: 1.5rem;
     }
   }
 }

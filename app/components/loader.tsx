@@ -1,10 +1,11 @@
 import React from "react";
-import { FaCircleRadiation } from "react-icons/fa6";
 
 const Loader = () => {
   return (
     <div className="loading-container">
-      <FaCircleRadiation className="loading-icon" />
+      <figure className="logo-container">
+        <div className="logo loading-icon"></div>
+      </figure>
     </div>
   );
 };
