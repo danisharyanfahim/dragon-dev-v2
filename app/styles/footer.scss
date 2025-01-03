@@ -55,6 +55,23 @@ footer {
 
       &.mission-section {
         justify-content: space-around;
+
+        .social-media-icons-container {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+          padding: 1rem;
+          gap: 1rem;
+          .social-media-icon {
+            background: linear-gradient(
+              90deg,
+              var(--ui-primary-accent-color-1),
+              var(--ui-primary-accent-color-2)
+            );
+            height: 48px;
+            width: 48px;
+          }
+        }
       }
 
       &.info-section {
@@ -165,8 +182,18 @@ footer {
 }
 
 @media (max-width: 964px) {
-  footer .top-section .mission-section .mission-text {
-    text-align: left;
-    text-wrap: balance;
+  footer .top-section section.mission-section {
+    .mission-text {
+      text-align: left;
+      text-wrap: balance;
+    }
+  }
+}
+
+@media (max-width: 648px) {
+  footer .top-section section.mission-section .social-media-icons-container {
+    justify-content: flex-start;
+    width: 100%;
+    padding: 3rem 0rem 0rem;
   }
 }

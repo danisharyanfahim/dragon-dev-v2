@@ -1,38 +1,39 @@
 .slide-show {
   height: 600px;
   width: 100%;
-  .controls-container {
+  .position-indicator {
+    bottom: 1rem;
+    right: 1rem;
     position: absolute;
     z-index: 4;
-    color: black;
-    height: 100%;
-    width: 100%;
+  }
 
-    > * {
-      position: absolute;
-    }
-    .position-indicator {
-      bottom: 1rem;
-      right: 1rem;
-    }
+  .prev-button {
+    right: -1.75rem;
+    position: absolute;
+    z-index: 4;
+  }
 
-    .control-buttons {
-      height: 100%;
-      width: 100%;
-      display: flex;
-      justify-content: space-between;
-      z-index: 2;
-    }
+  .next-button {
+    left: -1.75rem;
+    position: absolute;
+    z-index: 4;
+  }
 
-    .play-button {
-      padding: 1rem;
-      z-index: 3;
-    }
+  .prev-button,
+  .next-button {
+    top: calc(50% - 3rem);
+  }
 
-    h3 {
-      font-style: 2rem;
-      color: var(--ui-primary-accent-color-1-transparent);
-    }
+  .play-button {
+    padding: 1.2rem 1.2rem;
+    z-index: 5;
+    position: absolute;
+  }
+
+  h3 {
+    font-style: 2rem;
+    color: var(--ui-primary-accent-color-1-transparent);
   }
 
   ol li {
@@ -95,4 +96,17 @@
     var(--ui-background-color-1),
     var(--ui-background-color-2)
   );
+
+  > :first-child {
+    margin-top: 3rem;
+  }
+
+  h3 {
+    display: flex;
+    gap: 1rem;
+    color: var(--text-color-title);
+    .icon {
+      top: 5px;
+    }
+  }
 }

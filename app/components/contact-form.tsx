@@ -71,14 +71,12 @@ const ContactForm = () => {
     ) {
       problem = true;
       problemMessage = `
-        Sorry, we couldn't send email because you didn't type your:
-
-            ${firstName === "" ? "First Name" : ""}
-            ${lastName === "" ? "Last Name" : ""}
-            ${email === "" ? "Email" : ""}
-            ${subject === "" ? "Subject" : ""}
-            ${message === "" ? "Message" : ""}
-            `;
+        You are missing the following fields:
+        ${firstName === "" ? "First Name" : ""}
+         ${lastName === "" ? "Last Name" : ""} 
+         ${email === "" ? "Email" : ""}
+         ${subject === "" ? "Subject" : ""}
+         ${message === "" ? "Message" : ""}.`;
     }
 
     if (!problem) {
@@ -109,6 +107,7 @@ const ContactForm = () => {
               placeholder="First Name"
               value={firstName}
               onChange={(e) => setFirstName(e.target.value)}
+              required
             />
           </section>
           <section>
@@ -118,6 +117,7 @@ const ContactForm = () => {
               placeholder="Last Name"
               value={lastName}
               onChange={(e) => setLastName(e.target.value)}
+              required
             />
           </section>
           <section>
@@ -127,6 +127,7 @@ const ContactForm = () => {
               placeholder="Email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
+              required
             />
           </section>
           <section>
@@ -155,7 +156,8 @@ const ContactForm = () => {
               placeholder="Phone Number"
               value={phoneNumber}
               onChange={(e) => setPhoneNumber(e.target.value)}
-              pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}"
+              // pattern="[0-9]{9}"
+              required
             />
           </section>
           <section>

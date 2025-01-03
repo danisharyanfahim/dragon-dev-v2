@@ -299,13 +299,14 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      min-height: 240px;
+      min-height: 220px;
       width: 100%;
       img {
         height: 100%;
         width: 100%;
         position: absolute;
         object-fit: cover;
+        border-radius: 1rem;
       }
     }
 
@@ -516,6 +517,25 @@ header {
 }
 
 .work {
+  .tabs .icon {
+    color: inherit;
+
+    .the-solutioners-icon {
+      mask-image: url("/static/icons/work-icons/the-solutioners-icon.png");
+      mask-repeat: no-repeat;
+      mask-size: contain;
+      mask-position: center;
+      -webkit-mask-image: url("/static/icons/work-icons/the-solutioners-icon.png");
+      -webkit-mask-repeat: no-repeat;
+      -webkit-mask-size: contain;
+      -webkit-mask-position: center;
+      height: clamp(1.5rem, 1.214rem + 1.429vw, 2.5rem);
+      aspect-ratio: 1 / 1;
+      background-color: inherit;
+      top: -3px;
+    }
+  }
+
   .work-header {
     margin-top: 2rem;
     display: flex;
@@ -556,6 +576,119 @@ header {
       h4 {
         text-wrap: balance;
       }
+    }
+  }
+
+  .pages {
+    .work-page {
+      > :not(:first-child) {
+        margin-top: 0.5rem;
+      }
+      * {
+        text-wrap: balance;
+      }
+    }
+    p {
+      color: var(--light-text-color);
+    }
+  }
+
+  .link-button {
+    border-radius: 100px;
+    padding: 1rem;
+    padding: 0.5rem 2rem;
+    background: linear-gradient(
+      135deg,
+      var(--ui-primary-accent-color-1),
+      var(--ui-primary-accent-color-2)
+    );
+    box-shadow: 0px 0px 10px 0px var(--text-shadow-color-1);
+    transition: all 0.15s;
+  }
+
+  .logo {
+    mask-image: url("/static/icons/work-icons/the-solutioners-logo.png");
+    mask-repeat: no-repeat;
+    mask-size: contain;
+    mask-position: center;
+    -webkit-mask-image: url("/static/icons/work-icons/the-solutioners-logo.png");
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-size: contain;
+    -webkit-mask-position: center;
+    height: 100%;
+    width: 50%;
+    min-height: 120px;
+    min-width: 250px;
+    background: var(--light-text-color);
+    top: -3px;
+  }
+  .the-solutioners-icon.background {
+    position: absolute;
+    mask-image: url("/static/icons/work-icons/the-solutioners-icon.png");
+    mask-repeat: no-repeat;
+    mask-size: contain;
+    mask-position: center;
+    -webkit-mask-image: url("/static/icons/work-icons/the-solutioners-icon.png");
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-size: contain;
+    -webkit-mask-position: center;
+    background: var(--light-text-color);
+    height: 750px;
+    width: 750px;
+    top: 15%;
+    left: 50%;
+  }
+
+  .button-container {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+  .social-media-icons-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 1rem;
+    gap: 1rem;
+    .social-media-icon {
+      background: linear-gradient(
+        90deg,
+        var(--ui-primary-accent-color-1),
+        var(--ui-primary-accent-color-2)
+      );
+      height: 48px;
+      width: 48px;
+    }
+  }
+}
+
+.projects {
+  .button-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 1rem;
+    gap: 1rem;
+
+    .link-button {
+      border-radius: 100px;
+      padding: 1rem;
+      padding: 0.5rem 2rem;
+      background: linear-gradient(
+        135deg,
+        var(--ui-primary-accent-color-1),
+        var(--ui-primary-accent-color-2)
+      );
+      box-shadow: 0px 0px 10px 0px var(--text-shadow-color-1);
+      transition: all 0.15s;
+    }
+    .social-media-icon {
+      background: linear-gradient(
+        90deg,
+        var(--ui-primary-accent-color-1),
+        var(--ui-primary-accent-color-2)
+      );
+      height: 48px;
+      width: 48px;
     }
   }
 }

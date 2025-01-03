@@ -1,7 +1,11 @@
 import SplitCard from "@/app/components/cards/split-card";
+import IconLink from "@/app/components/icon-link";
 import SlideShow from "@/app/components/slide-show";
 import React from "react";
+import { BiSolidMovie } from "react-icons/bi";
+import { FaCloudSunRain } from "react-icons/fa6";
 import { GiPencilRuler } from "react-icons/gi";
+import { PiBooksFill } from "react-icons/pi";
 
 const Projects = () => {
   return (
@@ -19,62 +23,146 @@ const Projects = () => {
               sites and other coding experiments outside of web development.
             </h4>
           </section>
-          <SlideShow infinite={true}>
+          <SlideShow infinite={true} delay={3000}>
             <div className="project-slide">
-              <h3>Project Name</h3>
-              <h5>Site Description</h5>
               <p className="date">2024</p>
-              <img alt="image of the project or screenshot to the top" />
+              <h3>
+                Movie Site
+                <span className="icon">
+                  <BiSolidMovie />
+                </span>
+              </h3>
+              <h5>
+                A dynamic movie website I created to test out infinite-scrolling
+                before implementing teh feature into my blog.
+              </h5>
+              <ul>
+                <li>
+                  <p>
+                    Users can search for films based on multiple criteria,
+                    including the year of release, title, and genre, making it
+                    easy to find specific movies of interest
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    The site features lazy loading to improve performance by
+                    loading movie data only when needed
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    Skeleton loaders to display loading placeholders while
+                    content is being fetched
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    Infinite scrolling for a seamless browsing experience
+                    without the need to navigate between pages
+                  </p>
+                </li>
+              </ul>
+              <img alt="an icon to represent the project" />
               <ul className="Tech used"></ul>
               <div className="button-container">
-                <a href="https://Thesolutioners.ca">
-                  <button className="link-button">Go to site</button>
-                </a>
                 <a
-                  href="https://github.com/danisharyanfahim/the-solutioners"
-                  className="github-link"
+                  href="https://infinite-scroll-movies.vercel.app"
+                  target="_blank"
                 >
-                  <div className="tool-tip">Go to site</div>
-                  <img alt="Github Logo" />
+                  <button className="link-button">
+                    <p>Visit Site</p>
+                  </button>
                 </a>
+                <IconLink
+                  url="https://github.com/danisharyanfahim/infinite-scroll-movies"
+                  imageUrl="/static/icons/social-media-icons/github-icon.svg"
+                />
+              </div>
+              <div className="background">
+                <BiSolidMovie />
               </div>
             </div>
             <div className="project-slide">
-              <h3>Project 2 Name</h3>
-              <h4>Site 2 Description</h4>
-              <p className="date">2024</p>
-              <img alt="image of the project or screenshot to the top" />
+              <p className="date">2023</p>
+              <h3>
+                Digital Library
+                <span className="icon">
+                  <PiBooksFill />
+                </span>
+              </h3>
+              <h5>
+                This book site serves as an online library, allowing them to
+                search through a catalog of books, while also allowing users to
+                upload and store their own books.
+              </h5>
+              <img alt="an icon to represent the project" />
+              <ul>
+                <li>
+                  <p>
+                    Users can easily search for books based on various
+                    categories, such as genre, author, or title, and explore the
+                    library to find new reading material.
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    Allows for author creation, authors can have multiple books
+                    associated with them.
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    Uses FilePond for uploading cover images for book covers.
+                  </p>
+                </li>
+              </ul>
               <ul className="Tech used"></ul>
               <div className="button-container">
-                <a href="https://Thesolutioners.ca">
-                  <button className="link-button">Go to site</button>
+                <a href="https://Thesolutioners.ca" target="_blank">
+                  <button className="link-button">
+                    <p>Visit Site</p>
+                  </button>
                 </a>
-                <a
-                  href="https://github.com/danisharyanfahim/the-solutioners"
-                  className="github-link"
-                >
-                  <div className="tool-tip">Go to site</div>
-                  <img alt="Github Logo" />
-                </a>
+                <IconLink
+                  url="https://github.com/danisharyanfahim/digital-library"
+                  imageUrl="/static/icons/social-media-icons/github-icon.svg"
+                />
+              </div>
+              <div className="background">
+                <PiBooksFill />
               </div>
             </div>
             <div className="project-slide">
-              <h3>Project 3 Name</h3>
-              <h4>Site 3 Description</h4>
-              <p className="date">2024</p>
+              <p className="date">2025</p>
+              <h3>
+                Weather API Site
+                <span className="icon">
+                  <FaCloudSunRain />
+                </span>
+              </h3>
+              <h5>
+                A Basic weather API that tells you today's forecast for any city
+                you decide to look up.
+              </h5>
               <img alt="image of the project or screenshot to the top" />
               <ul className="Tech used"></ul>
               <div className="button-container">
-                <a href="https://Thesolutioners.ca">
-                  <button className="link-button">Go to site</button>
-                </a>
                 <a
-                  href="https://github.com/danisharyanfahim/the-solutioners"
-                  className="github-link"
+                  href="https://infinite-scroll-movies.vercel.app"
+                  target="_blank"
                 >
-                  <div className="tool-tip">Go to site</div>
-                  <img alt="Github Logo" />
+                  <button className="link-button">
+                    <p>Visit Site</p>
+                  </button>
                 </a>
+                <IconLink
+                  url="https://github.com/danisharyanfahim/infinite-scroll-movies"
+                  imageUrl="/static/icons/social-media-icons/github-icon.svg"
+                />
+              </div>
+              <div className="background">
+                <FaCloudSunRain />
               </div>
             </div>
           </SlideShow>

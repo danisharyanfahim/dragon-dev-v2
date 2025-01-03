@@ -95,67 +95,59 @@ const SlideShow = ({
 
   return (
     <section className="slide-show">
-      <div className="controls-container">
-        {showControlButtons && (
-          <div className="control-buttons">
-            <div className="button-container">
-              <button
-                className="prev-button"
-                onClick={() => toggleSlide(currentSlide - 1)}
-              >
-                <FaChevronLeft />
-              </button>
-            </div>
-            <div className="button-container">
-              <button
-                className="next-button"
-                onClick={() => toggleSlide(currentSlide + 1)}
-              >
-                <FaChevronRight />
-              </button>
-            </div>
-          </div>
-        )}
-        {showPositionIndicator && (
-          <div className="position-indicator">
-            <p>
-              {currentSlide + 1}/{slides.length}
-            </p>
-          </div>
-        )}
-        {showPositionButtons && (
-          <ul className="position-buttons">
-            {slides.map((_, index) => (
-              <li
-                key={index}
-                onClick={() => toggleSlide(index)}
-                style={{
-                  display: "inline-block",
-                  backgroundColor:
-                    currentSlide === index
-                      ? "white"
-                      : "rgba(255, 255, 255, 0.5)",
-                  borderRadius: "50%",
-                  height: "25px",
-                  width: "25px",
-                  cursor: "pointer",
-                  margin: "0.5rem",
-                  color: "black",
-                }}
-              >
-                <p>{index + 1}</p>
-              </li>
-            ))}
-          </ul>
-        )}
-        {autoPlay && showPlayButton && (
-          <div className="play-button-container">
-            <button className="play-button" onClick={togglePause}>
-              <h3>{isPlaying ? <GiPauseButton /> : <FaPlay />}</h3>
-            </button>
-          </div>
-        )}
-      </div>
+      {showControlButtons && (
+        <>
+          <button
+            className="next-button"
+            onClick={() => toggleSlide(currentSlide - 1)}
+          >
+            <FaChevronLeft />
+          </button>
+          <button
+            className="prev-button"
+            onClick={() => toggleSlide(currentSlide + 1)}
+          >
+            <FaChevronRight />
+          </button>
+        </>
+      )}
+      {showPositionIndicator && (
+        <div className="position-indicator">
+          <p>
+            {currentSlide + 1}/{slides.length}
+          </p>
+        </div>
+      )}
+      {showPositionButtons && (
+        <ul className="position-buttons">
+          {slides.map((_, index) => (
+            <li
+              key={index}
+              onClick={() => toggleSlide(index)}
+              style={{
+                display: "inline-block",
+                backgroundColor:
+                  currentSlide === index ? "white" : "rgba(255, 255, 255, 0.5)",
+                borderRadius: "50%",
+                height: "25px",
+                width: "25px",
+                cursor: "pointer",
+                margin: "0.5rem",
+                color: "black",
+              }}
+            >
+              <p>{index + 1}</p>
+            </li>
+          ))}
+        </ul>
+      )}
+      {autoPlay && showPlayButton && (
+        <div className="play-button-container">
+          <button className="play-button" onClick={togglePause}>
+            <h3>{isPlaying ? <GiPauseButton /> : <FaPlay />}</h3>
+          </button>
+        </div>
+      )}
       <div className="slides-container">
         <ol className="slides">
           {slides.map((slide, index) => {

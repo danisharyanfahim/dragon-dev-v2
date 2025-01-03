@@ -22,8 +22,7 @@
   .tabs-container {
     width: 100%;
     margin-bottom: clamp(0.5rem, 0.143rem + 1.786vw, 1rem);
-    container-type: inline;
-    container-name: tabs-container;
+
     .tabs {
       width: 100%;
       display: flex;
@@ -38,7 +37,7 @@
         min-width: 100px;
 
         h4 {
-          color: rgba(111, 136, 170, 0.527);
+          color: var(--unselected-tab);
           transition: all 0.5s;
           text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.253);
           display: flex;
@@ -46,21 +45,31 @@
           .icon {
             top: 5px;
             transition: all 0.5s;
-            color: rgba(111, 136, 170, 0.527);
+            color: var(--unselected-tab);
+
+            div {
+              background-color: var(--unselected-tab);
+              transition: all 0.5s;
+            }
           }
         }
 
         &.active {
-          // border-bottom: 2px solid #e6ebfdf0;
+          // border-bottom: 2px solid var(--selected-tab);
           transition: all 0.5s;
 
           h4 {
-            color: #e6ebfdf0;
+            color: var(--selected-tab);
             transition: all 0.5s;
 
             .icon {
               transition: all 0.5s;
-              color: #e6ebfdf0;
+              color: var(--selected-tab);
+
+              div {
+                background-color: var(--selected-tab);
+                transition: all 0.5s;
+              }
             }
           }
         }
@@ -72,6 +81,7 @@
     min-height: 500px;
     max-height: 800px;
     overflow-y: scroll;
+    overflow-x: hidden;
     border-radius: 0rem 0rem 0rem 0.75rem;
     scroll-behavior: smooth;
 

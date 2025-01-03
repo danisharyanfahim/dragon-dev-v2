@@ -50,6 +50,8 @@
   --ui-static-shadow-color: rgba(151, 146, 199, 0.637);
   --ui-static-shadow-color-dim: rgba(151, 146, 199, 0.367);
   --logo-primary-color: rgb(1, 1, 7);
+  --selected-tab: #e6ebfdf0;
+  --unselected-tab: rgba(111, 136, 170, 0.527);
 
   /* dimensions */
   --border-radius-outer: 1rem;

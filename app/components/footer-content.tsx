@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import { footerInfo, pageSections } from "../global/variables";
 import Link from "next/link";
 import { useTheme } from "next-themes";
+import IconLink from "./icon-link";
 
 const FooterContent = () => {
   const { theme } = useTheme();
@@ -30,7 +31,16 @@ const FooterContent = () => {
             lightning-fast performance, world-class functionality, and flawless
             design
           </p>
-          {/* <div className="social-media-icons-container"></div> */}
+          <div className="social-media-icons-container">
+            <IconLink
+              url="https://github.com/danisharyanfahim"
+              imageUrl="/static/icons/social-media-icons/github-icon.svg"
+            />
+            <IconLink
+              url="https://www.linkedin.com/in/danish-fahim-a56a85191/"
+              imageUrl="/static/icons/social-media-icons/linked-in-icon.png"
+            />
+          </div>
         </section>
         <section className="links-section">
           <div className="links-container">
