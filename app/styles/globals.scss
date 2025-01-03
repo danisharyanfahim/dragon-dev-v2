@@ -137,7 +137,7 @@ h5 {
   font-size: clamp(1.1rem, 0.786rem + 0.759cqw, 2rem);
 }
 
-code {
+code.code {
   color: var(--text-color-p);
   background-color: var(--border-color-1);
   border-radius: 0.25rem;
@@ -185,6 +185,14 @@ main {
   min-height: 100dvh;
 }
 
+.loading-page {
+  background: linear-gradient(90deg, #00000045, #68000045, #cf000045, #4f00cf45),
+    url("/static/images/backgrounds/balls-background.png");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
 .loading-container {
   min-height: 100dvh;
   width: 100%;
@@ -192,12 +200,30 @@ main {
   justify-content: center;
   align-items: center;
 
-  .loading-icon {
-    top: -5rem;
-    font-size: 15rem;
-    color: var(--light-text-color);
-    animation: breathe 0.5s linear ease-in-out infinite;
-    filter: drop-shadow(0px 0px 10px rgba(47, 0, 255, 0.678));
+  .loading-icon-container {
+    filter: drop-shadow(0px 0px 10px rgba(0, 47, 255, 0.76));
+    max-height: 400px;
+    max-width: 400px;
+    width: 50%;
+    aspect-ratio: 1 / 1;
+    min-height: 200px;
+    min-width: 200px;
+
+    .loading-icon {
+      height: 100%;
+      width: 100%;
+      top: -5rem;
+      mask-image: url("/static/icons/dragon-dev.svg");
+      mask-size: contain;
+      mask-repeat: no-repeat;
+      mask-position: center;
+      background: linear-gradient(
+        0deg,
+        var(--moon-color),
+        var(--light-text-color)
+      );
+      animation: breathe 1s ease-in-out infinite;
+    }
   }
 }
 ul {

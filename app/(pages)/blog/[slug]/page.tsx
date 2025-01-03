@@ -26,7 +26,7 @@ const applyMarks = (text: string, marks: Marks[]) => {
       } else if (mark === "strike-through") {
         formattedText = <del>{formattedText}</del>;
       } else if (mark === "code") {
-        formattedText = <code>{formattedText}</code>;
+        formattedText = <code className="code">{formattedText}</code>;
       } else if (mark === "highlight") {
         formattedText = <mark>{formattedText}</mark>;
       }
