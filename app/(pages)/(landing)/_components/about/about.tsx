@@ -104,7 +104,7 @@ const About = () => {
           title="Soft Skills"
           description="In addition to my technical expertise, I focus on cultivating
               essential soft skills that ensure smooth collaboration and
-              effective project execution"
+              effective project execution."
           dataURL="/app/data/soft-skills-content.json"
           direction="right-left"
           logos={softSkillsIcons}

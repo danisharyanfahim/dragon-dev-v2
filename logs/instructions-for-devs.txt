@@ -241,3 +241,9 @@ then you select the build for your project and continue with the same steps
 ***Important
 -This is working for React and React Dom Version 19.0.0 and Next Version 15.1, I had problems deploying it to Vercel and hosting on the local version due to a peer dependency conflict arising from using an older version of React. I needed to use the command npm -i --legacy-peer-deps to fix this and also put that into the vercel build commands in order to get it to run. So, either make sure the react version and react dom version are both the same and up to date on both my machine and vercel,
 or just create a Docker container which uses the current version and then just download those onto any other machines I use. Since, I know that this version will work.
+
+
+12) Pulling from Github:
+
+  1)Use the command git clone 'repository link'
+  2)Make sure to run npm install afterwards to install the node modules and packages

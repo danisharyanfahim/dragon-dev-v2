@@ -581,6 +581,9 @@ header {
 
   .pages {
     .work-page {
+      > * {
+        margin-left: 3rem;
+      }
       > :not(:first-child) {
         margin-top: 0.5rem;
       }
@@ -650,6 +653,7 @@ header {
     padding: 1rem;
     gap: 1rem;
     .social-media-icon {
+      cursor: pointer;
       background: linear-gradient(
         90deg,
         var(--ui-primary-accent-color-1),
@@ -668,6 +672,7 @@ header {
     justify-content: center;
     padding: 1rem;
     gap: 1rem;
+    z-index: 2;
 
     .link-button {
       border-radius: 100px;
@@ -682,6 +687,7 @@ header {
       transition: all 0.15s;
     }
     .social-media-icon {
+      cursor: pointer;
       background: linear-gradient(
         90deg,
         var(--ui-primary-accent-color-1),

@@ -34,7 +34,7 @@ const Projects = () => {
               </h3>
               <h5>
                 A dynamic movie website I created to test out infinite-scrolling
-                before implementing teh feature into my blog.
+                before implementing teh feature into my blog
               </h5>
               <ul>
                 <li>
@@ -63,7 +63,6 @@ const Projects = () => {
                   </p>
                 </li>
               </ul>
-              <img alt="an icon to represent the project" />
               <ul className="Tech used"></ul>
               <div className="button-container">
                 <a
@@ -75,7 +74,7 @@ const Projects = () => {
                   </button>
                 </a>
                 <IconLink
-                  url="https://github.com/danisharyanfahim/infinite-scroll-movies"
+                  url="https://github.com/danisharyanfahim/infinite-scroll"
                   imageUrl="/static/icons/social-media-icons/github-icon.svg"
                 />
               </div>
@@ -94,32 +93,34 @@ const Projects = () => {
               <h5>
                 This book site serves as an online library, allowing them to
                 search through a catalog of books, while also allowing users to
-                upload and store their own books.
+                upload and store their own books
               </h5>
-              <img alt="an icon to represent the project" />
               <ul>
                 <li>
                   <p>
                     Users can easily search for books based on various
                     categories, such as genre, author, or title, and explore the
-                    library to find new reading material.
+                    library to find new reading material
                   </p>
                 </li>
                 <li>
                   <p>
                     Allows for author creation, authors can have multiple books
-                    associated with them.
+                    associated with them
                   </p>
                 </li>
                 <li>
                   <p>
-                    Uses FilePond for uploading cover images for book covers.
+                    Uses FilePond for uploading cover images for book covers
                   </p>
                 </li>
               </ul>
               <ul className="Tech used"></ul>
               <div className="button-container">
-                <a href="https://Thesolutioners.ca" target="_blank">
+                <a
+                  href="https://digital-library-dragondev-feecd0c512b6.herokuapp.com/"
+                  target="_blank"
+                >
                   <button className="link-button">
                     <p>Visit Site</p>
                   </button>
@@ -143,13 +144,31 @@ const Projects = () => {
               </h3>
               <h5>
                 A Basic weather API that tells you today's forecast for any city
-                you decide to look up.
+                you decide to look up
               </h5>
-              <img alt="image of the project or screenshot to the top" />
+              <ul>
+                <li>
+                  <p>
+                    Gives all of the weather information for that day and time
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    Dynamic background based on both the weather as well as time
+                    of day for that particular city
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    Properly formatted time and date, as well as displaying the
+                    angle of the wing through an arrow
+                  </p>
+                </li>
+              </ul>
               <ul className="Tech used"></ul>
               <div className="button-container">
                 <a
-                  href="https://infinite-scroll-movies.vercel.app"
+                  href="https://weather-app-dragondev.vercel.app/"
                   target="_blank"
                 >
                   <button className="link-button">
@@ -157,7 +176,7 @@ const Projects = () => {
                   </button>
                 </a>
                 <IconLink
-                  url="https://github.com/danisharyanfahim/infinite-scroll-movies"
+                  url="https://github.com/danisharyanfahim/weather-app"
                   imageUrl="/static/icons/social-media-icons/github-icon.svg"
                 />
               </div>

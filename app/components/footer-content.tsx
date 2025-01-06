@@ -29,7 +29,7 @@ const FooterContent = () => {
           <p className="mission-text">
             My mission is to create websites and web applications that deliver
             lightning-fast performance, world-class functionality, and flawless
-            design
+            design.
           </p>
           <div className="social-media-icons-container">
             <IconLink
