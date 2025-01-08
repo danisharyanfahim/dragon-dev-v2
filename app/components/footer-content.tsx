@@ -100,8 +100,11 @@ const FooterContent = () => {
         </section>
       </div>
       <section className="copyright-container">
-        <p className="copyright-text">© 2025 DragonDev. All rights reserved.</p>
+        <p className="copyright-text">
+          © 2025 DragonDev.ca All rights reserved.
+        </p>
       </section>
+      <div className="background-container"></div>
     </>
   );
 };

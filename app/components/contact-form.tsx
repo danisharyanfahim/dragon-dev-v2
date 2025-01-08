@@ -66,8 +66,7 @@ const ContactForm = () => {
       lastName === "" ||
       email === "" ||
       subject === "" ||
-      message === "" ||
-      !privacy
+      message === ""
     ) {
       problem = true;
       problemMessage = `

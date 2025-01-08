@@ -244,6 +244,8 @@ ul {
     align-self: flex-start;
     display: inline-block; // Keep the bullet inline with the text
     vertical-align: middle;
+    position: relative;
+    top: 5px;
   }
 
   li > * {

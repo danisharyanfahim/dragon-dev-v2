@@ -13,6 +13,7 @@
 footer {
   width: 100%;
   padding: 0rem clamp(1rem, -42.714rem + 48.571vw, 35rem);
+  overflow: hidden;
 
   // box-shadow: 0px 0px 3px 0px rgba(0 0 0 / 0.5);
 
@@ -28,6 +29,7 @@ footer {
       align-items: center;
       width: 100%;
       min-height: 200px;
+      filter: drop-shadow(0px 0px 10px var(--text-shadow-color-1));
 
       img {
         height: 90%;
@@ -61,6 +63,8 @@ footer {
           justify-content: center;
           padding: 1rem;
           gap: 1rem;
+          filter: drop-shadow(0px 0px 10px var(--text-shadow-color-1));
+
           .social-media-icon {
             background: linear-gradient(
               90deg,
@@ -164,6 +168,25 @@ footer {
         margin-top: 0.7rem;
       }
     }
+  }
+
+  .background-container {
+    position: absolute;
+    mask-image: url("/static/icons/dragon-dev.svg");
+    mask-size: contain;
+    mask-repeat: no-repeat;
+    mask-position: center;
+    -webkit-mask-image: url("/static/icons/dragon-dev.svg");
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-size: contain;
+    -webkit-mask-position: center;
+    background: url("/static/icons/dragon-dev.svg");
+    filter: grayscale(85%) opacity(10%) brightness(95%)
+      drop-shadow(0px 0px 5px rgba(146, 146, 165, 0.63));
+    height: 850px;
+    width: 850px;
+    top: 15%;
+    left: 60%;
   }
 }
 

@@ -14,6 +14,7 @@ const TechCard = ({
   description,
   understanding,
   url,
+  id,
 }: TechCardProps) => {
   const [isFlipped, setIsFlipped] = useState<boolean>(false);
   const handleFlip = (e) => {
@@ -27,6 +28,7 @@ const TechCard = ({
     <div
       className={`grid-card ${isFlipped ? "flipped" : ""}`}
       onClick={(e) => handleFlip(e)}
+      id={id}
     >
       <div className="spacer">
         <div className="front">

@@ -7,6 +7,44 @@ import { FaCloudSunRain } from "react-icons/fa6";
 import { GiPencilRuler } from "react-icons/gi";
 import { PiBooksFill } from "react-icons/pi";
 
+const bookTech = [
+  { name: "HTML", type: "language" },
+  { name: "CSS", type: "language" },
+  { name: "JS", type: "language" },
+  { name: "FilePond", type: "technology" },
+  { name: "Git/Github", type: "technology" },
+  { name: "EJS", type: "technology" },
+  { name: "Express", type: "technology" },
+  { name: "MongoDB", type: "technology" },
+  { name: "Mongoose", type: "technology" },
+  { name: "VSCode", type: "technology" },
+  { name: "Heroku", type: "technology" },
+];
+
+const movieTech = [
+  { name: "HTML", type: "language" },
+  { name: "CSS", type: "language" },
+  { name: "JS", type: "language" },
+  { name: "TS", type: "language" },
+  { name: "React", type: "technology" },
+  { name: "NextJS", type: "technology" },
+  { name: "Sanity.io", type: "technology" },
+  { name: "VSCode", type: "technology" },
+  { name: "Vercel", type: "technology" },
+];
+
+const weatherTech = [
+  { name: "HTML", type: "language" },
+  { name: "CSS", type: "language" },
+  { name: "JS", type: "language" },
+  { name: "TS", type: "language" },
+  { name: "React", type: "technology" },
+  { name: "NextJS", type: "technology" },
+  { name: "SASS", type: "technology" },
+  { name: "VSCode", type: "technology" },
+  { name: "Vercel", type: "technology" },
+];
+
 const Projects = () => {
   return (
     <section className="projects" id="projects">
@@ -24,6 +62,71 @@ const Projects = () => {
             </h4>
           </section>
           <SlideShow infinite={true} delay={3000}>
+            <div className="project-slide">
+              <p className="date">2025</p>
+              <h3>
+                Weather API Site
+                <span className="icon">
+                  <FaCloudSunRain />
+                </span>
+              </h3>
+              <h5>
+                A Basic weather API that tells you today's forecast for any city
+                you decide to look up
+              </h5>
+              <ul>
+                <li>
+                  <p>
+                    Gives all of the weather information for that day and time
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    Dynamic background based on both the weather as well as time
+                    of day for that particular city
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    Properly formatted time and date, as well as displaying the
+                    angle of the wing through an arrow
+                  </p>
+                </li>
+              </ul>
+              <div className="weather-container">
+                <div className="tech-container">
+                  {weatherTech.map((tech, index) => {
+                    return (
+                      <small
+                        className={`tech-tag ${tech.type}`}
+                        key={tech.name + index}
+                      >
+                        {tech.name}
+                      </small>
+                    );
+                  })}
+                </div>
+              </div>
+              <div className="button-container">
+                <a
+                  href="https://weather-app-dragondev.vercel.app/"
+                  target="_blank"
+                >
+                  <button className="link-button">
+                    <p>Visit Site</p>
+                  </button>
+                </a>
+                <div className="social-media-icons-container">
+                  <IconLink
+                    url="https://github.com/danisharyanfahim/weather-app"
+                    imageUrl="/static/icons/social-media-icons/github-icon.svg"
+                  />
+                </div>
+              </div>
+              <div className="background">
+                <FaCloudSunRain />
+              </div>
+            </div>
             <div className="project-slide">
               <p className="date">2024</p>
               <h3>
@@ -63,7 +166,20 @@ const Projects = () => {
                   </p>
                 </li>
               </ul>
-              <ul className="Tech used"></ul>
+              <div className="weather-container">
+                <div className="tech-container">
+                  {movieTech.map((tech, index) => {
+                    return (
+                      <small
+                        className={`tech-tag ${tech.type}`}
+                        key={tech.name + index}
+                      >
+                        {tech.name}
+                      </small>
+                    );
+                  })}
+                </div>
+              </div>
               <div className="button-container">
                 <a
                   href="https://infinite-scroll-movies.vercel.app"
@@ -73,10 +189,12 @@ const Projects = () => {
                     <p>Visit Site</p>
                   </button>
                 </a>
-                <IconLink
-                  url="https://github.com/danisharyanfahim/infinite-scroll"
-                  imageUrl="/static/icons/social-media-icons/github-icon.svg"
-                />
+                <div className="social-media-icons-container">
+                  <IconLink
+                    url="https://github.com/danisharyanfahim/infinite-scroll"
+                    imageUrl="/static/icons/social-media-icons/github-icon.svg"
+                  />
+                </div>
               </div>
               <div className="background">
                 <BiSolidMovie />
@@ -115,7 +233,18 @@ const Projects = () => {
                   </p>
                 </li>
               </ul>
-              <ul className="Tech used"></ul>
+              <div className="tech-container">
+                {bookTech.map((tech, index) => {
+                  return (
+                    <small
+                      className={`tech-tag ${tech.type}`}
+                      key={tech.name + index}
+                    >
+                      {tech.name}
+                    </small>
+                  );
+                })}
+              </div>
               <div className="button-container">
                 <a
                   href="https://digital-library-dragondev-feecd0c512b6.herokuapp.com/"
@@ -125,63 +254,15 @@ const Projects = () => {
                     <p>Visit Site</p>
                   </button>
                 </a>
-                <IconLink
-                  url="https://github.com/danisharyanfahim/digital-library"
-                  imageUrl="/static/icons/social-media-icons/github-icon.svg"
-                />
+                <div className="social-media-icons-container">
+                  <IconLink
+                    url="https://github.com/danisharyanfahim/digital-library"
+                    imageUrl="/static/icons/social-media-icons/github-icon.svg"
+                  />
+                </div>
               </div>
               <div className="background">
                 <PiBooksFill />
-              </div>
-            </div>
-            <div className="project-slide">
-              <p className="date">2025</p>
-              <h3>
-                Weather API Site
-                <span className="icon">
-                  <FaCloudSunRain />
-                </span>
-              </h3>
-              <h5>
-                A Basic weather API that tells you today's forecast for any city
-                you decide to look up
-              </h5>
-              <ul>
-                <li>
-                  <p>
-                    Gives all of the weather information for that day and time
-                  </p>
-                </li>
-                <li>
-                  <p>
-                    Dynamic background based on both the weather as well as time
-                    of day for that particular city
-                  </p>
-                </li>
-                <li>
-                  <p>
-                    Properly formatted time and date, as well as displaying the
-                    angle of the wing through an arrow
-                  </p>
-                </li>
-              </ul>
-              <ul className="Tech used"></ul>
-              <div className="button-container">
-                <a
-                  href="https://weather-app-dragondev.vercel.app/"
-                  target="_blank"
-                >
-                  <button className="link-button">
-                    <p>Visit Site</p>
-                  </button>
-                </a>
-                <IconLink
-                  url="https://github.com/danisharyanfahim/weather-app"
-                  imageUrl="/static/icons/social-media-icons/github-icon.svg"
-                />
-              </div>
-              <div className="background">
-                <FaCloudSunRain />
               </div>
             </div>
           </SlideShow>

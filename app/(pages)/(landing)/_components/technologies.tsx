@@ -4,6 +4,7 @@ import TechCard from "@/app/components/cards/tech-card";
 import Window from "@/app/components/window";
 import { LangProps, TechCardProps } from "@/app/interfaces/landing";
 import { getLang, getTech } from "@/app/utils/server-actions";
+import { formatStringToId } from "@/app/utils/utility-functions";
 import React from "react";
 import { BsFileEarmarkCodeFill, BsPcDisplay } from "react-icons/bs";
 import { GrPersonalComputer } from "react-icons/gr";
@@ -95,8 +96,10 @@ const Technologies = async () => {
                   </div>
                 </div>
                 {techDataSolid.map((tech: TechCardProps) => {
-                  const { id } = tech;
-                  return <TechCard key={id} {...tech} />;
+                  const { id, title } = tech;
+                  return (
+                    <TechCard key={id} {...tech} id={formatStringToId(title)} />
+                  );
                 })}
                 <div className="title-card" id="tech-familiar">
                   <div className="spacer">
