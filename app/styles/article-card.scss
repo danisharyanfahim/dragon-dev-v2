@@ -148,10 +148,10 @@
             height: 50%;
             width: 100%;
             position: absolute;
-            object-fit: cover;
+            object-fit: contain;
             padding-right: 2rem;
-            filter: drop-shadow(0px 0px 5px var(--ui-tertiary-accent-color-1))
-              drop-shadow(0px 0px 10px var(--ui-tertiary-accent-color-2));
+            filter: drop-shadow(0px 0px 5px var(--ui-static-shadow-color-dim))
+              drop-shadow(0px 0px 10px var(--ui-static-shadow-color-dim));
           }
         }
       }
