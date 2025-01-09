@@ -56,14 +56,19 @@ footer {
 
       &.mission-section {
         justify-content: space-around;
+      }
 
+      &.info-section {
+        justify-content: space-between;
         .social-media-icons-container {
           display: flex;
           flex-wrap: wrap;
-          justify-content: center;
-          padding: 1rem;
+          justify-self: flex-end;
+          justify-content: flex-start;
+          padding: 1rem 0.5rem;
           gap: 1rem;
           filter: drop-shadow(0px 0px 10px var(--text-shadow-color-1));
+          width: 100%;
 
           .social-media-icon {
             background: linear-gradient(
@@ -75,10 +80,6 @@ footer {
             width: 36px;
           }
         }
-      }
-
-      &.info-section {
-        justify-content: space-between;
       }
 
       &.links-section {

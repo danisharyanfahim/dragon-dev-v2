@@ -28,7 +28,7 @@ const InfiniteScroll = ({
   const [articles, setArticles] = useState<ArticleCardProps[]>([]);
   const hasMore = useRef(false);
   const page = useRef(0);
-  const { isIntersecting, ref } = useIntersectionObserver({ threshold: 0.25 }); //Only when 25% of the loader is visible will the OnScreenHook be triggered
+  const { isIntersecting, ref } = useIntersectionObserver({ threshold: 0.05 }); //Only when 25% of the loader is visible will the OnScreenHook be triggered
   const renderCount = useRef(0);
   const [isPending, startTransition] = useTransition();
 
