@@ -43,7 +43,6 @@
         var(--ui-background-color-1),
         var(--ui-background-color-2)
       );
-      max-width: 345px;
       box-shadow: 0px 0px 10px 0px var(--shadow-color-1);
       padding: 0.5rem;
       animation: appear 0.33s;
@@ -160,6 +159,7 @@
 .article-card,
 .skeleton-card {
   min-width: 300px;
+  max-width: 345px;
   display: flex;
   flex-direction: column;
   justify-content: center;
