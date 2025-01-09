@@ -3,19 +3,22 @@ import SplitCard from "@/app/components/cards/split-card";
 import TechCard from "@/app/components/cards/tech-card";
 import Window from "@/app/components/window";
 import { LangProps, TechCardProps } from "@/app/interfaces/landing";
-import { getLang, getTech } from "@/app/utils/server-actions";
+import { getLang, getSoftware, getTech } from "@/app/utils/server-actions";
 import { formatStringToId } from "@/app/utils/utility-functions";
 import React from "react";
 import { BsFileEarmarkCodeFill, BsPcDisplay } from "react-icons/bs";
 import { GrPersonalComputer } from "react-icons/gr";
 import { IoStar } from "react-icons/io5";
 import { PiStudentFill } from "react-icons/pi";
+import { RiWindowFill } from "react-icons/ri";
 
 const Technologies = async () => {
   const langDataSolid: LangProps[] = await getLang("solid");
   const langDataFamiliar: LangProps[] = await getLang("familiar");
   const techDataSolid: TechCardProps[] = await getTech("solid");
   const techDataFamiliar: TechCardProps[] = await getTech("familiar");
+  const softwareDataSolid: TechCardProps[] = await getSoftware("solid");
+  const softwareDataFamiliar: TechCardProps[] = await getSoftware("familiar");
 
   return (
     <section className="technologies" id="technologies">
@@ -41,6 +44,7 @@ const Technologies = async () => {
             buttonInfo={[
               { title: "Languages", icon: <BsFileEarmarkCodeFill /> },
               { title: "Technologies", icon: <BsPcDisplay /> },
+              { title: "Software", icon: <RiWindowFill /> },
             ]}
           >
             <div className="page-container">
@@ -87,11 +91,11 @@ const Technologies = async () => {
                     <div className="badge-container">
                       <IoStar />
                     </div>
-                    <h2>Technology I Am Proficient With</h2>
+                    <h2>Technologies I Understand</h2>
                     <h5 className="short-description no-bold">
-                      These cards highlights the technologies I have solid
+                      These cards highlights the technologies I have a solid
                       understanding of and use confidently in my daily
-                      development work
+                      development work.
                     </h5>
                   </div>
                 </div>
@@ -106,15 +110,55 @@ const Technologies = async () => {
                     <div className="badge-container">
                       <PiStudentFill />
                     </div>
-                    <h2>Technology I Am Familiar With</h2>
+                    <h2>Technologies I've Utilized</h2>
                     <h5 className="short-description no-bold">
                       These cards showcase the technologies I have either used
                       before or am currently exploring and working to improve my
-                      understanding of
+                      understanding of.
                     </h5>
                   </div>
                 </div>
                 {techDataFamiliar.map((tech: TechCardProps) => {
+                  const { id } = tech;
+                  return <TechCard key={id} {...tech} />;
+                })}
+              </div>
+            </div>
+            <div className="page-container">
+              <div className="grid">
+                <div className="title-card" id="tech-solid">
+                  <div className="spacer">
+                    <div className="badge-container">
+                      <IoStar />
+                    </div>
+                    <h2>Software I Am Proficient With</h2>
+                    <h5 className="short-description no-bold">
+                      These cards showcase the software programs I have a solid
+                      understanding of and often use confidently in my daily
+                      development work.
+                    </h5>
+                  </div>
+                </div>
+                {softwareDataSolid.map((tech: TechCardProps) => {
+                  const { id, title } = tech;
+                  return (
+                    <TechCard key={id} {...tech} id={formatStringToId(title)} />
+                  );
+                })}
+                <div className="title-card" id="tech-familiar">
+                  <div className="spacer">
+                    <div className="badge-container">
+                      <PiStudentFill />
+                    </div>
+                    <h2>Software I Am Familiar With</h2>
+                    <h5 className="short-description no-bold">
+                      These cards showcase the software programs I have either
+                      used before or am currently exploring and working to
+                      improve my understanding of.
+                    </h5>
+                  </div>
+                </div>
+                {softwareDataFamiliar.map((tech: TechCardProps) => {
                   const { id } = tech;
                   return <TechCard key={id} {...tech} />;
                 })}

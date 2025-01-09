@@ -164,6 +164,15 @@ export const getArticlesByPage = async (
   return articleData;
 };
 
+export const getLang = async (understanding: Understanding) => {
+  const langData = await sanityFetch({
+    query: `*[_type == "programmingLanguage" && understanding match $understanding]{title, usedFor, description, 'id': _id, icon, yearCreated, understanding}`,
+    params: { understanding: understanding },
+    revalidate: 30,
+  });
+  return langData;
+};
+
 export const getTech = async (understanding: Understanding) => {
   const techData = await sanityFetch({
     query: `*[_type == "tech" && understanding match $understanding]{title, features, description, category, 'url': url.current, 'id': _id, icon, understanding}`,
@@ -172,12 +181,11 @@ export const getTech = async (understanding: Understanding) => {
   });
   return techData;
 };
-
-export const getLang = async (understanding: Understanding) => {
-  const langData = await sanityFetch({
-    query: `*[_type == "programmingLanguage" && understanding match $understanding]{title, usedFor, description, 'id': _id, icon, yearCreated, understanding}`,
+export const getSoftware = async (understanding: Understanding) => {
+  const techData = await sanityFetch({
+    query: `*[_type == "software" && understanding match $understanding]{title, features, description, category, 'url': url.current, 'id': _id, icon, understanding}`,
     params: { understanding: understanding },
     revalidate: 30,
   });
-  return langData;
+  return techData;
 };

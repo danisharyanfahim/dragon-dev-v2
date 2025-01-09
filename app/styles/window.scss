@@ -26,7 +26,8 @@
     .tabs {
       width: 100%;
       display: flex;
-      flex-wrap: wrap;
+      overflow-x: auto;
+      overflow-y: hidden;
       justify-content: flex-start;
 
       .tab {
@@ -34,7 +35,6 @@
           clamp(1rem, 0.286rem + 3.571vw, 2rem);
         // border-bottom: 2px solid transparent;
         transition: all 0.5s;
-        min-width: 100px;
 
         h4 {
           color: var(--unselected-tab);
@@ -110,8 +110,8 @@
   }
 }
 
-@media (max-width: 770px) {
-  .window-menu .tabs-container .tabs {
-    justify-content: center;
+@media (max-width: 450px) {
+  .window-menu .pages-container {
+    max-height: 560px;
   }
 }

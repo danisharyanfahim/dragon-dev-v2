@@ -569,7 +569,7 @@ header {
   .pages {
     .work-page {
       > * {
-        margin-left: 3rem;
+        margin-left: clamp(0rem, -2.352rem + 8.362vw, 3rem);
       }
       > :not(:first-child) {
         margin-top: 0.5rem;

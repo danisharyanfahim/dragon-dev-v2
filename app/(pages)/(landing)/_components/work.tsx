@@ -68,10 +68,10 @@ const Work = () => {
           <Window
             buttonInfo={[
               {
-                title: "The Solutioners",
+                title: "TheSolutioners.ca",
                 icon: <div className="the-solutioners-icon"></div>,
               },
-              { title: "SDS Property Group" },
+              { title: "SDSPropertyGroup.com" },
             ]}
           >
             <div className="work-page" id="the-solutioners">

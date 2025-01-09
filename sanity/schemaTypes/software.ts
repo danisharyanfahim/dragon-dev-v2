@@ -1,12 +1,12 @@
 export default {
-  name: 'tech',
+  name: 'software',
   type: 'document',
-  title: 'Technology Card',
+  title: 'Software Card',
   fields: [
     {
       name: 'title',
       type: 'string',
-      title: 'Technology Name',
+      title: 'Software Name',
     },
     {
       name: 'category',
