@@ -37,8 +37,8 @@ export const devIcons = [
   <IoLibrary />,
   <IoMedal />,
   <TbAdjustmentsSearch />,
-  <PiProjectorScreenChartFill />,
   <BsFillLightningFill />,
+  <PiProjectorScreenChartFill />,
   <SiGnometerminal />,
 ];
 

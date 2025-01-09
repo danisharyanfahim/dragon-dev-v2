@@ -126,7 +126,7 @@ const Technologies = async () => {
             </div>
             <div className="page-container">
               <div className="grid">
-                <div className="title-card" id="tech-solid">
+                <div className="title-card" id="software-solid">
                   <div className="spacer">
                     <div className="badge-container">
                       <IoStar />
@@ -145,7 +145,7 @@ const Technologies = async () => {
                     <TechCard key={id} {...tech} id={formatStringToId(title)} />
                   );
                 })}
-                <div className="title-card" id="tech-familiar">
+                <div className="title-card" id="software-familiar">
                   <div className="spacer">
                     <div className="badge-container">
                       <PiStudentFill />

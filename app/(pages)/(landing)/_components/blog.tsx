@@ -65,9 +65,11 @@ const Blog = async () => {
                       })}
                     </div>
                     <div className="link-button-container">
-                      <button className="link-button">
-                        <p>Read More</p>
-                      </button>
+                      <Link href={`/blog/${currentSlug}`}>
+                        <button className="link-button">
+                          <p>Read More</p>
+                        </button>
+                      </Link>
                     </div>
                   </div>
                 </div>
