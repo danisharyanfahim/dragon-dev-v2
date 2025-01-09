@@ -71,11 +71,14 @@ const Work = () => {
                 title: "TheSolutioners.ca",
                 icon: <div className="the-solutioners-icon"></div>,
               },
-              { title: "SDSPropertyGroup.com" },
+              {
+                title: "SDSPropertyGroup.com",
+                icon: <div className="sds-property-group-icon"></div>,
+              },
             ]}
           >
             <div className="work-page" id="the-solutioners">
-              <div className="logo" />
+              <div className="logo" id="the-solutioners-logo" />
               <p className="date">May 2024 - Present</p>
               <h5>Lead Developer</h5>
               <h3>The Solutioners</h3>
@@ -165,8 +168,7 @@ const Work = () => {
               <div className="the-solutioners-icon background"></div>
             </div>
             <div className="work-page" id="sds-property-group">
-              <img alt="image of logo to the right" />
-              {/* <div className="logo" /> */}
+              <div className="logo" id="sds-property-group-logo" />
               <p className="date">Dec 2024 - Present</p>
               <h5>Lead Developer</h5>
               <h3>SDS Property Group</h3>
@@ -253,7 +255,7 @@ const Work = () => {
                   />
                 </div>
               </div>
-              {/* <div className="sds-group-icon background"></div> */}
+              <div className="sds-property-group-icon background"></div>
             </div>
           </Window>
         </SplitCard>

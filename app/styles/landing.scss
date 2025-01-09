@@ -574,6 +574,21 @@ header#home {
       background-color: inherit;
       top: -3px;
     }
+
+    .sds-property-group-icon {
+      mask-image: url("/static/icons/work-icons/sds-logo.svg");
+      mask-repeat: no-repeat;
+      mask-size: contain;
+      mask-position: center;
+      -webkit-mask-image: url("/static/icons/work-icons/sds-logo.svg");
+      -webkit-mask-repeat: no-repeat;
+      -webkit-mask-size: contain;
+      -webkit-mask-position: center;
+      height: clamp(1.5rem, 1.214rem + 1.429vw, 2.5rem);
+      aspect-ratio: 1 / 1;
+      background-color: inherit;
+      top: -3px;
+    }
   }
 
   .work-header {
@@ -671,28 +686,41 @@ header#home {
   }
 
   .logo {
-    mask-image: url("/static/icons/work-icons/the-solutioners-logo.png");
     mask-repeat: no-repeat;
     mask-size: contain;
-    mask-position: center;
-    -webkit-mask-image: url("/static/icons/work-icons/the-solutioners-logo.png");
     -webkit-mask-repeat: no-repeat;
     -webkit-mask-size: contain;
-    -webkit-mask-position: center;
-    height: 100%;
-    width: 50%;
-    min-height: 120px;
-    min-width: 250px;
+
     background: var(--light-text-color);
     top: -3px;
+    &#the-solutioners-logo {
+      mask-image: url("/static/icons/work-icons/the-solutioners-logo.png");
+      -webkit-mask-image: url("/static/icons/work-icons/the-solutioners-logo.png");
+      height: 100%;
+      width: 50%;
+      min-height: 120px;
+      min-width: 250px;
+      mask-position: center;
+      -webkit-mask-position: center;
+    }
+    &#sds-property-group-logo {
+      mask-image: url("/static/icons/work-icons/sds-logo.svg");
+      -webkit-mask-image: url("/static/icons/work-icons/sds-logo.svg");
+      height: 100%;
+      width: 50%;
+      min-height: 200px;
+      min-width: 250px;
+      mask-position: flex-start;
+      -webkit-mask-position: flex-start;
+    }
   }
-  .the-solutioners-icon.background {
-    position: absolute;
+  .background {
     mask-image: url("/static/icons/work-icons/the-solutioners-icon.png");
+    -webkit-mask-image: url("/static/icons/work-icons/the-solutioners-icon.png");
+    position: absolute;
     mask-repeat: no-repeat;
     mask-size: contain;
     mask-position: center;
-    -webkit-mask-image: url("/static/icons/work-icons/the-solutioners-icon.png");
     -webkit-mask-repeat: no-repeat;
     -webkit-mask-size: contain;
     -webkit-mask-position: center;
@@ -701,6 +729,16 @@ header#home {
     width: 750px;
     top: 15%;
     left: 50%;
+
+    &.the-solutioners-icon {
+      mask-image: url("/static/icons/work-icons/the-solutioners-icon.png");
+      -webkit-mask-image: url("/static/icons/work-icons/the-solutioners-icon.png");
+    }
+
+    &.sds-property-group-icon {
+      mask-image: url("/static/icons/work-icons/sds-logo.svg");
+      -webkit-mask-image: url("/static/icons/work-icons/sds-logo.svg");
+    }
   }
 
   .button-container {
