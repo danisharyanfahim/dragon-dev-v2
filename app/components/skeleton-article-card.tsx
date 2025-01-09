@@ -11,6 +11,15 @@ const SkeletonArticleCard = () => {
     <div className="skeleton-card">
       <div className="image-container"></div>
       <div className="content-container">
+        <small className="date-created">Lorem ipsum</small>
+        <h4 className="title">animi</h4>
+        <h4 className="title">animi</h4>
+        <p className="overview">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          Exercitationem ad animi iure nobis repudiandae quasi blanditiis, eius
+          non culpa ab nemo deserunt voluptates rem nihil quod eligendi est, aut
+          reprehenderit.
+        </p>
         <div className="category-container">
           <div className="tag">Lorem</div>
           <div className="tag">ipsum </div>
@@ -19,14 +28,6 @@ const SkeletonArticleCard = () => {
           <div className="tag">amet</div>
           <div className="tag">animi</div>
         </div>
-        <h4 className="title">animi</h4>
-        <small className="date-created">Lorem ipsum</small>
-        <p className="overview">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit.
-          Exercitationem ad animi iure nobis repudiandae quasi blanditiis, eius
-          non culpa ab nemo deserunt voluptates rem nihil quod eligendi est, aut
-          reprehenderit.
-        </p>
         <div className="link-button-container">
           <button className="link-button">Read More</button>
         </div>

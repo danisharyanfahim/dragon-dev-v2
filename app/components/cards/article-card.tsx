@@ -25,16 +25,16 @@ const ArticleCard = ({
         />
       </figure>
       <div className="content-container">
+        <small className="date-created">
+          {formatTimeDifference(dateCreated)}
+        </small>
+        <h4 className="title">{title}</h4>
+        <p className="overview">{overview}</p>
         <div className="category-container">
           {categories.map((category, index) => {
             return <Tag key={index} {...category} />;
           })}
         </div>
-        <h4 className="title">{title}</h4>
-        <small className="date-created">
-          {formatTimeDifference(dateCreated)}
-        </small>
-        <p className="overview">{overview}</p>
         <div className="link-button-container">
           <Link href={`/blog/${currentSlug}`}>
             <button className="link-button">

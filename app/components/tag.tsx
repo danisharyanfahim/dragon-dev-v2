@@ -15,7 +15,7 @@ const Tag = ({ relevance, text, format }: Category) => {
   return (
     <button className={`tag relevance-${relevance}`} onClick={handleClick}>
       <small>
-        {format === "capitalize" ? text.toUpperCase() : formatCamelCase(text)}
+        #{format === "capitalize" ? text.toUpperCase() : formatCamelCase(text)}
       </small>
     </button>
   );

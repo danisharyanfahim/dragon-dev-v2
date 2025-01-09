@@ -10,7 +10,13 @@ const BlogSearch = ({
 }) => {
   return (
     <div className="blog-search-page">
-      <SearchBar />
+      <header className="blog-header">
+        <h1 className="logo-text">
+          <span>DragonDev</span>
+          <span className="colorful">Blog</span>
+        </h1>
+        <SearchBar />
+      </header>
       <InfiniteScroll searchParams={searchParams} articlesPerPage={6} />
     </div>
   );

@@ -306,7 +306,7 @@
         width: 100%;
         position: absolute;
         object-fit: cover;
-        border-radius: 1rem;
+        border-radius: 1rem 1rem 0rem 0rem;
       }
     }
 
@@ -369,7 +369,7 @@
   gap: 0rem;
 }
 
-header {
+header#home {
   min-height: 1000px;
   // display: flex;
   // align-items: center;
