@@ -53,8 +53,18 @@ const Blog = async () => {
               } = data;
               return (
                 <div className="article-carousel-card" key={id}>
-                  <div className="image-container">
-                    <img src={urlFor(titleImage).url()} alt="article-image" />
+                  <div className="card-header">
+                    <div className="text-container">
+                      <h6>{title.toUpperCase()}</h6>
+                    </div>
+                    <figure className="image-container">
+                      <img
+                        src={urlFor(titleImage).url()}
+                        alt="title-image"
+                        className="title-image"
+                        loading="lazy"
+                      />
+                    </figure>
                   </div>
                   <div className="text-container">
                     <h5 className="title">{title}</h5>
@@ -72,6 +82,7 @@ const Blog = async () => {
                       </Link>
                     </div>
                   </div>
+                  <div className="background-icon"></div>
                 </div>
               );
             })}

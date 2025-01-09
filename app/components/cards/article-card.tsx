@@ -16,14 +16,19 @@ const ArticleCard = ({
 }: ArticleCardProps) => {
   return (
     <div className="article-card">
-      <figure className="image-container">
-        <img
-          src={urlFor(titleImage).url()}
-          alt="title-image"
-          className="title-image"
-          loading="lazy"
-        />
-      </figure>
+      <div className="card-header">
+        <div className="text-container">
+          <h6>{title.toUpperCase()}</h6>
+        </div>
+        <figure className="image-container">
+          <img
+            src={urlFor(titleImage).url()}
+            alt="title-image"
+            className="title-image"
+            loading="lazy"
+          />
+        </figure>
+      </div>
       <div className="content-container">
         <small className="date-created">
           {formatTimeDifference(dateCreated)}
@@ -43,6 +48,7 @@ const ArticleCard = ({
           </Link>
         </div>
       </div>
+      <div className="background-icon"></div>
     </div>
   );
 };

@@ -18,6 +18,8 @@
   --ui-primary-accent-color-2: rgb(16, 37, 224);
   --ui-secondary-accent-color-1: rgb(40, 68, 228);
   --ui-secondary-accent-color-2: #0962e7;
+  --ui-tertiary-accent-color-1: rgb(255, 0, 0);
+  --ui-tertiary-accent-color-2: rgb(146, 0, 0);
   --ui-primary-accent-color-1-transparent: rgb(6, 24, 184, 0.8);
   --ui-primary-accent-color-2-transparent: rgb(16, 37, 224, 0.7);
   --theme-toggle-color-1: rgb(216, 244, 255);
@@ -85,6 +87,8 @@
   --ui-primary-accent-color-2: rgb(102, 0, 0);
   --ui-secondary-accent-color-1: rgb(255, 0, 0);
   --ui-secondary-accent-color-2: rgb(143, 0, 0);
+  --ui-tertiary-accent-color-1: rgb(6, 24, 184);
+  --ui-tertiary-accent-color-2: #0962e7;
   --text-shadow-color-1: rgba(255, 0, 0, 0.274);
   --ui-primary-accent-color-1-transparent: rgb(146, 0, 0, 0.8);
   --ui-primary-accent-color-2-transparent: rgb(102, 0, 0, 0.7);
