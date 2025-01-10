@@ -74,6 +74,11 @@
     padding-top: 1rem;
     padding-bottom: 1rem;
     z-index: 3;
+    &::-webkit-scrollbar {
+      display: none;
+      -webkit-appearance: none;
+      appearance: none;
+    }
 
     @media (max-width: 1280px) {
       grid-auto-columns: calc((100% / 2) - (var(--grid-gap) - 8px));
