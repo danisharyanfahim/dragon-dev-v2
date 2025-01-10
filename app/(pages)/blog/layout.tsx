@@ -1,4 +1,4 @@
-import Footer from "@/app/components/footer";
+import Footer from "@/app/components/layout/footer";
 
 export default function BlogLayout({
   children,

@@ -1,8 +1,8 @@
 import React from "react";
-import { formatTimeDifference } from "../utils/utility-functions";
-import { urlFor } from "../lib/client";
+import { formatTimeDifference } from "../../utils/utility-functions";
+import { urlFor } from "../../lib/client";
 import Link from "next/link";
-import Tag from "./tag";
+import Tag from "../ui/tag";
 
 const categories = [];
 

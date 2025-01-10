@@ -1,7 +1,7 @@
 import LangCard from "@/app/components/cards/lang-card";
 import SplitCard from "@/app/components/cards/split-card";
 import TechCard from "@/app/components/cards/tech-card";
-import Window from "@/app/components/window";
+import Window from "@/app/components/ui/window";
 import { LangProps, TechCardProps } from "@/app/interfaces/landing";
 import { getLang, getSoftware, getTech } from "@/app/utils/server-actions";
 import { formatStringToId } from "@/app/utils/utility-functions";

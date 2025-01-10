@@ -1,4 +1,4 @@
-import FooterContent from "@/app/components/footer-content";
+import FooterContent from "@/app/components/layout/footer-content";
 import React from "react";
 
 const Footer = () => {

@@ -1,5 +1,5 @@
 import SplitCard from "@/app/components/cards/split-card";
-import ContactForm from "@/app/components/contact-form";
+import ContactForm from "@/app/components/ui/contact-form";
 import React from "react";
 import { HiPhone } from "react-icons/hi2";
 

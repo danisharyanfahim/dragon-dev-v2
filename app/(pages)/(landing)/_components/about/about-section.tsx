@@ -1,6 +1,6 @@
 import { getStaticFile } from "@/app/api/get-static-file";
 import SplitCard from "@/app/components/cards/split-card";
-import Slider from "@/app/components/slider";
+import Slider from "@/app/components/ui/slider";
 import { SlideData } from "@/app/interfaces/landing";
 import { formatStringToId } from "@/app/utils/utility-functions";
 import React from "react";

@@ -1,4 +1,4 @@
-import Loader from "@/app/components/loader";
+import Loader from "@/app/components/ui/loader";
 import React from "react";
 
 const LoadingPage = () => {

@@ -1,7 +1,6 @@
 "use client";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
-import ThemeToggle from "../theme-toggle";
 import { pageSections } from "@/app/global/variables";
 import { CgMenuGridR } from "react-icons/cg";
 import { IoHome, IoNewspaperSharp } from "react-icons/io5";
@@ -11,6 +10,7 @@ import { GiPencilRuler } from "react-icons/gi";
 import { MdOutlineWork } from "react-icons/md";
 import { HiPhone } from "react-icons/hi2";
 import { useTheme } from "next-themes";
+import ThemeToggle from "../ui/theme-toggle";
 
 const navMenuIcons = [
   <IoHome className="icon" />,

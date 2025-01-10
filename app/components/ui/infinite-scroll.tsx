@@ -11,11 +11,11 @@ import {
   getAllArticles,
   getArticlesByPage,
   getNumberOfArticles,
-} from "../utils/server-actions";
-import ArticleCard from "./cards/article-card";
-import { ArticleCardProps, SearchParamProps } from "../interfaces/blog";
-import SkeletonArticleCard from "./skeleton-article-card";
+} from "../../utils/server-actions";
+import ArticleCard from "../cards/article-card";
+import { ArticleCardProps, SearchParamProps } from "../../interfaces/blog";
 import { useIntersectionObserver } from "usehooks-ts";
+import SkeletonArticleCard from "../cards/skeleton-article-card";
 
 const InfiniteScroll = ({
   searchParams,

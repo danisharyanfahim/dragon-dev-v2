@@ -1,9 +1,9 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import { footerInfo, pageSections } from "../global/variables";
+import { footerInfo, pageSections } from "../../global/variables";
 import Link from "next/link";
 import { useTheme } from "next-themes";
-import IconLink from "./icon-link";
+import IconLink from "../ui/icon-link";
 
 const FooterContent = () => {
   const { theme } = useTheme();

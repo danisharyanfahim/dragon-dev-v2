@@ -1,6 +1,6 @@
 import SplitCard from "@/app/components/cards/split-card";
-import IconLink from "@/app/components/icon-link";
-import Window from "@/app/components/window";
+import IconLink from "@/app/components/ui/icon-link";
+import Window from "@/app/components/ui/window";
 import React from "react";
 import { MdOutlineWork } from "react-icons/md";
 

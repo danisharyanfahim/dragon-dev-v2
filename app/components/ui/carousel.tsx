@@ -6,8 +6,8 @@ import React, {
   useRef,
   useState,
 } from "react";
-import { addToFrontAndEnd } from "../utils/utility-functions";
-import CarouselCard from "./cards/carousel-card";
+import { addToFrontAndEnd } from "../../utils/utility-functions";
+import CarouselCard from "../cards/carousel-card";
 import { FaChevronLeft, FaChevronRight, FaPlay } from "react-icons/fa6";
 import { GiPauseButton } from "react-icons/gi";
 

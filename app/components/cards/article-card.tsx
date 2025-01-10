@@ -3,8 +3,7 @@ import { ArticleCardProps } from "@/app/interfaces/blog";
 import { formatTimeDifference } from "../../utils/utility-functions";
 import { urlFor } from "../../lib/client";
 import Link from "next/link";
-import Tag from "../tag";
-import { MdKeyboardDoubleArrowRight } from "react-icons/md";
+import Tag from "../ui/tag";
 
 const ArticleCard = ({
   title,

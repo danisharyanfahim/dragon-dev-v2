@@ -1,5 +1,5 @@
-import InfiniteScroll from "@/app/components/infinite-scroll";
-import SearchBar from "@/app/components/search-bar";
+import InfiniteScroll from "@/app/components/ui/infinite-scroll";
+import SearchBar from "@/app/components/ui/search-bar";
 import { SearchParamProps } from "@/app/interfaces/blog";
 import React from "react";
 

@@ -1,6 +1,6 @@
 import SplitCard from "@/app/components/cards/split-card";
-import IconLink from "@/app/components/icon-link";
-import SlideShow from "@/app/components/slide-show";
+import IconLink from "@/app/components/ui/icon-link";
+import SlideShow from "@/app/components/ui/slide-show";
 import React from "react";
 import { BiSolidMovie } from "react-icons/bi";
 import { FaCloudSunRain } from "react-icons/fa6";

@@ -1,8 +1,8 @@
 "use client";
 import React, { MouseEventHandler } from "react";
 import { useRouter } from "next/navigation";
-import { Category } from "../interfaces/blog";
-import { formatCamelCase } from "../utils/utility-functions";
+import { Category } from "../../interfaces/blog";
+import { formatCamelCase } from "../../utils/utility-functions";
 
 const Tag = ({ relevance, text, format }: Category) => {
   const router = useRouter();

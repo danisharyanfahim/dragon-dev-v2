@@ -1,5 +1,5 @@
-import CodeContainer from "@/app/components/code-container";
-import Tag from "@/app/components/tag";
+import CodeContainer from "@/app/components/ui/code-container";
+import Tag from "@/app/components/ui/tag";
 import {
   ArticlePageProps,
   CodeContainerProps,

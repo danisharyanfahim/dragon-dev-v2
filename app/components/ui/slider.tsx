@@ -1,4 +1,5 @@
 "use client";
+import { addToFrontAndEnd } from "@/app/utils/utility-functions";
 import React, {
   useEffect,
   useLayoutEffect,
@@ -6,10 +7,9 @@ import React, {
   useRef,
   useState,
 } from "react";
-import Slide from "./cards/slide";
-import { addToFrontAndEnd } from "../utils/utility-functions";
 import { FaChevronLeft, FaChevronRight, FaPlay } from "react-icons/fa6";
 import { GiPauseButton } from "react-icons/gi";
+import Slide from "../cards/slide";
 
 const Slider = ({
   children,

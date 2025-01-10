@@ -1,6 +1,6 @@
 import SplitCard from "@/app/components/cards/split-card";
-import Carousel from "@/app/components/carousel";
-import Tag from "@/app/components/tag";
+import Carousel from "@/app/components/ui/carousel";
+import Tag from "@/app/components/ui/tag";
 import { ArticleCardProps } from "@/app/interfaces/blog";
 import { urlFor } from "@/app/lib/client";
 import { getLatestArticles } from "@/app/utils/server-actions";

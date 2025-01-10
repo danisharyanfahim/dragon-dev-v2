@@ -1,8 +1,8 @@
 "use client";
+import { CodeContainerProps } from "@/app/interfaces/blog";
 import React, { useState } from "react";
 import { FaCheck, FaRegClipboard } from "react-icons/fa6";
 import SyntaxHighlighter from "react-syntax-highlighter";
-import { CodeContainerProps } from "../interfaces/blog";
 import { nord } from "react-syntax-highlighter/dist/esm/styles/hljs";
 
 const CodeContainer: React.FC<CodeContainerProps> = ({

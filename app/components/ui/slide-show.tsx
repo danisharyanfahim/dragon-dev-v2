@@ -1,8 +1,9 @@
 "use client";
 import React, { useEffect, useMemo, useRef, useState } from "react";
-import Slide from "./cards/slide";
+
 import { FaChevronLeft, FaChevronRight, FaPlay } from "react-icons/fa6";
 import { GiPauseButton } from "react-icons/gi";
+import Slide from "../cards/slide";
 
 /* 
 // -infinite/wrapping

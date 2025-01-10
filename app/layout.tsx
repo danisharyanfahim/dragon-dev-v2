@@ -1,4 +1,4 @@
-import Navbar from "./components/navbar/navbar";
+import Navbar from "./components/layout/navbar";
 import { ThemeProvider } from "./context/theme-provider";
 import "./styles/globals.scss";
 
