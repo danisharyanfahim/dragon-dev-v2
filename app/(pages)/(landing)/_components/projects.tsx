@@ -73,8 +73,8 @@ const Projects = () => {
                 </span>
               </h3>
               <h5>
-                A Basic weather API that tells you today's forecast for any city
-                you decide to look up
+                A Basic weather API that tells you the current forcast for any
+                city you wish to look up
               </h5>
               <ul>
                 <li>
@@ -139,7 +139,7 @@ const Projects = () => {
               </h3>
               <h5>
                 A dynamic movie website I created to test out infinite-scrolling
-                before implementing teh feature into my blog
+                before implementing the feature into my blog
               </h5>
               <ul>
                 <li>
@@ -211,7 +211,7 @@ const Projects = () => {
                 </span>
               </h3>
               <h5>
-                This book site serves as an online library, allowing them to
+                This book site serves as an online library, allowing users to
                 search through a catalog of books, while also allowing users to
                 upload and store their own books
               </h5>
