@@ -71,6 +71,7 @@
     overflow-x: auto;
     scrollbar-width: none;
     scroll-snap-type: x mandatory;
+    // scroll-padding: 0 16px; //Use this feature later on to make sure the caorusel aligns perfectly, even with padding and margins
     padding-top: 1rem;
     padding-bottom: 1rem;
     z-index: 3;

@@ -120,27 +120,19 @@ const SlideShow = ({
         </div>
       )}
       {showPositionButtons && (
-        <ul className="position-buttons">
+        <ol className="position-buttons">
           {slides.map((_, index) => (
             <li
               key={index}
               onClick={() => toggleSlide(index)}
-              style={{
-                display: "inline-block",
-                backgroundColor:
-                  currentSlide === index ? "white" : "rgba(255, 255, 255, 0.5)",
-                borderRadius: "50%",
-                height: "25px",
-                width: "25px",
-                cursor: "pointer",
-                margin: "0.5rem",
-                color: "black",
-              }}
+              className={`position-button ${
+                currentSlide === index ? "active" : ""
+              }`}
             >
-              <p>{index + 1}</p>
+              {/* <p>{index + 1}</p> */}
             </li>
           ))}
-        </ul>
+        </ol>
       )}
       {autoPlay && showPlayButton && (
         <div className="play-button-container">

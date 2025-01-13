@@ -63,7 +63,7 @@ const Projects = () => {
               sites and other coding experiments outside of web development.
             </h4>
           </section>
-          <SlideShow infinite={true} delay={3000}>
+          <SlideShow infinite={true} delay={3000} showPositionButtons={true}>
             <div className="project-slide">
               <p className="date">2025</p>
               <h3>

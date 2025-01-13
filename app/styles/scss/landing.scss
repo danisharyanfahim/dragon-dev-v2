@@ -790,8 +790,9 @@ header#home {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    padding: 1rem;
+    padding: 0rem;
     z-index: 2;
+    margin-bottom: 2rem;
     .social-media-icons-container {
       display: flex;
       flex-wrap: wrap;

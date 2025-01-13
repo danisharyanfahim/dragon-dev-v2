@@ -19,7 +19,7 @@ const Carousel = ({
   autoPlay = false,
   delay = 1000,
   direction = "forward",
-  initialSlide,
+  initialCard,
   showPlayButton = false,
   showControlButtons = true,
   showPositionIndicator = true,
@@ -29,7 +29,7 @@ const Carousel = ({
   autoPlay?: boolean;
   delay?: number;
   direction?: "forward" | "reverse";
-  initialSlide?: number;
+  initialCard?: number;
   showPlayButton?: boolean;
   showControlButtons?: boolean;
   showPositionIndicator?: boolean;
@@ -67,12 +67,12 @@ const Carousel = ({
     return cards;
   }, [children]);
 
-  const scrollTo = (nextSlide: number) => {
+  const scrollTo = (nextCard: number) => {
     const firstCardWidth = cardRefs.current[0]?.offsetWidth;
     if (firstCardWidth === undefined) return;
-    setCurrentSlide(nextSlide);
+    setCurrentCard(nextCard);
     carouselRef.current?.scrollTo({
-      left: (firstCardWidth + gridGap) * nextSlide,
+      left: (firstCardWidth + gridGap) * nextCard,
       behavior: scrollBehavior.current,
     });
   };
@@ -84,43 +84,43 @@ const Carousel = ({
     return Math.round(carouselWidth / firstCardWidth);
   };
 
-  const toggleSlide = (nextSlide: number) => {
+  const toggleCard = (nextCard: number) => {
     if (infinite) {
       const visibleCards = getVisibleCards();
       if (visibleCards === undefined) return;
-      if (nextSlide > cards.length - visibleCards) {
+      if (nextCard > cards.length - visibleCards) {
         scrollBehavior.current = "auto";
-        nextSlide -= children.length + 1;
-      } else if (nextSlide < 0) {
+        nextCard -= children.length + 1;
+      } else if (nextCard < 0) {
         scrollBehavior.current = "auto";
-        nextSlide = children.length;
+        nextCard = children.length;
       }
-      scrollTo(nextSlide);
-    } else if (nextSlide <= children.length - 1 && nextSlide >= 0) {
-      scrollTo(nextSlide);
+      scrollTo(nextCard);
+    } else if (nextCard <= children.length - 1 && nextCard >= 0) {
+      scrollTo(nextCard);
     }
   };
 
-  const [currentCard, setCurrentSlide] = useState<number>(0);
+  const [currentCard, setCurrentCard] = useState<number>(0);
 
-  const setFirstSlide = (
-    initialSlide: number,
+  const setFirstCard = (
+    initialCard: number,
     infinite: boolean,
     cardsBefore: number
   ) => {
     if (infinite) {
-      initialSlide = cardsBefore + initialSlide;
+      initialCard = cardsBefore + initialCard;
     }
-    scrollTo(initialSlide);
-    return initialSlide;
+    scrollTo(initialCard);
+    return initialCard;
   };
 
-  //Sets the slider position to the scroll position of the initial card, regardless of whether or not the carousel wraps
+  //Sets the carousel position to the scroll position of the initial card, regardless of whether or not the carousel wraps
   useLayoutEffect(() => {
-    setFirstSlide(initialSlide ?? 0, infinite, cardsBefore);
+    setFirstCard(initialCard ?? 0, infinite, cardsBefore);
   }, []);
 
-  //If the scroll is set to auto, which happens when one end of the slides has been reached when the slides are set to infinite mode, then it will reenable smooth scrolling and go to the target slide
+  // If the scroll is set to auto, which happens when one end of the cards has been reached when the cards are set to infinite mode, then it will reenable smooth scrolling and go to the target card
   useEffect(() => {
     if (scrollBehavior.current === "auto") {
       scrollBehavior.current = "smooth";
@@ -128,21 +128,21 @@ const Carousel = ({
       if (visibleCards === undefined) return;
       if (currentCard === cardsBefore + (3 - visibleCards)) {
         //3 Is the highest number of visible cards
-        toggleSlide(currentCard + 1);
+        toggleCard(currentCard + 1);
       } else if (currentCard === children.length) {
-        toggleSlide(currentCard - 1);
+        toggleCard(currentCard - 1);
       }
     }
   }, [currentCard]);
 
-  //Controls the autoPlaying of the slides, after the delay duration has been reached it will go to the next or previous slide
+  //Controls the autoPlaying of the card, after the delay duration has been reached it will go to the next or previous cards
   useEffect(() => {
     if (!autoPlay || !isPlaying) return;
     const interval = setInterval(() => {
       if (direction === "forward") {
-        toggleSlide(currentCard + 1);
+        toggleCard(currentCard + 1);
       } else {
-        toggleSlide(currentCard - 1);
+        toggleCard(currentCard - 1);
       }
     }, delay);
     return () => {
@@ -155,10 +155,11 @@ const Carousel = ({
       {showPositionIndicator && (
         <div className="position-indicator">
           <p>
-            {currentCard + 1 > children.length
-              ? currentCard - children.length + 1
+            {/* {currentCard + 1 > children.length
+              ? currentCard + 1 - children.length
               : currentCard + 1}
-            /{children.length}
+            /{children.length} */}
+            {currentCard + 1}/{children.length}
           </p>
         </div>
       )}
@@ -174,13 +175,13 @@ const Carousel = ({
         <>
           <button
             className="prev-button"
-            onClick={() => toggleSlide(currentCard + 1)}
+            onClick={() => toggleCard(currentCard + 1)}
           >
             <FaChevronRight />
           </button>
           <button
             className="next-button"
-            onClick={() => toggleSlide(currentCard - 1)}
+            onClick={() => toggleCard(currentCard - 1)}
           >
             <FaChevronLeft />
           </button>
@@ -197,5 +198,9 @@ export default Carousel;
 
 /* Make position buttons later, they are basically mini slides
  which also scroll left and right, and which ever one you click
- on will scroll both the positions buttons and the slider to
- the left or the right depending on the amount  */
+ on will scroll both the positions buttons and the carousel to
+ the left or the right depending on the amount, also add touch
+ dragging, hover dragging, and mouse dragging, and make it work
+ with the infinite scrolling. Play around with the scroll padding
+ css property, and also the scrollIntoView, and scrollBy functions
+ and see if they work better than scrollTo  */
