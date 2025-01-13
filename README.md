@@ -1,4 +1,4 @@
-<img src="public/static/icons/dragon-dev-day.svg" align="right" height="72px" />
+<img src="public/static/icons/dragon-dev-day.svg" align="left" height="72px" />
 
 # **DragonDev.ca**
 
