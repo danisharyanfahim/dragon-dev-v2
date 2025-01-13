@@ -54,6 +54,8 @@
   --logo-primary-color: rgb(1, 1, 7);
   --selected-tab: #e6ebfdf0;
   --unselected-tab: rgba(111, 136, 170, 0.527);
+  --input-background-color: rgba(212, 216, 235, 0.863);
+  --map-background-filter-color: rgba(30, 71, 255, 0.11);
 
   /* dimensions */
   --border-radius-outer: 1rem;
@@ -93,4 +95,6 @@
   --ui-primary-accent-color-1-transparent: rgb(146, 0, 0, 0.8);
   --ui-primary-accent-color-2-transparent: rgb(102, 0, 0, 0.7);
   --logo-primary-color: rgb(241, 243, 255);
+  --input-background-color: rgba(18, 18, 40, 0.8);
+  --map-background-filter-color: rgba(0, 0, 20, 0.95);
 }

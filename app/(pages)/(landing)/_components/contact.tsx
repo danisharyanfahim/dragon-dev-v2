@@ -23,7 +23,6 @@ const Contact = () => {
                 <img src="/static/icons/paper-plane.svg" alt="paper-plane" />
               </figure>
             </section>
-
             <ContactForm />
           </div>
         </SplitCard>
