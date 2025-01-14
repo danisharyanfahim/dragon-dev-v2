@@ -212,10 +212,8 @@ footer {
   }
 }
 
-@media (max-width: 648px) {
-  footer .top-section section.mission-section .social-media-icons-container {
-    justify-content: flex-start;
-    width: 100%;
-    padding: 3rem 0rem 0rem;
+@media (max-width: 450px) {
+  footer .top-section {
+    gap: 0rem;
   }
 }

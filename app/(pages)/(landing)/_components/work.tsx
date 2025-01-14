@@ -86,7 +86,7 @@ const Work = () => {
                 A professional website for The Solutioners, a Canadian
                 cybersecurity and IT solutions company. They offer a wide range
                 of services, including SOC services, risk assessment,
-                penetration testing and many other and IT security solutions.
+                penetration testing and many other IT security solutions.
               </h5>
               <ul className="Tasks-completed">
                 <li>
