@@ -73,7 +73,7 @@ const Projects = () => {
                 </span>
               </h3>
               <h5>
-                A Basic weather API that tells you the current forcast for any
+                A Basic weather API that tells you the current forecast for any
                 city you wish to look up
               </h5>
               <ul>
