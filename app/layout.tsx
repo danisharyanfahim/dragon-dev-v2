@@ -26,7 +26,7 @@ export default function RootLayout({
         />
         <meta
           property="og:image"
-          content="https://dragondev.ca/public/static/icons/dragon-dev.svg"
+          content="https://dragondev.ca/static/icons/dragon-dev.svg"
         />
         <meta property="og:url" content="https://dragondev.ca/" />
         <meta property="og:type" content="website" />
