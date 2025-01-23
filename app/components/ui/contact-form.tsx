@@ -98,7 +98,6 @@ const ContactForm = () => {
   return (
     <div className="contact-form">
       <div className="background-image"></div>
-
       <div className="form container">
         <form onSubmit={handleSubmit} className="email-form container">
           <section>

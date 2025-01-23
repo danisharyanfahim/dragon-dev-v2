@@ -645,6 +645,17 @@ header#home {
       * {
         text-wrap: balance;
       }
+
+      h3#construction-warning {
+        display: flex;
+        gap: 0.5rem;
+        align-items: center;
+
+        .warning-icon {
+          color: red;
+          animation: breathe 1s linear infinite;
+        }
+      }
     }
 
     .tech-container {

@@ -42,9 +42,11 @@ const weatherTech = [
   { name: "RestAPI", type: "technology" },
   { name: "React", type: "technology" },
   { name: "NextJS", type: "technology" },
+  { name: "ExpressJS", type: "technology" },
+  { name: "NodeJS", type: "technology" },
   { name: "SASS", type: "technology" },
   { name: "VSCode", type: "technology" },
-  { name: "Vercel", type: "technology" },
+  { name: "AWS", type: "technology" },
 ];
 
 const Projects = () => {
@@ -67,19 +69,22 @@ const Projects = () => {
             <div className="project-slide">
               <p className="date">2025</p>
               <h3>
-                Weather API Site
+                Weather Dashboard
                 <span className="icon">
                   <FaCloudSunRain />
                 </span>
               </h3>
               <h5>
-                A Basic weather API that tells you the current forecast for any
-                city you wish to look up
+                A weather dashboard that shows you the current forecast for any
+                city you wish to look up, as well as the hourly and weekly
+                forecasts.
               </h5>
               <ul>
                 <li>
                   <p>
-                    Gives all of the weather information for that day and time
+                    Utilizes multiple APIs to gather and display detailed
+                    weather data and an image background for the selected city,
+                    tailored to the current day and time
                   </p>
                 </li>
                 <li>
@@ -90,8 +95,7 @@ const Projects = () => {
                 </li>
                 <li>
                   <p>
-                    Properly formatted time and date, as well as displaying the
-                    angle of the wing through an arrow
+                    Displays data using intuitive diagrams, icons, and graphs
                   </p>
                 </li>
               </ul>
@@ -111,7 +115,7 @@ const Projects = () => {
               </div>
               <div className="button-container">
                 <a
-                  href="https://weather-app-dragondev.vercel.app/"
+                  href="https://master.dj1lv8genpute.amplifyapp.com/"
                   target="_blank"
                 >
                   <button className="link-button">
@@ -120,7 +124,7 @@ const Projects = () => {
                 </a>
                 <div className="social-media-icons-container">
                   <IconLink
-                    url="https://github.com/danisharyanfahim/weather-app"
+                    url="https://github.com/danisharyanfahim/weather-app-v2"
                     imageUrl="/static/icons/social-media-icons/github-icon.svg"
                   />
                 </div>
@@ -139,7 +143,7 @@ const Projects = () => {
               </h3>
               <h5>
                 A dynamic movie website I created to test out infinite-scrolling
-                before implementing the feature into my blog
+                before implementing the feature into my blog.
               </h5>
               <ul>
                 <li>
@@ -213,7 +217,7 @@ const Projects = () => {
               <h5>
                 This book site serves as an online library, allowing users to
                 search through a catalog of books, while also allowing users to
-                upload and store their own books
+                upload and store their own books.
               </h5>
               <ul>
                 <li>

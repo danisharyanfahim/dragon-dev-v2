@@ -3,6 +3,7 @@ import IconLink from "@/app/components/ui/icon-link";
 import Window from "@/app/components/ui/window";
 import React from "react";
 import { MdOutlineWork } from "react-icons/md";
+import { PiWarningDiamondFill } from "react-icons/pi";
 
 const solutionerTechnologies = [
   { name: "HTML", type: "language" },
@@ -168,6 +169,10 @@ const Work = () => {
               <div className="the-solutioners-icon background"></div>
             </div>
             <div className="work-page" id="sds-property-group">
+              <h3 id="construction-warning">
+                <PiWarningDiamondFill className="warning-icon" />
+                Site is still under construction
+              </h3>
               <div className="logo" id="sds-property-group-logo" />
               <p className="date">Dec 2024 - Present</p>
               <h5>Lead Developer</h5>
