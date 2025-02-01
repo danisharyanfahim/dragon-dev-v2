@@ -242,13 +242,12 @@
 
 .article-card,
 .skeleton-card {
-  min-width: 300px;
-  max-width: 345px;
+  width: 320px;
+  min-height: 540px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  min-height: 540px;
   border-radius: 0.5rem;
 }
 
