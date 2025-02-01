@@ -88,7 +88,10 @@ const BlogArticle = async ({ params }: { params: { slug: string } }) => {
           </figure>
           <article>
             <section className="article-head">
-              <h4 className="author-info">Dans - Blog</h4>
+              <h4 className="author-info">
+                <span className="colorful">DragonDev</span>
+                <span className="colorful">Blog</span>
+              </h4>
               <h1 className="title">{title}</h1>
               <div className="dates-container">
                 <p className="date-created">

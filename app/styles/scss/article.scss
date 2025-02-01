@@ -75,6 +75,35 @@
         flex-direction: inherit;
         padding-top: clamp(1rem, 5vw - 0.75rem, 3rem);
 
+        h1 {
+          display: flex;
+          justify-content: center;
+          font-size: clamp(2.25rem, 1.455rem + 2.828vw, 4rem);
+          padding: 2rem;
+
+          span {
+            margin: 1rem 0rem;
+            padding: 0rem 1rem;
+            color: var(--light-text-color);
+            &.colorful {
+              background: linear-gradient(
+                -45deg,
+                rgb(0, 9, 134),
+                rgb(0, 0, 255),
+                rgb(43, 65, 255),
+                rgb(79, 111, 255)
+              );
+              background-clip: text;
+              -webkit-background-clip: text;
+              -webkit-text-fill-color: transparent;
+            }
+          }
+
+          :first-child {
+            border-right: 6px solid var(--light-text-color);
+          }
+        }
+
         > * {
           padding-bottom: 0.5rem;
         }
@@ -88,7 +117,7 @@
           display: table-cell;
           vertical-align: middle;
           text-align: center;
-          padding-bottom: 0.5rem;
+          padding: 0.5rem;
         }
         .author-info {
           background: linear-gradient(
@@ -99,9 +128,29 @@
           background-clip: text;
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
-          display: table-cell;
-          vertical-align: middle;
-          text-align: center;
+
+          display: flex;
+          justify-content: center;
+
+          span {
+            margin: 1rem 0rem;
+            padding: 0rem 1rem;
+            color: var(--light-text-color);
+            &.colorful {
+              background: linear-gradient(
+                -45deg,
+                var(--ui-primary-accent-color-1),
+                var(--ui-primary-accent-color-2)
+              );
+              background-clip: text;
+              -webkit-background-clip: text;
+              -webkit-text-fill-color: transparent;
+            }
+          }
+
+          :first-child {
+            border-right: 3px solid var(--ui-primary-accent-color-1);
+          }
         }
         .dates-container {
           display: flex;
