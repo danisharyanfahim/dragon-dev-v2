@@ -387,6 +387,11 @@
           transform: scale(100%);
           transition: all 0.15s;
 
+          &:hover {
+            transform: scale(108%);
+            transition: all 0.15s;
+          }
+
           p {
             font-size: clamp(0.8rem, -0.6rem + 8cqw, 1.2rem);
           }
