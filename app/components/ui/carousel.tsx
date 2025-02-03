@@ -155,11 +155,11 @@ const Carousel = ({
       {showPositionIndicator && (
         <div className="position-indicator">
           <p>
-            {/* {currentCard + 1 > children.length
+            {currentCard + 1 > children.length
               ? currentCard + 1 - children.length
               : currentCard + 1}
-            /{children.length} */}
-            {currentCard + 1}/{children.length}
+            /{children.length}
+            {/* {currentCard + 1}/{children.length} */}
           </p>
         </div>
       )}
