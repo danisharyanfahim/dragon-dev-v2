@@ -20,10 +20,9 @@ export interface ArticlePageProps {
 
 export interface TextBlock {
   type: "text";
-  text: string;
+  children: { text: string; marks: Marks[] }[];
   style: "h1" | "h2" | "h3" | "h4" | "h5" | "h6" | "blockquote" | "normal";
   listItem: "bullet" | "number" | null;
-  marks: Marks[];
   link: string | null;
 }
 

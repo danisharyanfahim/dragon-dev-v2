@@ -36,17 +36,37 @@ const applyMarks = (text: string, marks: Marks[]) => {
 };
 
 const formatText = (textInfo: TextBlock, index: number) => {
-  const { text, style, marks, listItem, link } = textInfo;
+  const { children, style, listItem, link } = textInfo;
   let formattedText: React.ReactNode;
 
   if (style === "normal") {
-    formattedText = <p key={index}>{applyMarks(text, marks)}</p>;
+    formattedText = (
+      <p key={index}>
+        {children.map((child: { text: string; marks: Marks[] }) => {
+          return applyMarks(child.text, child.marks);
+        })}
+      </p>
+    );
   } else {
     const Tag = style as keyof JSX.IntrinsicElements; // Dynamically sets the style of the text based on the tag name
     if (style === "blockquote") {
-      formattedText = <Tag key={index}>"{applyMarks(text, marks)}"</Tag>; //Applies quotes to block qoute tag
+      formattedText = (
+        <Tag key={index}>
+          "
+          {children.map((child: { text: string; marks: Marks[] }) => {
+            return applyMarks(child.text, child.marks);
+          })}
+          "
+        </Tag>
+      ); //Applies quotes to block qoute tag
     } else {
-      formattedText = <Tag key={index}>{applyMarks(text, marks)}</Tag>;
+      formattedText = (
+        <Tag key={index}>
+          {children.map((child: { text: string; marks: Marks[] }) => {
+            return applyMarks(child.text, child.marks);
+          })}
+        </Tag>
+      );
     }
   }
 

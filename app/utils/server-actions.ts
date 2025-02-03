@@ -98,10 +98,12 @@ export const getArticle = async (slug: string) => {
   content[] {
     _type == 'block' => {
       'type': 'text',
-      'text': children[0].text,
+      'children': children[]{
+      'text': text,
+      'marks': marks[]
+      },
       'style': style,
       'listItem': listItem,
-      'marks': children[0].marks[],
       'link': markDefs[0].href
     },
     _type == 'document' => {
