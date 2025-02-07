@@ -192,7 +192,8 @@ Dark-mode and light-mode theme toggle, which switches the theme from night to da
 - [ ] Window, laptop, PC, and phone mock-ups for displaying screenshots and screen-recordings/GIFs
 - [ ] Videos with subtitles, and ability to play in a toast container in the corner
 - [ ] Share buttons for sharing on social media platforms and through email and mobile applications
-- [ ] Stylized Math Equations using the SanityIO laTex plugin
+- [ ] Stylized math equations using the SanityIO laTex plugin
+- [ ] Stylized keyboard shortcuts and hotkeys
 - [ ] Implementing lists and tables onto the blog page
 - [ ] Support for icons, Unicode, and emoji symbols as part of the text content of the page
 - [ ] Keyboard Icons
